@@ -12,7 +12,7 @@ export default function Hero() {
       <div className="flex flex-col-reverse lg:flex-row gap-5">
         {/* Column 1 */}
         <div className="w-full lg:w-[10%] flex items-center">
-          <div className="w-full flex flex-row lg:flex-col justify-center lg:justify-normal gap-10">
+          <div className="w-full flex flex-row lg:flex-col justify-center lg:justify-normal gap-10 sm:gap-20 lg:gap-10">
             <FaLinkedin className="text-darkSecondary hover:text-accentColor hover:scale-[1.2] duration-500 text-3xl cursor-pointer" />
             <FaFacebookSquare className="text-darkSecondary hover:text-accentColor hover:scale-[1.2] duration-500 text-3xl cursor-pointer" />
             <IoLogoYoutube className="text-darkSecondary hover:text-accentColor hover:scale-[1.2] duration-500 text-3xl cursor-pointer" />
@@ -24,22 +24,22 @@ export default function Hero() {
         <div className="w-full lg:w-[90%] flex flex-col gap-10 relative">
           <div className="flex flex-col lg:flex-row gap-5">
             <div className="w-full lg:w-[65%] relative flex flex-col">
-              <div className="aspect-square w-[50%] bg-accentColor rounded-[100%] blur-[200px] absolute z-[1] opacity-80"></div>
-              <div className="uppercase font-titleFont font-bold text-darkSecondary text-4xl lg:text-5xl z-[5]">
+              {/* <div className="aspect-square w-[35%] bg-accentColor rounded-[100%]  absolute z-[1] blur-[100px] opacity-75"></div> */}
+              <div className="uppercase font-titleFont font-bold text-darkSecondary text-4xl sm:text-6xl lg:text-5xl z-[5]">
                 Transforming
               </div>
               <div className="flex flex-row gap-2 z-[5]">
-                <div className="w-20 xl:w-36 h-auto bg-accentColor"></div>
-                <div className="text-5xl lg:text-7xl text-darkPrimary font-bodyFont uppercase font-extralight">
+                <div className="w-20 sm:w-36 h-auto bg-accentColor"></div>
+                <div className="text-5xl sm:text-7xl lg:text-6xl xl:text-7xl text-darkSecondary font-bodyFont uppercase font-extralight">
                   Ideas Into
                 </div>
               </div>
               <div className="flex flex-col z-[5]">
-                <div className="font-titleFont text-darkSecondary text-7xl lg:text-8xl xl:text-9xl font-extrabold uppercase">
+                <div className="font-titleFont text-darkPrimary text-7xl sm:text-9xl lg:text-8xl xl:text-9xl font-extrabold uppercase">
                   Digital
                 </div>
                 <div className="font-titleFont text-6xl lg:text-7xl xl:text-8xl text-accentColor flex flex-row gap-5 sm:gap-10 font-semibold uppercase z-[5]">
-                  <span className="text-darkPrimary text-2xl lg:text-4xl border-darkPrimary  flex justify-center items-center border rounded-full px-2">
+                  <span className="text-darkPrimary text-2xl sm::text-4xl border-darkPrimary  flex justify-center items-center border rounded-full px-2">
                     <BsArrowDown />
                   </span>{" "}
                   Reality
