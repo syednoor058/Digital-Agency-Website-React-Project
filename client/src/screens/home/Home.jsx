@@ -2,6 +2,7 @@
 import Clients from "../../components/clients/Clients";
 import Hero from "../../components/hero/Hero";
 import Navbar from "../../components/navbar/Navbar";
+import WhatWeDo from "../../components/whatWeDo/WhatWeDo";
 import WhoWeAre from "../../components/whoWeAre/WhoWeAre";
 
 export default function Home() {
@@ -11,6 +12,7 @@ export default function Home() {
       <Hero />
       <Clients />
       <WhoWeAre />
+      <WhatWeDo />
     </div>
   );
 }

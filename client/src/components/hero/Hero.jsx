@@ -74,7 +74,7 @@ export default function Hero() {
                   </div>
                   <div className="w-full flex flex-col gap-2">
                     <div className="text-center text-lightPrimary text-2xl sm:text-5xl font-titleFont font-bold">
-                      6
+                      12
                     </div>
                     <div className="text-center leading-none text-xs sm:text-base">
                       Clients Served

@@ -23,14 +23,14 @@ export default function WhoWeAre() {
             </div>
             <div className="w-20 h-[2px] bg-accentColor"></div>
           </div>
-          <div className="flex flex-col gap-2 uppercase">
+          <div className="flex flex-col gap-2 uppercase font-titleFont">
             <div className="text-[32px] sm:text-6xl leading-none">
               Empowering your
             </div>
-            <div className="text-[34px] sm:text-5xl font-extralight leading-none">
+            <div className="text-[28px] sm:text-5xl font-extralight leading-none">
               Business to <span className="">Reach</span>
             </div>
-            <div className="text-[44px] sm:text-7xl xl:text-8xl font-semibold leading-none">
+            <div className="text-[40px] sm:text-7xl font-semibold leading-none">
               New <span className="text-accentColor font-bold">heights</span>!
             </div>
             <div className="w-full flex justify-start lg:justify-end">
