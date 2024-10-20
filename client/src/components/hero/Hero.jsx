@@ -30,7 +30,7 @@ export default function Hero() {
               </div>
               <div className="flex flex-row gap-2 z-[5]">
                 <div className="w-20 sm:w-36 h-auto bg-accentColor"></div>
-                <div className="text-5xl sm:text-7xl lg:text-6xl xl:text-7xl text-darkSecondary font-bodyFont uppercase font-extralight">
+                <div className="text-[45px] sm:text-7xl lg:text-6xl xl:text-7xl text-darkSecondary font-bodyFont uppercase font-extralight leading-none">
                   Ideas Into
                 </div>
               </div>
