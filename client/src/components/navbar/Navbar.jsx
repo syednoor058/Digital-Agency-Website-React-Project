@@ -19,7 +19,7 @@ export default function Navbar() {
             to="/"
             className={({ isActive }) =>
               isActive
-                ? "font-bold duration-300 group text-accentColor overflow-hidden"
+                ? " duration-300 group text-accentColor overflow-hidden"
                 : "flex flex-col justify-center items-center overflow-hidden group"
             }
           >
@@ -30,7 +30,7 @@ export default function Navbar() {
             to="/services"
             className={({ isActive }) =>
               isActive
-                ? "font-bold duration-300 group text-accentColor overflow-hidden"
+                ? " duration-300 group text-accentColor overflow-hidden"
                 : "flex flex-col justify-center items-center overflow-hidden group"
             }
           >
@@ -38,21 +38,21 @@ export default function Navbar() {
             <div className="group-hover:translate-x-0 -translate-x-[105%] h-[2px] w-full bg-accentColor duration-[400ms]"></div>
           </NavLink>
           <NavLink
-            to="/portfolio"
+            to="/projects"
             className={({ isActive }) =>
               isActive
-                ? "font-bold duration-300 group text-accentColor overflow-hidden"
+                ? " duration-300 group text-accentColor overflow-hidden"
                 : "flex flex-col justify-center items-center overflow-hidden group"
             }
           >
-            Portfolio
+            Projects
             <div className="group-hover:translate-x-0 -translate-x-[105%] h-[2px] w-full bg-accentColor duration-[400ms]"></div>
           </NavLink>
           <NavLink
             to="/pricing"
             className={({ isActive }) =>
               isActive
-                ? "font-bold duration-300 group text-accentColor overflow-hidden"
+                ? " duration-300 group text-accentColor overflow-hidden"
                 : "flex flex-col justify-center items-center overflow-hidden group"
             }
           >
@@ -63,7 +63,7 @@ export default function Navbar() {
             to="/about-us"
             className={({ isActive }) =>
               isActive
-                ? "font-bold duration-300 group text-accentColor overflow-hidden"
+                ? " duration-300 group text-accentColor overflow-hidden"
                 : "flex flex-col justify-center items-center overflow-hidden group"
             }
           >
@@ -74,7 +74,7 @@ export default function Navbar() {
             to="/contact-us"
             className={({ isActive }) =>
               isActive
-                ? "font-bold duration-300 group text-accentColor overflow-hidden"
+                ? " duration-300 group text-accentColor overflow-hidden"
                 : "flex flex-col justify-center items-center overflow-hidden group"
             }
           >
@@ -82,7 +82,7 @@ export default function Navbar() {
             <div className="group-hover:translate-x-0 -translate-x-[105%] h-[2px] w-full bg-accentColor duration-[400ms]"></div>
           </NavLink>
         </div>
-        <div className="w-[15%] px-2 py-2 bg-accentColor rounded-sm flex justify-center items-center font-semibold">
+        <div className="w-[15%] px-2 py-2 bg-accentColor rounded-sm flex justify-center items-center ">
           Free trial
         </div>
       </div>
@@ -92,7 +92,7 @@ export default function Navbar() {
             <img className="w-auto h-14" src={lightLogo} alt="light_logo" />
           </div>
           <div className="flex flex-row gap-2 sm:gap-3 justify-end items-center">
-            <div className="px-2 py-2 bg-accentColor rounded-sm flex justify-center items-center font-semibold">
+            <div className="px-2 py-2 bg-accentColor rounded-sm flex justify-center items-center ">
               Free trial
             </div>
             <div
@@ -107,75 +107,87 @@ export default function Navbar() {
       <div
         className={`w-[60%] bg-accentColor h-screen overflow-y-auto ${
           toggle ? "translate-x-0" : "-translate-x-[105%]"
-        } duration-700 px-5 md:px-7 fixed z-[999]`}
+        } duration-700 fixed z-[999]`}
       >
-        <div className="flex flex-col gap-5 justify-center items-center lg:text-sm xl:text-base text-darkPrimary pt-10">
-          <NavLink
-            to="/"
-            className={({ isActive }) =>
-              isActive
-                ? "font-bold duration-300 group text-lightPrimary overflow-hidden"
-                : "flex flex-col justify-center items-center overflow-hidden group"
-            }
-          >
-            Home
-            <div className="group-hover:translate-x-0 -translate-x-[105%] h-[2px] w-full bg-darkPrimary duration-[400ms]"></div>
-          </NavLink>
-          <NavLink
-            to="/services"
-            className={({ isActive }) =>
-              isActive
-                ? "font-bold duration-300 group text-lightPrimary overflow-hidden"
-                : "flex flex-col justify-center items-center overflow-hidden group"
-            }
-          >
-            Services
-            <div className="group-hover:translate-x-0 -translate-x-[105%] h-[2px] w-full bg-darkPrimary duration-[400ms]"></div>
-          </NavLink>
-          <NavLink
-            to="/portfolio"
-            className={({ isActive }) =>
-              isActive
-                ? "font-bold duration-300 group text-lightPrimary overflow-hidden"
-                : "flex flex-col justify-center items-center overflow-hidden group"
-            }
-          >
-            Portfolio
-            <div className="group-hover:translate-x-0 -translate-x-[105%] h-[2px] w-full bg-darkPrimary duration-[400ms]"></div>
-          </NavLink>
-          <NavLink
-            to="/pricing"
-            className={({ isActive }) =>
-              isActive
-                ? "font-bold duration-300 group text-lightPrimary overflow-hidden"
-                : "flex flex-col justify-center items-center overflow-hidden group"
-            }
-          >
-            Pricing
-            <div className="group-hover:translate-x-0 -translate-x-[105%] h-[2px] w-full bg-darkPrimary duration-[400ms]"></div>
-          </NavLink>
-          <NavLink
-            to="/about-us"
-            className={({ isActive }) =>
-              isActive
-                ? "font-bold duration-300 group text-lightPrimary overflow-hidden"
-                : "flex flex-col justify-center items-center overflow-hidden group"
-            }
-          >
-            About
-            <div className="group-hover:translate-x-0 -translate-x-[105%] h-[2px] w-full bg-darkPrimary duration-[400ms]"></div>
-          </NavLink>
-          <NavLink
-            to="/contact-us"
-            className={({ isActive }) =>
-              isActive
-                ? "font-bold duration-300 group text-lightPrimary overflow-hidden"
-                : "flex flex-col justify-center items-center overflow-hidden group"
-            }
-          >
-            Contact
-            <div className="group-hover:translate-x-0 -translate-x-[105%] h-[2px] w-full bg-darkPrimary duration-[400ms]"></div>
-          </NavLink>
+        <div className="flex flex-col justify-center items-start lg:text-sm xl:text-base text-darkPrimary pt-10 divide-darkPrimary">
+          <div className="w-full" onClick={toggleMenu}>
+            <NavLink
+              to="/"
+              className={({ isActive }) =>
+                isActive
+                  ? "w-full bg-darkPrimary  duration-300 group text-lightPrimary overflow-hidden pt-3 flex flex-col justify-center gap-3"
+                  : "flex flex-col justify-center overflow-hidden group gap-3 pt-3"
+              }
+            >
+              <div className="w-full px-5 md:px-7">Home</div>
+              <div className="w-full h-[0.5px] bg-darkPrimary opacity-50"></div>
+            </NavLink>
+          </div>
+          <div className="w-full" onClick={toggleMenu}>
+            <NavLink
+              to="/services"
+              className={({ isActive }) =>
+                isActive
+                  ? "w-full bg-darkPrimary  duration-300 group text-lightPrimary overflow-hidden pt-3 flex flex-col justify-center gap-3"
+                  : "flex flex-col justify-center overflow-hidden group gap-3 pt-3"
+              }
+            >
+              <div className="w-full px-5 md:px-7">Services</div>
+              <div className="w-full h-[0.5px] bg-darkPrimary opacity-50"></div>
+            </NavLink>
+          </div>
+          <div className="w-full" onClick={toggleMenu}>
+            <NavLink
+              to="/projects"
+              className={({ isActive }) =>
+                isActive
+                  ? "w-full bg-darkPrimary  duration-300 group text-lightPrimary overflow-hidden pt-3 flex flex-col justify-center gap-3"
+                  : "flex flex-col justify-center overflow-hidden group gap-3 pt-3"
+              }
+            >
+              <div className="w-full px-5 md:px-7">Projects</div>
+              <div className="w-full h-[0.5px] bg-darkPrimary opacity-50"></div>
+            </NavLink>
+          </div>
+          <div className="w-full" onClick={toggleMenu}>
+            <NavLink
+              to="/pricing"
+              className={({ isActive }) =>
+                isActive
+                  ? "w-full bg-darkPrimary  duration-300 group text-lightPrimary overflow-hidden pt-3 flex flex-col justify-center gap-3"
+                  : "flex flex-col justify-center overflow-hidden group gap-3 pt-3"
+              }
+            >
+              <div className="w-full px-5 md:px-7">Pricing</div>
+              <div className="w-full h-[0.5px] bg-darkPrimary opacity-50"></div>
+            </NavLink>
+          </div>
+          <div className="w-full" onClick={toggleMenu}>
+            <NavLink
+              to="/about-us"
+              className={({ isActive }) =>
+                isActive
+                  ? "w-full bg-darkPrimary  duration-300 group text-lightPrimary overflow-hidden pt-3 flex flex-col justify-center gap-3"
+                  : "flex flex-col justify-center overflow-hidden group gap-3 pt-3"
+              }
+            >
+              <div className="w-full px-5 md:px-7">About</div>
+              <div className="w-full h-[0.5px] bg-darkPrimary opacity-50"></div>
+            </NavLink>
+          </div>
+          <div className="w-full" onClick={toggleMenu}>
+            <NavLink
+              to="/contact-us"
+              className={({ isActive }) =>
+                isActive
+                  ? "w-full bg-darkPrimary  duration-300 group text-lightPrimary overflow-hidden pt-3 flex flex-col justify-center gap-3"
+                  : "flex flex-col justify-center overflow-hidden group gap-3 pt-3"
+              }
+            >
+              <div className="w-full px-5 md:px-7">Contact</div>
+              <div className="w-full h-[0.5px] bg-darkPrimary opacity-50"></div>
+            </NavLink>
+          </div>
         </div>
       </div>
     </div>
