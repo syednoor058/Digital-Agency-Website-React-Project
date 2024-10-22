@@ -8,7 +8,7 @@ import WorkCard2 from "./WorkCard2";
 
 export default function HowWeWork() {
   return (
-    <div className=" pt-10 lg:pt-20 font-bodyFont text-darkSecondary bg-lightPrimary">
+    <div className=" py-10 lg:py-20 font-bodyFont text-darkSecondary bg-lightPrimary">
       <div className="flex flex-col gap-7 sm:gap-10 lg:gap-20 px-5 sm:px-7 lg:px-10 xl:px-20">
         <div className="flex flex-row gap-2 items-center">
           <div className="uppercase font-semibold text-sm sm:text-lg">

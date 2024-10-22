@@ -4,19 +4,22 @@ import { BiSolidQuoteLeft } from "react-icons/bi";
 
 export default function WorkCard(props) {
   return (
-    <div className="w-full flex flex-col lg:flex-row-reverse gap-10 xl:gap-20">
-      <div className="w-full lg:w-[70%] flex flex-row-reverse items-center gap-5 xl:gap-10">
-        <div className="w-[30%] sm:w-[30%] flex flex-row items-start">
-          <div className="w-full aspect-square rounded-[100%] bg-accentColor flex justify-center items-center text-5xl sm:text-7xl  lg:text-9xl font-semibold text-lightPrimary p-5 leading-3">
-            <div className="leading-none opacity-75">{props.number}</div>
+    <div className="w-full flex flex-col lg:flex-row-reverse gap-10 xl:gap-20 border-b py-5">
+      <div className="w-full lg:w-[70%] flex flex-col justify-center gap-5 xl:gap-10">
+        <div className="flex flex-row-reverse items-center gap-5 xl:gap-10">
+          <div className="w-[30%] sm:w-[30%] flex flex-row items-start">
+            <div className="w-full aspect-square rounded-[100%] bg-accentColor flex justify-center items-center text-5xl sm:text-7xl  lg:text-9xl font-semibold text-lightPrimary p-5 leading-3">
+              <div className="leading-none opacity-75">{props.number}</div>
+            </div>
+          </div>
+          <div className="w-[70%] sm:w-[70%] flex flex-col gap-2">
+            <div className="text-base sm:text-2xl uppercase font-semibold">
+              {props.title}
+            </div>
+            <div className="text-sm sm:text-base">{props.desc}</div>
           </div>
         </div>
-        <div className="w-[70%] sm:w-[70%] flex flex-col gap-2">
-          <div className="text-base sm:text-2xl uppercase font-semibold">
-            {props.title}
-          </div>
-          <div className="text-sm sm:text-base">{props.desc}</div>
-        </div>
+        <div className="text-sm sm:text-base">{props.desc}</div>
       </div>
 
       <div className="full lg:w-[30%] flex justify-center lg:justify-end">

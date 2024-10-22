@@ -1,4 +1,5 @@
 // import React from 'react'
+import CaseStudy from "../../components/caseStudy/CaseStudy";
 import Clients from "../../components/clients/Clients";
 import Hero from "../../components/hero/Hero";
 import HowWeWork from "../../components/howWeWork/HowWeWork";
@@ -13,6 +14,7 @@ export default function Home() {
       <WhoWeAre />
       <WhatWeDo />
       <HowWeWork />
+      <CaseStudy />
     </div>
   );
 }
