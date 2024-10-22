@@ -4,11 +4,12 @@ import { FaFacebookSquare, FaLinkedin, FaWhatsappSquare } from "react-icons/fa";
 import { FaRegClock } from "react-icons/fa6";
 import { IoLogoYoutube, IoMdCheckmarkCircleOutline } from "react-icons/io";
 import { RiCustomerService2Line, RiInstagramFill } from "react-icons/ri";
+import { Link } from "react-router-dom";
 import heroCover from "../../assets/images/hero_cover.png";
 
 export default function Hero() {
   return (
-    <div className="font-bodyFont text-darkPrimary px-5 sm:px-7 lg:px-10 xl:px-20 py-10 lg:pt-24 lg:pb-20 bg-lightPrimary">
+    <div className="font-bodyFont text-darkSecondary px-5 sm:px-7 lg:px-10 xl:px-20 py-10 lg:pt-24 lg:pb-20 bg-lightPrimary">
       <div className="flex flex-col-reverse lg:flex-row gap-5">
         {/* Column 1 */}
         <div className="w-full lg:w-[10%] flex items-center">
@@ -25,12 +26,12 @@ export default function Hero() {
           <div className="flex flex-col lg:flex-row gap-5">
             <div className="w-full lg:w-[65%] relative flex flex-col">
               {/* <div className="aspect-square w-[35%] bg-accentColor rounded-[100%]  absolute z-[1] blur-[100px] opacity-75"></div> */}
-              <div className="uppercase font-titleFont font-bold text-darkSecondary text-4xl sm:text-6xl lg:text-5xl z-[5]">
+              <div className="uppercase font-titleFont font-bold text-darkPrimary text-4xl sm:text-6xl lg:text-5xl z-[5]">
                 Transforming
               </div>
               <div className="flex flex-row gap-2 z-[5]">
                 <div className="w-20 sm:w-36 h-auto bg-accentColor"></div>
-                <div className="text-[45px] sm:text-7xl lg:text-6xl xl:text-7xl text-darkSecondary font-bodyFont uppercase font-extralight leading-none">
+                <div className="text-[45px] sm:text-7xl lg:text-6xl xl:text-7xl text-darkPrimary font-bodyFont uppercase font-extralight leading-none">
                   Ideas Into
                 </div>
               </div>
@@ -48,10 +49,16 @@ export default function Hero() {
             </div>
 
             <div className="w-full lg:w-[35%] flex flex-col gap-8  text-darkPrimary lg:absolute lg:right-10 lg:top-5 z-[5]">
-              <div className="text-base lg:text-sm font-bodyFont text-darkPrimary">
-                Crafting seamless digital experiences—where design meets
-                development, and ideas become solutions. From code to campaign,
-                we empower businesses to thrive in a connected world.
+              <div className="text-base lg:text-sm font-bodyFont text-darkPrimary flex flex-col gap-3">
+                <div>
+                  Crafting seamless digital experiences—where design meets
+                  development, and ideas become solutions.
+                </div>
+                <Link className="sm:w-[40%] lg:w-[70%] xl:w-[60%] flex justify-center items-center hover:bg-accentColor hover:text-darkPrimary hover:border-none hover:scale-[1.1] duration-500 rounded-sm border border-darkPrimary">
+                  <div className="w-full uppercase px-3 py-2  text-lg text-center">
+                    Let&apos;s Get Started
+                  </div>
+                </Link>
               </div>
               <div className="bg-accentColor justify-center p-5 sm:p-5 md:p-8 flex flex-row lg:flex-col gap-6 lg:gap-4 shadow-xl">
                 <div className="flex flex-col sm:flex-row gap-3 lg:gap-5 items-center ">

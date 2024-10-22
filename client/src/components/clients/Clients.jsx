@@ -10,7 +10,7 @@ import shodwe from "../../assets/images/clients/shodwe.png";
 export default function Clients() {
   return (
     <div className="">
-      <div className="bg-darkPrimary py-6 md:py-9 lg:py-12">
+      <div className="bg-darkPrimary py-8 md:py-9 lg:py-12">
         <Marquee
           autoFill={true}
           speed={80}

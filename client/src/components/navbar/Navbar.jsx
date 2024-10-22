@@ -10,7 +10,7 @@ export default function Navbar() {
   };
   return (
     <div className="w-full font-titleFont uppercase text-darkSecondary">
-      <div className="w-full px-3 md:px-8 lg:px-8 xl:px-20 hidden lg:flex flex-row gap-10 items-center justify-between">
+      <div className="w-full h-16 px-3 md:px-8 lg:px-8 xl:px-20 hidden lg:flex flex-row gap-10 items-center justify-between">
         <div className="w-[20%]">
           <img className="w-full h-auto" src={lightLogo} alt="light_logo" />
         </div>
@@ -86,8 +86,8 @@ export default function Navbar() {
           Free trial
         </div>
       </div>
-      <div className="w-full px-3 md:px-8 lg:px-8 xl:px-20 text-xs sm:text-sm">
-        <div className="w-full flex flex-row gap-10 items-center justify-between lg:hidden text-darkPrimary">
+      <div className="w-full h-14 px-3 md:px-8 lg:px-8 xl:px-20 text-xs sm:text-sm  flex lg:hidden items-center">
+        <div className="w-full flex flex-row gap-10 items-center justify-between  text-darkPrimary">
           <div className="">
             <img className="w-auto h-14" src={lightLogo} alt="light_logo" />
           </div>
@@ -115,12 +115,11 @@ export default function Navbar() {
               to="/"
               className={({ isActive }) =>
                 isActive
-                  ? "w-full bg-darkPrimary  duration-300 group text-lightPrimary overflow-hidden pt-3 flex flex-col justify-center gap-3"
-                  : "flex flex-col justify-center overflow-hidden group gap-3 pt-3"
+                  ? "w-full bg-darkPrimary  duration-300 group text-lightPrimary overflow-hidden flex flex-col justify-center gap-3"
+                  : "flex flex-col justify-center overflow-hidden group gap-3 border-b-[0.5px] border-darkSecondary border-opacity-30"
               }
             >
-              <div className="w-full px-5 md:px-7">Home</div>
-              <div className="w-full h-[0.5px] bg-darkPrimary opacity-50"></div>
+              <div className="w-full px-5 md:px-7 py-3">Home</div>
             </NavLink>
           </div>
           <div className="w-full" onClick={toggleMenu}>
@@ -128,12 +127,11 @@ export default function Navbar() {
               to="/services"
               className={({ isActive }) =>
                 isActive
-                  ? "w-full bg-darkPrimary  duration-300 group text-lightPrimary overflow-hidden pt-3 flex flex-col justify-center gap-3"
-                  : "flex flex-col justify-center overflow-hidden group gap-3 pt-3"
+                  ? "w-full bg-darkPrimary  duration-300 group text-lightPrimary overflow-hidden flex flex-col justify-center gap-3"
+                  : "flex flex-col justify-center overflow-hidden group gap-3 border-b-[0.5px] border-darkSecondary border-opacity-30"
               }
             >
-              <div className="w-full px-5 md:px-7">Services</div>
-              <div className="w-full h-[0.5px] bg-darkPrimary opacity-50"></div>
+              <div className="w-full px-5 md:px-7 py-3">Services</div>
             </NavLink>
           </div>
           <div className="w-full" onClick={toggleMenu}>
@@ -141,12 +139,11 @@ export default function Navbar() {
               to="/projects"
               className={({ isActive }) =>
                 isActive
-                  ? "w-full bg-darkPrimary  duration-300 group text-lightPrimary overflow-hidden pt-3 flex flex-col justify-center gap-3"
-                  : "flex flex-col justify-center overflow-hidden group gap-3 pt-3"
+                  ? "w-full bg-darkPrimary  duration-300 group text-lightPrimary overflow-hidden flex flex-col justify-center gap-3"
+                  : "flex flex-col justify-center overflow-hidden group gap-3 border-b-[0.5px] border-darkSecondary border-opacity-30"
               }
             >
-              <div className="w-full px-5 md:px-7">Projects</div>
-              <div className="w-full h-[0.5px] bg-darkPrimary opacity-50"></div>
+              <div className="w-full px-5 md:px-7 py-3">Projects</div>
             </NavLink>
           </div>
           <div className="w-full" onClick={toggleMenu}>
@@ -154,12 +151,11 @@ export default function Navbar() {
               to="/pricing"
               className={({ isActive }) =>
                 isActive
-                  ? "w-full bg-darkPrimary  duration-300 group text-lightPrimary overflow-hidden pt-3 flex flex-col justify-center gap-3"
-                  : "flex flex-col justify-center overflow-hidden group gap-3 pt-3"
+                  ? "w-full bg-darkPrimary  duration-300 group text-lightPrimary overflow-hidden flex flex-col justify-center gap-3"
+                  : "flex flex-col justify-center overflow-hidden group gap-3 border-b-[0.5px] border-darkSecondary border-opacity-30"
               }
             >
-              <div className="w-full px-5 md:px-7">Pricing</div>
-              <div className="w-full h-[0.5px] bg-darkPrimary opacity-50"></div>
+              <div className="w-full px-5 md:px-7 py-3">Pricing</div>
             </NavLink>
           </div>
           <div className="w-full" onClick={toggleMenu}>
@@ -167,12 +163,11 @@ export default function Navbar() {
               to="/about-us"
               className={({ isActive }) =>
                 isActive
-                  ? "w-full bg-darkPrimary  duration-300 group text-lightPrimary overflow-hidden pt-3 flex flex-col justify-center gap-3"
-                  : "flex flex-col justify-center overflow-hidden group gap-3 pt-3"
+                  ? "w-full bg-darkPrimary  duration-300 group text-lightPrimary overflow-hidden flex flex-col justify-center gap-3"
+                  : "flex flex-col justify-center overflow-hidden group gap-3 border-b-[0.5px] border-darkSecondary border-opacity-30"
               }
             >
-              <div className="w-full px-5 md:px-7">About</div>
-              <div className="w-full h-[0.5px] bg-darkPrimary opacity-50"></div>
+              <div className="w-full px-5 md:px-7 py-3">About</div>
             </NavLink>
           </div>
           <div className="w-full" onClick={toggleMenu}>
@@ -180,12 +175,11 @@ export default function Navbar() {
               to="/contact-us"
               className={({ isActive }) =>
                 isActive
-                  ? "w-full bg-darkPrimary  duration-300 group text-lightPrimary overflow-hidden pt-3 flex flex-col justify-center gap-3"
-                  : "flex flex-col justify-center overflow-hidden group gap-3 pt-3"
+                  ? "w-full bg-darkPrimary  duration-300 group text-lightPrimary overflow-hidden flex flex-col justify-center gap-3"
+                  : "flex flex-col justify-center overflow-hidden group gap-3 border-b-[0.5px] border-darkSecondary border-opacity-30"
               }
             >
-              <div className="w-full px-5 md:px-7">Contact</div>
-              <div className="w-full h-[0.5px] bg-darkPrimary opacity-50"></div>
+              <div className="w-full px-5 md:px-7 py-3">Contact</div>
             </NavLink>
           </div>
         </div>
