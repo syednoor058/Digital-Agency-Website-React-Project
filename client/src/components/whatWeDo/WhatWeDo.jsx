@@ -8,7 +8,7 @@ export default function WhatWeDo() {
     <div className=" pt-10 lg:pt-20 font-bodyFont text-darkPrimary bg-accentColor">
       <div className="flex flex-col gap-7 sm:gap-10 lg:gap-20">
         <div className="flex flex-col sm:flex-row gap-5 px-5 sm:px-7 lg:px-10 xl:px-20">
-          <div className="w-full sm:w-[30%] flex flex-row gap-5 sm:gap-10">
+          <div className="w-full sm:w-[30%] flex flex-row gap-3 sm:gap-10">
             <div className="uppercase font-semibold text-sm sm:text-lg text-darkSecondary">
               What we do
             </div>

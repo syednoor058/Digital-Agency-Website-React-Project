@@ -5,6 +5,7 @@ import Hero from "../../components/hero/Hero";
 import HowWeWork from "../../components/howWeWork/HowWeWork";
 import WhatWeDo from "../../components/whatWeDo/WhatWeDo";
 import WhoWeAre from "../../components/whoWeAre/WhoWeAre";
+import WhyChooseUs from "../../components/whyChooseUs/WhyChooseUs";
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
       <WhatWeDo />
       <HowWeWork />
       <CaseStudy />
+      <WhyChooseUs />
     </div>
   );
 }
