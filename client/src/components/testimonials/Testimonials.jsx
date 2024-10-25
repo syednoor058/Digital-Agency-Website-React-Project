@@ -76,7 +76,7 @@ export default function Testimonials() {
   };
   return (
     <div className="py-10 lg:py-20 font-bodyFont text-darkSecondary bg-accentColor relative overflow-hidden">
-      <div className="w-full h-1/2 bg-lightPrimary absolute bottom-0"></div>
+      <div className="w-full h-1/2 bg-lightPrimary absolute bottom-0 rounded-t-[50px]"></div>
       <div className="flex flex-col gap-10 xl:gap-20 relative">
         <div className="flex flex-col sm:flex-row gap-5 px-5 sm:px-7 lg:px-10 xl:px-20">
           <div className="w-full sm:w-[30%] flex flex-row gap-3 sm:gap-10">
@@ -96,7 +96,7 @@ export default function Testimonials() {
             <div className="px-2 sm:px-3">
               <TestimonialCard
                 image={shararImg}
-                feedback="Our business grew faster than we imagined after partnering with this agency. Their strategic guidance and digital solutions boosted our revenue by 50% within months. They don't just deliver services—they help us unlock potential we didn't know we had."
+                feedback="Our business grew faster than we imagined after partnering with this agency. Their strategic guidance and digital solutions boosted our revenue by 50% within months. They don't just deliver services—they help us unlock."
                 client="Kazi Fahim Sharar"
                 company="Puppetbrush Digital Solution"
                 pos="Cheif Executive Officer"
@@ -123,7 +123,7 @@ export default function Testimonials() {
             <div className="px-2 sm:px-3">
               <TestimonialCard
                 image={azizulImg}
-                feedback="We relied on them for software development, and they exceeded expectations with flawless, reliable solutions. Their rigorous testing ensured a smooth launch with zero downtime—simply outstanding!"
+                feedback="We relied on them for software development, and they exceeded expectations with flawless, reliable solutions. Their rigorous testing ensured a smooth launch with zero downtime—simply outstanding and amazing!"
                 client="Md. Azizul Haque"
                 company="InterAid education care"
                 pos="Founder & Head Teacher"

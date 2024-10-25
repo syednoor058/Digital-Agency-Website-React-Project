@@ -1,6 +1,8 @@
 // import React from 'react'
+// import CallToAction from "../../components/callToAction/CallToAction";
 import CaseStudy from "../../components/caseStudy/CaseStudy";
 import Clients from "../../components/clients/Clients";
+import Footer from "../../components/footer/Footer";
 import Hero from "../../components/hero/Hero";
 import HowWeWork from "../../components/howWeWork/HowWeWork";
 import Testimonials from "../../components/testimonials/Testimonials";
@@ -19,6 +21,8 @@ export default function Home() {
       <CaseStudy />
       <WhyChooseUs />
       <Testimonials />
+      {/* <CallToAction /> */}
+      <Footer />
     </div>
   );
 }

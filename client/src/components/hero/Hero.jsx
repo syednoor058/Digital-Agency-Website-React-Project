@@ -56,7 +56,7 @@ export default function Hero() {
                 </div>
                 <Link className="sm:w-[40%] lg:w-[70%] xl:w-[60%] flex justify-center items-center hover:bg-accentColor hover:text-darkPrimary hover:border-none hover:scale-[1.1] duration-500 rounded-sm border border-darkPrimary">
                   <div className="w-full uppercase px-3 py-2  text-lg text-center">
-                    Let&apos;s Get Started
+                    Get Started
                   </div>
                 </Link>
               </div>
