@@ -1,11 +1,11 @@
 // import React from 'react'
 import Marquee from "react-fast-marquee";
-import interAid from "../../assets/images/clients/interaid.png";
-import puppetBrush from "../../assets/images/clients/puppetbrush.png";
-import qahaf from "../../assets/images/clients/qahaf.png";
-import quantumQube from "../../assets/images/clients/quantum_qube.png";
-import sato from "../../assets/images/clients/sato.png";
-import shodwe from "../../assets/images/clients/shodwe.png";
+import interAid from "../../assets/images/clients/interaid.webp";
+import puppetBrush from "../../assets/images/clients/puppetbrush.webp";
+import qahaf from "../../assets/images/clients/qahaf.webp";
+import quantumQube from "../../assets/images/clients/quantum_qube.webp";
+import sato from "../../assets/images/clients/sato.webp";
+import shodwe from "../../assets/images/clients/shodwe.webp";
 
 export default function Clients() {
   return (

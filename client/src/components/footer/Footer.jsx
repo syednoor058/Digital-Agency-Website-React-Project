@@ -4,7 +4,7 @@ import { IoLogoYoutube } from "react-icons/io";
 
 export default function Footer() {
   return (
-    <div className="pt-10 lg:pt-20 font-bodyFont text-lightSecondary bg-darkPrimary">
+    <div className="mt-10 pt-16 lg:pt-20 font-bodyFont text-lightSecondary bg-darkPrimary">
       <div className="flex flex-col gap-10 px-5 sm:px-7 lg:px-10 xl:px-20">
         <div className="w-full flex flex-col lg:flex-row gap-10 xl:gap-20">
           <div className="w-full sm:w-[65%] lg:w-[45%] flex flex-col gap-3">
@@ -33,7 +33,7 @@ export default function Footer() {
               <IoLogoYoutube />
             </div>
           </div>
-          <div className="w-full lg:w-[55%] flex flex-wrap gap-10 justify-between">
+          <div className="w-full lg:w-[55%] flex flex-wrap gap-10 sm:justify-between pt-10 lg:pt-0">
             <div className="flex flex-col gap-5">
               <div className="uppercase font-bold text-lightPrimary">
                 Company
@@ -47,17 +47,6 @@ export default function Footer() {
             </div>
             <div className="flex flex-col gap-5">
               <div className="uppercase font-bold text-lightPrimary">
-                Customer
-              </div>
-              <div className="flex flex-col gap-3">
-                <div>Contact</div>
-                <div>About</div>
-                <div>Get a Quote</div>
-                <div>Privacy Policy</div>
-              </div>
-            </div>
-            <div className="flex flex-col gap-5">
-              <div className="uppercase font-bold text-lightPrimary">
                 Explore
               </div>
               <div className="flex flex-col gap-3">
@@ -65,6 +54,17 @@ export default function Footer() {
                 <div>Digital Marketing</div>
                 <div>Machine Learning</div>
                 <div>Terms & Conditions</div>
+              </div>
+            </div>
+            <div className="flex flex-col gap-5">
+              <div className="uppercase font-bold text-lightPrimary">
+                Customer
+              </div>
+              <div className="flex flex-col gap-3">
+                <div>Contact</div>
+                <div>About</div>
+                <div>Get a Quote</div>
+                <div>Privacy Policy</div>
               </div>
             </div>
           </div>

@@ -5,7 +5,7 @@ import { FaRegClock } from "react-icons/fa6";
 import { IoLogoYoutube, IoMdCheckmarkCircleOutline } from "react-icons/io";
 import { RiCustomerService2Line, RiInstagramFill } from "react-icons/ri";
 import { Link } from "react-router-dom";
-import heroCover from "../../assets/images/hero_cover.png";
+import heroCover from "../../assets/images/hero_cover.webp";
 
 export default function Hero() {
   return (

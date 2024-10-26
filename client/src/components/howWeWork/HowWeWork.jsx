@@ -1,8 +1,8 @@
 // import React from 'react'
-import firstImg from "../../assets/images/howWeDo/1.png";
-import secondImg from "../../assets/images/howWeDo/2.png";
-import thirdImg from "../../assets/images/howWeDo/3.png";
-import forthImg from "../../assets/images/howWeDo/4.png";
+import firstImg from "../../assets/images/howWeDo/1.webp";
+import secondImg from "../../assets/images/howWeDo/2.webp";
+import thirdImg from "../../assets/images/howWeDo/3.webp";
+import forthImg from "../../assets/images/howWeDo/4.webp";
 import WorkCard from "./WorkCard";
 import WorkCard2 from "./WorkCard2";
 

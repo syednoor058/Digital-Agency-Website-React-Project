@@ -1,9 +1,9 @@
 // import React from 'react'
 import { BsFillArrowUpRightCircleFill } from "react-icons/bs";
 import { Link } from "react-router-dom";
-import portfolioImg from "../../assets/images/projects/2.png";
-import kickOffImg from "../../assets/images/projects/3.png";
-import carsPredImg from "../../assets/images/projects/4.png";
+import portfolioImg from "../../assets/images/projects/2.webp";
+import kickOffImg from "../../assets/images/projects/3.webp";
+import carsPredImg from "../../assets/images/projects/4.webp";
 import CaseStudyCard from "./CaseStudyCard";
 
 export default function CaseStudy() {
