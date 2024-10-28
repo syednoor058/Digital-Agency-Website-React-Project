@@ -9,81 +9,83 @@ export default function Navbar() {
     setToggle(!toggle);
   };
   return (
-    <div className="w-full font-titleFont uppercase text-darkSecondary">
+    <div className="w-full font-titleFont capitalize text-darkSecondary">
       <div className="w-full h-16 px-3 md:px-8 lg:px-8 xl:px-20 hidden lg:flex flex-row gap-10 items-center justify-between">
-        <div className="w-[20%]">
+        <div className="w-[15%]">
           <img className="w-full h-auto" src={lightLogo} alt="light_logo" />
         </div>
-        <div className="flex flex-row gap-5 justify-center items-center lg:text-sm xl:text-base">
-          <NavLink
-            to="/"
-            className={({ isActive }) =>
-              isActive
-                ? " duration-300 group text-accentColor overflow-hidden"
-                : "flex flex-col justify-center items-center overflow-hidden group"
-            }
-          >
-            Home
-            <div className="group-hover:translate-x-0 -translate-x-[105%] h-[2px] w-full bg-accentColor duration-[400ms]"></div>
-          </NavLink>
-          <NavLink
-            to="/services"
-            className={({ isActive }) =>
-              isActive
-                ? " duration-300 group text-accentColor overflow-hidden"
-                : "flex flex-col justify-center items-center overflow-hidden group"
-            }
-          >
-            Services
-            <div className="group-hover:translate-x-0 -translate-x-[105%] h-[2px] w-full bg-accentColor duration-[400ms]"></div>
-          </NavLink>
-          <NavLink
-            to="/projects"
-            className={({ isActive }) =>
-              isActive
-                ? " duration-300 group text-accentColor overflow-hidden"
-                : "flex flex-col justify-center items-center overflow-hidden group"
-            }
-          >
-            Projects
-            <div className="group-hover:translate-x-0 -translate-x-[105%] h-[2px] w-full bg-accentColor duration-[400ms]"></div>
-          </NavLink>
-          <NavLink
-            to="/pricing"
-            className={({ isActive }) =>
-              isActive
-                ? " duration-300 group text-accentColor overflow-hidden"
-                : "flex flex-col justify-center items-center overflow-hidden group"
-            }
-          >
-            Pricing
-            <div className="group-hover:translate-x-0 -translate-x-[105%] h-[2px] w-full bg-accentColor duration-[400ms]"></div>
-          </NavLink>
-          <NavLink
-            to="/about-us"
-            className={({ isActive }) =>
-              isActive
-                ? " duration-300 group text-accentColor overflow-hidden"
-                : "flex flex-col justify-center items-center overflow-hidden group"
-            }
-          >
-            About
-            <div className="group-hover:translate-x-0 -translate-x-[105%] h-[2px] w-full bg-accentColor duration-[400ms]"></div>
-          </NavLink>
-          <NavLink
-            to="/contact-us"
-            className={({ isActive }) =>
-              isActive
-                ? " duration-300 group text-accentColor overflow-hidden"
-                : "flex flex-col justify-center items-center overflow-hidden group"
-            }
-          >
-            Contact
-            <div className="group-hover:translate-x-0 -translate-x-[105%] h-[2px] w-full bg-accentColor duration-[400ms]"></div>
-          </NavLink>
-        </div>
-        <div className="w-[15%] px-2 py-2 bg-accentColor rounded-sm flex justify-center items-center ">
-          Free trial
+        <div className="w-full flex flex-row gap-20 justify-end items-center">
+          <div className="flex flex-row gap-5 justify-center items-center text-base lg:text-sm">
+            <NavLink
+              to="/"
+              className={({ isActive }) =>
+                isActive
+                  ? " duration-300 group text-accentColor overflow-hidden"
+                  : "flex flex-col justify-center items-center overflow-hidden group"
+              }
+            >
+              Home
+              <div className="group-hover:translate-x-0 -translate-x-[105%] h-[2px] w-full bg-accentColor duration-[400ms]"></div>
+            </NavLink>
+            <NavLink
+              to="/services"
+              className={({ isActive }) =>
+                isActive
+                  ? " duration-300 group text-accentColor overflow-hidden"
+                  : "flex flex-col justify-center items-center overflow-hidden group"
+              }
+            >
+              Services
+              <div className="group-hover:translate-x-0 -translate-x-[105%] h-[2px] w-full bg-accentColor duration-[400ms]"></div>
+            </NavLink>
+            <NavLink
+              to="/projects"
+              className={({ isActive }) =>
+                isActive
+                  ? " duration-300 group text-accentColor overflow-hidden"
+                  : "flex flex-col justify-center items-center overflow-hidden group"
+              }
+            >
+              Projects
+              <div className="group-hover:translate-x-0 -translate-x-[105%] h-[2px] w-full bg-accentColor duration-[400ms]"></div>
+            </NavLink>
+            <NavLink
+              to="/pricing"
+              className={({ isActive }) =>
+                isActive
+                  ? " duration-300 group text-accentColor overflow-hidden"
+                  : "flex flex-col justify-center items-center overflow-hidden group"
+              }
+            >
+              Pricing
+              <div className="group-hover:translate-x-0 -translate-x-[105%] h-[2px] w-full bg-accentColor duration-[400ms]"></div>
+            </NavLink>
+            <NavLink
+              to="/about-us"
+              className={({ isActive }) =>
+                isActive
+                  ? " duration-300 group text-accentColor overflow-hidden"
+                  : "flex flex-col justify-center items-center overflow-hidden group"
+              }
+            >
+              About
+              <div className="group-hover:translate-x-0 -translate-x-[105%] h-[2px] w-full bg-accentColor duration-[400ms]"></div>
+            </NavLink>
+            <NavLink
+              to="/contact-us"
+              className={({ isActive }) =>
+                isActive
+                  ? " duration-300 group text-accentColor overflow-hidden"
+                  : "flex flex-col justify-center items-center overflow-hidden group"
+              }
+            >
+              Contact
+              <div className="group-hover:translate-x-0 -translate-x-[105%] h-[2px] w-full bg-accentColor duration-[400ms]"></div>
+            </NavLink>
+          </div>
+          <div className="w-[15%] px-2 py-2 bg-accentColor rounded-sm flex justify-center items-center lg:text-sm">
+            Free trial
+          </div>
         </div>
       </div>
       <div className="w-full h-14 px-3 md:px-8 lg:px-8 xl:px-20 text-xs sm:text-sm  flex lg:hidden items-center">

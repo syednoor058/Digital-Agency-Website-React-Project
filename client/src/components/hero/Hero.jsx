@@ -1,5 +1,6 @@
 // import React from 'react'
-import { BsArrowDown } from "react-icons/bs";
+// import { BsArrowDown } from "react-icons/bs";
+import { motion } from "framer-motion";
 import { FaFacebookSquare, FaLinkedin, FaWhatsappSquare } from "react-icons/fa";
 import { FaRegClock } from "react-icons/fa6";
 import { IoLogoYoutube, IoMdCheckmarkCircleOutline } from "react-icons/io";
@@ -24,25 +25,33 @@ export default function Hero() {
         {/* Column 2 */}
         <div className="w-full lg:w-[90%] flex flex-col gap-10 relative">
           <div className="flex flex-col lg:flex-row gap-5">
-            <div className="w-full lg:w-[65%] relative flex flex-col">
+            <div className="w-full lg:w-[65%] relative flex flex-col gap-1 leading-none">
               {/* <div className="aspect-square w-[35%] bg-accentColor rounded-[100%]  absolute z-[1] blur-[100px] opacity-75"></div> */}
-              <div className="uppercase font-titleFont font-bold text-darkPrimary text-4xl sm:text-6xl lg:text-5xl z-[5]">
+              <div className="uppercase font-titleFont font-bold text-darkPrimary text-4xl sm:text-6xl lg:text-5xl z-[5] leading-none relative">
+                <motion.div
+                  initial={{ height: "100%" }}
+                  animate={{ height: "0%" }}
+                  transition={{ ease: [0.76, 0, 0.24, 1], duration: 1 }}
+                  className="absolute w-full h-full bg-lightPrimary"
+                ></motion.div>
                 Transforming
               </div>
               <div className="flex flex-row gap-2 z-[5]">
-                <div className="w-20 sm:w-36 h-auto bg-accentColor"></div>
-                <div className="text-[45px] sm:text-7xl lg:text-6xl xl:text-7xl text-darkPrimary font-bodyFont uppercase font-extralight leading-none">
+                <motion.div
+                  initial={{ width: 0 }}
+                  animate={{ width: "120px" }}
+                  transition={{ ease: [0.76, 0, 0.24, 1], duration: 1 }}
+                  className="w-[120px] h-auto bg-accentColor"
+                ></motion.div>
+                <div className="text-4xl sm:text-6xl lg:text-5xl text-darkPrimary font-bodyFont uppercase font-extralight leading-none">
                   Ideas Into
                 </div>
               </div>
               <div className="flex flex-col z-[5]">
-                <div className="font-titleFont text-darkPrimary text-7xl sm:text-9xl lg:text-8xl xl:text-9xl font-extrabold uppercase">
+                <div className="font-titleFont text-darkPrimary text-7xl sm:text-9xl lg:text-8xl xl:text-[127px] font-bold tracking-tighter uppercase leading-none -mt-1 sm:-mt-3 ">
                   Digital
                 </div>
-                <div className="font-titleFont text-6xl lg:text-7xl xl:text-8xl text-accentColor flex flex-row gap-5 sm:gap-10 font-semibold uppercase z-[5]">
-                  <span className="text-darkPrimary text-2xl sm::text-4xl border-darkPrimary  flex justify-center items-center border rounded-full px-2">
-                    <BsArrowDown />
-                  </span>{" "}
+                <div className="font-titleFont text-7xl sm:text-9xl lg:text-8xl xl:text-[127px] text-accentColor flex flex-row gap-5 sm:gap-10 font-bold uppercase tracking-tighter leading-none -mt-2 sm:-mt-5">
                   Reality
                 </div>
               </div>

@@ -14,7 +14,7 @@ export default function HowWeWork() {
           <div className="uppercase font-semibold text-sm sm:text-lg">
             How We Work
           </div>
-          <div className="w-20 h-[2px] bg-accentColor"></div>
+          <div className="w-[2px] h-full bg-accentColor"></div>
         </div>
         <div className="w-full flex flex-col gap-7">
           <WorkCard

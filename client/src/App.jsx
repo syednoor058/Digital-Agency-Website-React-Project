@@ -1,4 +1,5 @@
 // import React from "react";
+import LocomotiveScroll from "locomotive-scroll";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Navbar from "./components/navbar/Navbar";
 import About from "./screens/about/About";
@@ -9,9 +10,10 @@ import Projects from "./screens/projects/Projects";
 import Services from "./screens/services/Services";
 
 export default function App() {
+  const locomotiveScroll = new LocomotiveScroll();
   return (
     <BrowserRouter>
-      <div className="w-full fixed top-0 z-[1000] shadow-md bg-lightPrimary bg-opacity-90 backdrop-blur-[6px]">
+      <div className="w-full fixed top-0 z-[1000] bg-lightPrimary bg-opacity-90 backdrop-blur-[6px]">
         <Navbar />
       </div>
 

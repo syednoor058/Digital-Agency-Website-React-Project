@@ -21,7 +21,7 @@ export default function WhoWeAre() {
             <div className="uppercase font-semibold text-sm sm:text-lg">
               Who We Are
             </div>
-            <div className="w-20 h-[2px] bg-accentColor"></div>
+            <div className="w-[2px] h-full bg-accentColor"></div>
           </div>
           <div className="flex flex-col gap-2 uppercase font-titleFont">
             <div className="text-[32px] sm:text-6xl leading-none">
