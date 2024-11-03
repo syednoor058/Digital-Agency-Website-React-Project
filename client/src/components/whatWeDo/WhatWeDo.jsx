@@ -9,14 +9,14 @@ export default function WhatWeDo() {
       <div className="flex flex-col gap-7 sm:gap-10 lg:gap-20">
         <div className="flex flex-col sm:flex-row gap-5 px-5 sm:px-7 lg:px-10 xl:px-20">
           <div className="w-full sm:w-[30%] flex flex-row gap-3 sm:gap-10">
-            <div className="uppercase font-semibold text-sm sm:text-lg text-darkSecondary">
+            <div className="uppercase font-semibold text-sm sm:text-lg text-darkPrimary">
               What we do
             </div>
             <div className="w-[2px] h-auto bg-lightPrimary"></div>
           </div>
-          <div className="w-full sm:w-[70%] uppercase font-titleFont font-bold text-[42px] sm:text-[54px] lg:text-6xl leading-none">
-            <span className="">Solution</span> that drive your{" "}
-            <span className="text-lightPrimary font-light">success</span>
+          <div className="w-full sm:w-[70%] uppercase font-titleFont font-bold text-[42px] sm:text-[54px] lg:text-6xl leading-none text-darkPrimary">
+            <span className="">Solution</span> that drive{" "}
+            <span className="text-lightTitleText font-light">your success</span>
           </div>
         </div>
         <div className="w-full flex flex-col sm:flex-row justify-start px-5 sm:px-7 lg:px-10 xl:px-20 gap-7">
@@ -29,7 +29,7 @@ export default function WhatWeDo() {
             value.
           </div>
           <div className="w-full sm:w-[40%] lg:w-[60%] flex flex-row gap-5 items-center justify-end">
-            <div className="text-9xl sm:text-7xl lg:text-9xl xl:text-[200px] leading-none font-thin text-lightPrimary ">
+            <div className="text-9xl sm:text-7xl lg:text-9xl xl:text-[200px] leading-none font-thin text-lightTitleText ">
               1.5
               <span className="text-7xl sm:text-5xl lg:text-7xl xl:text-9xl font-medium">
                 X

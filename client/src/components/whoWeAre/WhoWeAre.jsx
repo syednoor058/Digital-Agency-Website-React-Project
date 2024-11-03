@@ -11,11 +11,11 @@ import tanha from "../../assets/images/testimonials/tanha.webp";
 
 export default function WhoWeAre() {
   return (
-    <div className="px-5 sm:px-7 lg:px-10 xl:px-20 py-10 lg:py-20 font-bodyFont text-darkPrimary bg-lightPrimary relative overflow-hidden">
-      <div className="w-[70%] sm:w-[50%] aspect-square bg-darkSecondary rounded-[100%] absolute -right-32 -bottom-32 sm:-right-36 lg:-right-60 sm:-bottom-36 lg:-bottom-60 p-20 sm:p-28 lg:p-40 opacity-10">
-        <div className="w-full aspect-square rounded-[100%] bg-lightPrimary"></div>
+    <div className="px-5 sm:px-7 lg:px-10 xl:px-20 py-10 lg:py-20 font-bodyFont text-lightBodyText bg-darkSecondary relative overflow-hidden">
+      <div className="w-[90%] sm:w-[70%] lg:w-[50%] aspect-square bg-lightSecondary rounded-[100%] absolute -right-32 -bottom-32 sm:-right-36 lg:-right-60 sm:-bottom-36 lg:-bottom-60 p-20 sm:p-28 lg:p-40 opacity-5 z-[2]">
+        <div className="w-full aspect-square rounded-[100%] bg-darkSecondary"></div>
       </div>
-      <div className="flex flex-col lg:flex-row gap-7 lg:gap-10">
+      <div className="flex flex-col lg:flex-row gap-7 lg:gap-10 relative z-[5]">
         <div className="w-full lg:w-[65%] flex flex-col gap-5">
           <div className="flex flex-row gap-2 items-center">
             <div className="uppercase font-semibold text-sm sm:text-lg">
@@ -23,7 +23,7 @@ export default function WhoWeAre() {
             </div>
             <div className="w-[2px] h-full bg-accentColor"></div>
           </div>
-          <div className="flex flex-col gap-2 uppercase font-titleFont">
+          <div className="flex flex-col gap-2 uppercase font-titleFont text-lightTitleText">
             <div className="text-[32px] sm:text-6xl leading-none">
               Empowering your
             </div>
@@ -34,7 +34,7 @@ export default function WhoWeAre() {
               New <span className="text-accentColor font-bold">heights</span>!
             </div>
             <div className="w-full flex justify-start lg:justify-end">
-              <div className="text-7xl sm:text-9xl font-extralight opacity-10 rotate-90 lg:rotate-0">
+              <div className="text-7xl sm:text-9xl font-extralight opacity-25 rotate-90 lg:rotate-0">
                 <PiArrowSquareUpRightThin />
               </div>
             </div>

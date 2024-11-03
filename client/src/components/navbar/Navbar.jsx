@@ -2,14 +2,14 @@
 import { useState } from "react";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { NavLink } from "react-router-dom";
-import lightLogo from "../../assets/logo/light_mode_logo.png";
+import lightLogo from "../../assets/logo/dark_mode_logo.png";
 export default function Navbar() {
   const [toggle, setToggle] = useState(false);
   const toggleMenu = () => {
     setToggle(!toggle);
   };
   return (
-    <div className="w-full font-titleFont capitalize text-darkSecondary">
+    <div className="w-full font-titleFont capitalize text-lightBodyText bg-darkPrimary">
       <div className="w-full h-16 px-3 md:px-8 lg:px-8 xl:px-20 hidden lg:flex flex-row gap-10 items-center justify-between">
         <div className="w-[15%]">
           <img className="w-full h-auto" src={lightLogo} alt="light_logo" />
@@ -83,18 +83,18 @@ export default function Navbar() {
               <div className="group-hover:translate-x-0 -translate-x-[105%] h-[2px] w-full bg-accentColor duration-[400ms]"></div>
             </NavLink>
           </div>
-          <div className="w-[15%] px-2 py-2 bg-accentColor rounded-sm flex justify-center items-center lg:text-sm">
+          <div className="w-[15%] px-3 py-2 border border-accentColor rounded-full flex justify-center items-center lg:text-sm">
             Free trial
           </div>
         </div>
       </div>
       <div className="w-full h-14 px-3 md:px-8 lg:px-8 xl:px-20 text-xs sm:text-sm  flex lg:hidden items-center">
-        <div className="w-full flex flex-row gap-10 items-center justify-between  text-darkPrimary">
+        <div className="w-full flex flex-row gap-10 items-center justify-between  text-lightTitleText">
           <div className="">
             <img className="w-auto h-14" src={lightLogo} alt="light_logo" />
           </div>
           <div className="flex flex-row gap-2 sm:gap-3 justify-end items-center">
-            <div className="px-2 py-2 bg-accentColor rounded-sm flex justify-center items-center ">
+            <div className="px-3 py-2 border border-accentColor rounded-full flex justify-center items-center ">
               Free trial
             </div>
             <div
@@ -111,7 +111,7 @@ export default function Navbar() {
           toggle ? "translate-x-0" : "-translate-x-[105%]"
         } duration-700 fixed z-[999]`}
       >
-        <div className="flex flex-col justify-center items-start lg:text-sm xl:text-base text-darkPrimary pt-10 divide-darkPrimary">
+        <div className="flex flex-col justify-center items-start lg:text-sm xl:text-base text-lightTitleText pt-10 divide-darkPrimary">
           <div className="w-full" onClick={toggleMenu}>
             <NavLink
               to="/"

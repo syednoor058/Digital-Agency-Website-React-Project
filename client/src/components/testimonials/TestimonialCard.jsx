@@ -6,14 +6,14 @@ import { Avatar } from "@mui/material";
 
 export default function TestimonialCard(props) {
   return (
-    <div className="w-full h-full bg-darkPrimary flex flex-col gap-10 rounded-t-3xl shadow-md relative items-stretch">
+    <div className="w-full h-full bg-darkPrimary flex flex-col gap-10 rounded-3xl shadow-md relative items-stretch">
       <div className="p-5 text-lightSecondary flex flex-col gap-4">
         <div className="text-lightPrimary text-4xl">
           <FaQuoteLeft />
         </div>
         <div className="text-sm lg:text-base">{props.feedback}</div>
       </div>
-      <div className="w-full bg-accentColor bottom-0">
+      <div className="w-full bg-accentColor bottom-0 rounded-b-3xl">
         <div className="w-full flex flex-col gap-3 justify-center items-center text-center leading-none -mt-10">
           <div className="p-[7px] bg-darkPrimary rounded-[100%] relative">
             <Avatar

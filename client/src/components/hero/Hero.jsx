@@ -14,62 +14,127 @@ export default function Hero() {
       <div className="flex flex-col-reverse lg:flex-row gap-5">
         {/* Column 1 */}
         <div className="w-full lg:w-[10%] flex items-center">
-          <div className="w-full flex flex-row lg:flex-col justify-center lg:justify-normal gap-10 sm:gap-20 lg:gap-10">
+          <motion.div
+            initial={{ y: "100%" }}
+            animate={{ y: "0" }}
+            transition={{
+              ease: [0.76, 0, 0.24, 1],
+              duration: 1,
+              delay: 0.1,
+            }}
+            className="w-full flex flex-row lg:flex-col justify-center lg:justify-normal gap-10 sm:gap-20 lg:gap-10"
+          >
             <FaLinkedin className="text-darkSecondary hover:text-accentColor hover:scale-[1.2] duration-500 text-3xl cursor-pointer" />
             <FaFacebookSquare className="text-darkSecondary hover:text-accentColor hover:scale-[1.2] duration-500 text-3xl cursor-pointer" />
             <IoLogoYoutube className="text-darkSecondary hover:text-accentColor hover:scale-[1.2] duration-500 text-3xl cursor-pointer" />
             <RiInstagramFill className="text-darkSecondary hover:text-accentColor hover:scale-[1.2] duration-500 text-3xl cursor-pointer" />
             <FaWhatsappSquare className="text-darkSecondary hover:text-accentColor hover:scale-[1.2] duration-500 text-3xl cursor-pointer" />
-          </div>
+          </motion.div>
         </div>
         {/* Column 2 */}
         <div className="w-full lg:w-[90%] flex flex-col gap-10 relative">
           <div className="flex flex-col lg:flex-row gap-5">
             <div className="w-full lg:w-[65%] relative flex flex-col gap-1 leading-none">
               {/* <div className="aspect-square w-[35%] bg-accentColor rounded-[100%]  absolute z-[1] blur-[100px] opacity-75"></div> */}
-              <div className="uppercase font-titleFont font-bold text-darkPrimary text-4xl sm:text-6xl lg:text-5xl z-[5] leading-none relative">
-                <motion.div
-                  initial={{ height: "100%" }}
-                  animate={{ height: "0%" }}
-                  transition={{ ease: [0.76, 0, 0.24, 1], duration: 1 }}
-                  className="absolute w-full h-full bg-lightPrimary"
-                ></motion.div>
-                Transforming
+              <div className="uppercase font-titleFont font-bold text-darkPrimary text-4xl sm:text-6xl lg:text-5xl z-[5] leading-none relative overflow-hidden">
+                <motion.span
+                  initial={{ y: "100%" }}
+                  animate={{ y: "0" }}
+                  transition={{
+                    ease: [0.76, 0, 0.24, 1],
+                    duration: 0.8,
+                  }}
+                  className="inline-block translate-y-full"
+                >
+                  Transforming
+                </motion.span>
               </div>
               <div className="flex flex-row gap-2 z-[5]">
                 <motion.div
                   initial={{ width: 0 }}
                   animate={{ width: "120px" }}
-                  transition={{ ease: [0.76, 0, 0.24, 1], duration: 1 }}
+                  transition={{
+                    ease: [0.76, 0, 0.24, 1],
+                    duration: 1,
+                    delay: 0.3,
+                  }}
                   className="w-[120px] h-auto bg-accentColor"
                 ></motion.div>
-                <div className="text-4xl sm:text-6xl lg:text-5xl text-darkPrimary font-bodyFont uppercase font-extralight leading-none">
-                  Ideas Into
+                <div className="text-4xl sm:text-6xl lg:text-5xl text-darkPrimary font-bodyFont uppercase font-extralight leading-none overflow-hidden">
+                  <motion.span
+                    initial={{ y: "100%" }}
+                    animate={{ y: "0" }}
+                    transition={{
+                      ease: [0.76, 0, 0.24, 1],
+                      duration: 0.8,
+                    }}
+                    className="inline-block translate-y-full"
+                  >
+                    Ideas Into
+                  </motion.span>
                 </div>
               </div>
               <div className="flex flex-col z-[5]">
-                <div className="font-titleFont text-darkPrimary text-7xl sm:text-9xl lg:text-8xl xl:text-[127px] font-bold tracking-tighter uppercase leading-none -mt-1 sm:-mt-3 ">
-                  Digital
+                <div className="font-titleFont text-darkPrimary text-7xl sm:text-9xl lg:text-8xl xl:text-[127px] font-bold tracking-tighter uppercase leading-none -mt-1 sm:-mt-3 overflow-hidden">
+                  <motion.span
+                    initial={{ y: "100%" }}
+                    animate={{ y: "0" }}
+                    transition={{
+                      ease: [0.76, 0, 0.24, 1],
+                      duration: 0.8,
+                    }}
+                    className="inline-block translate-y-full"
+                  >
+                    Digital
+                  </motion.span>
                 </div>
-                <div className="font-titleFont text-7xl sm:text-9xl lg:text-8xl xl:text-[127px] text-accentColor flex flex-row gap-5 sm:gap-10 font-bold uppercase tracking-tighter leading-none -mt-2 sm:-mt-5">
-                  Reality
+                <div className="font-titleFont text-7xl sm:text-9xl lg:text-8xl xl:text-[127px] text-accentColor font-bold uppercase tracking-tighter leading-none -mt-2 sm:-mt-5 overflow-hidden">
+                  <motion.span
+                    initial={{ y: "100%" }}
+                    animate={{ y: "0" }}
+                    transition={{
+                      ease: [0.76, 0, 0.24, 1],
+                      duration: 0.8,
+                    }}
+                    className="inline-block translate-y-full"
+                  >
+                    Reality
+                  </motion.span>
                 </div>
               </div>
             </div>
 
-            <div className="w-full lg:w-[35%] flex flex-col gap-8  text-darkPrimary lg:absolute lg:right-10 lg:top-5 z-[5]">
+            <div className="w-full lg:w-[35%] flex flex-col gap-8  text-darkPrimary lg:absolute lg:right-10 lg:top-5 z-[5] overflow-hidden">
               <div className="text-base lg:text-sm font-bodyFont text-darkPrimary flex flex-col gap-3">
-                <div>
+                <motion.div
+                  initial={{ y: "100%" }}
+                  animate={{ y: "0" }}
+                  transition={{ ease: [0.22, 1, 0.36, 1], duration: 1 }}
+                >
                   Crafting seamless digital experiences—where design meets
                   development, and ideas become solutions.
-                </div>
+                </motion.div>
                 <Link className="sm:w-[40%] lg:w-[70%] xl:w-[60%] flex justify-center items-center hover:bg-accentColor hover:text-darkPrimary hover:border-none hover:scale-[1.1] duration-500 rounded-sm border border-darkPrimary">
-                  <div className="w-full uppercase px-3 py-2  text-lg text-center">
+                  <motion.div
+                    initial={{ x: "-100%" }}
+                    animate={{ x: "0" }}
+                    transition={{
+                      ease: [0.76, 0, 0.24, 1],
+                      duration: 1,
+                      delay: 0.1,
+                    }}
+                    className="w-full uppercase px-3 py-2  text-lg text-center"
+                  >
                     Get Started
-                  </div>
+                  </motion.div>
                 </Link>
               </div>
-              <div className="bg-accentColor justify-center p-5 sm:p-5 md:p-8 flex flex-row lg:flex-col gap-6 lg:gap-4 shadow-xl">
+              <motion.div
+                initial={{ y: "100%" }}
+                animate={{ y: "0" }}
+                transition={{ ease: [0.22, 1, 0.36, 1], duration: 1 }}
+                className="bg-accentColor justify-center p-5 sm:p-5 md:p-8 flex flex-row lg:flex-col gap-6 lg:gap-4 shadow-xl"
+              >
                 <div className="flex flex-col sm:flex-row gap-3 lg:gap-5 items-center ">
                   <div className=" text-lightPrimary text-4xl sm:text-5xl md:text-6xl lg:text-8xl">
                     <FaRegClock />
@@ -111,11 +176,14 @@ export default function Hero() {
                     </div>
                   </div>
                 </div>
-              </div>
+              </motion.div>
             </div>
           </div>
-          <div className="w-full relative aspect-[16/5]">
-            <img
+          <div className="w-full relative aspect-[16/5] overflow-hidden">
+            <motion.img
+              initial={{ x: "-100%" }}
+              animate={{ x: "0" }}
+              transition={{ ease: [0.76, 0, 0.24, 1], duration: 1, delay: 0.1 }}
               className="w-full h-full object-cover"
               src={heroCover}
               alt="hero_cover"

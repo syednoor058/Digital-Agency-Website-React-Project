@@ -75,8 +75,8 @@ export default function Testimonials() {
     ],
   };
   return (
-    <div className="pt-10 pb-20 lg:py-20 font-bodyFont text-darkSecondary bg-accentColor relative overflow-hidden">
-      <div className="w-full h-1/2 bg-lightPrimary absolute bottom-0 rounded-t-[50px]"></div>
+    <div className="pt-10 pb-20 lg:py-20 font-bodyFont text-darkSecondary bg-lightPrimary relative overflow-hidden">
+      <div className="w-full h-3/5 bg-accentColor absolute top-0 rounded-b-3xl"></div>
       <div className="flex flex-col gap-10 xl:gap-20 relative">
         <div className="flex flex-col sm:flex-row gap-5 px-5 sm:px-7 lg:px-10 xl:px-20">
           <div className="w-full sm:w-[30%] flex flex-row gap-3 sm:gap-10">
