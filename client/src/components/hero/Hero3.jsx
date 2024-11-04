@@ -15,7 +15,7 @@ export default function Hero3() {
         <div className="flex flex-col gap-5 md:gap-7">
           <div className="uppercase font-titleFont font-bold text-[28px] sm:text-5xl leading-none text-center text-lightTitleText">
             <h1 className="font-light">Transforming Your ideas into</h1>
-            <h1 className="text-[35px] sm:text-7xl">
+            <h1 className="text-[35px] sm:text-6xl md:text-7xl">
               Digital <span className="text-accentColor">reality</span>
             </h1>
           </div>
@@ -43,36 +43,38 @@ export default function Hero3() {
         <div className="w-full flex flex-col lg:flex-row gap-10 xl:gap-16">
           <div className="w-full lg:w-[40%] flex flex-col gap-7 xl:gap-16">
             <div className="flex flex-row gap-7 xl:gap-16 justify-center">
-              <div className="flex flex-col gap-2 ">
-                <div className="text-3xl sm:text-5xl font-medium flex gap-5 justify-center items-center">
+              <div className="w-[50%] flex items-center flex-col gap-2 ">
+                <div className="text-3xl sm:text-5xl font-medium flex gap-2 justify-center items-center">
                   <span className="text-5xl sm:text-6xl text-accentColor">
                     <GoClock />
                   </span>
                   3+
                 </div>
-                <div className="text-center">Years of Experience</div>
+                <div className="text-center text-sm sm:text-base">
+                  Years of Experience
+                </div>
               </div>
-              <div className="flex flex-col gap-2">
-                <div className="text-3xl sm:text-5xl font-medium flex gap-5 justify-center items-center">
+              <div className="w-[50%] items-center flex flex-col gap-2">
+                <div className="text-3xl sm:text-5xl font-medium flex gap-2 justify-center items-center">
                   <span className="text-5xl sm:text-6xl text-accentColor">
                     <IoPersonOutline />
                   </span>
                   12
                 </div>
-                <div className="w-full text-center">
+                <div className="w-full text-center text-sm sm:text-base">
                   Satisfied Clients All Over the World
                 </div>
               </div>
             </div>
             <div className="flex justify-center">
               <div className="flex flex-col gap-2 ">
-                <div className="text-3xl sm:text-5xl font-medium flex gap-5 justify-center items-center">
+                <div className="text-3xl sm:text-5xl font-medium flex gap-2 justify-center items-center">
                   <span className="text-5xl sm:text-6xl text-accentColor">
                     <RiTaskLine />
                   </span>
                   20
                 </div>
-                <div className="text-center">
+                <div className="text-center text-sm sm:text-base">
                   Projects Completed Successfully
                 </div>
               </div>

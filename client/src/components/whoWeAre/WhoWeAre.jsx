@@ -12,7 +12,7 @@ import tanha from "../../assets/images/testimonials/tanha.webp";
 export default function WhoWeAre() {
   return (
     <div className="px-5 sm:px-7 lg:px-10 xl:px-20 py-10 lg:py-20 font-bodyFont text-lightBodyText bg-darkSecondary relative overflow-hidden">
-      <div className="w-[90%] sm:w-[70%] lg:w-[50%] aspect-square bg-lightSecondary rounded-[100%] absolute -right-32 -bottom-32 sm:-right-36 lg:-right-60 sm:-bottom-36 lg:-bottom-60 p-20 sm:p-28 lg:p-40 opacity-5 z-[2]">
+      <div className="w-[90%] sm:w-[70%] lg:w-[50%] aspect-square bg-darkPrimary rounded-[100%] absolute -right-32 -bottom-32 sm:-right-36 lg:-right-60 sm:-bottom-36 lg:-bottom-60 p-20 sm:p-28 lg:p-40 z-[2]">
         <div className="w-full aspect-square rounded-[100%] bg-darkSecondary"></div>
       </div>
       <div className="flex flex-col lg:flex-row gap-7 lg:gap-10 relative z-[5]">

@@ -4,7 +4,7 @@ import CaseStudy from "../../components/caseStudy/CaseStudy";
 import Clients from "../../components/clients/Clients";
 import Footer from "../../components/footer/Footer";
 import Hero3 from "../../components/hero/Hero3";
-import HowWeWork from "../../components/howWeWork/HowWeWork";
+import HowWeWork2 from "../../components/howWeWork/HowWeWork2";
 import Testimonials from "../../components/testimonials/Testimonials";
 import WhatWeDo from "../../components/whatWeDo/WhatWeDo";
 import WhoWeAre from "../../components/whoWeAre/WhoWeAre";
@@ -12,12 +12,12 @@ import WhyChooseUs from "../../components/whyChooseUs/WhyChooseUs";
 
 export default function Home() {
   return (
-    <div className="pt-10 w-full h-full overflow-x-hidden">
+    <div className="pt-14 lg:pt-10 w-full h-full overflow-x-hidden bg-darkPrimary">
       <Hero3 />
       <Clients />
       <WhoWeAre />
       <WhatWeDo />
-      <HowWeWork />
+      <HowWeWork2 />
       <CaseStudy />
       <WhyChooseUs />
       <Testimonials />

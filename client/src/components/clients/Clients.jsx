@@ -1,11 +1,11 @@
 // import React from 'react'
 import Marquee from "react-fast-marquee";
-import interAid from "../../assets/images/clients/interaid.webp";
-import puppetBrush from "../../assets/images/clients/puppetbrush.webp";
-import qahaf from "../../assets/images/clients/qahaf.webp";
-import quantumQube from "../../assets/images/clients/quantum_qube.webp";
-import sato from "../../assets/images/clients/sato.webp";
-import shodwe from "../../assets/images/clients/shodwe.webp";
+import interAid from "../../assets/images/clients/1.png";
+import puppetBrush from "../../assets/images/clients/2.png";
+import qahaf from "../../assets/images/clients/3.png";
+import quantumQube from "../../assets/images/clients/4.png";
+import sato from "../../assets/images/clients/5.png";
+import shodwe from "../../assets/images/clients/6.png";
 
 export default function Clients() {
   return (
@@ -15,25 +15,25 @@ export default function Clients() {
           autoFill={true}
           speed={100}
           direction="left"
-          className="hover:cursor-pointer opacity-90"
+          className="hover:cursor-pointer opacity-60"
         >
           <div className="flex justify-center items-center mx-3 md:mx-10">
             <img
-              className="w-[100px] md:w-[200px]"
+              className="w-[100px] md:w-[220px]"
               src={interAid}
               alt="inter-aid"
             />
           </div>
           <div className="flex justify-center items-center mx-3 md:mx-10">
             <img
-              className="w-[100px] md:w-[200px]"
+              className="w-[100px] md:w-[220px]"
               src={sato}
               alt="inter-aid"
             />
           </div>
           <div className="flex justify-center items-center mx-3 md:mx-10">
             <img
-              className="w-[100px] md:w-[200px]"
+              className="w-[100px] md:w-[220px]"
               src={qahaf}
               alt="inter-aid"
             />
@@ -49,7 +49,7 @@ export default function Clients() {
 
           <div className="flex justify-center items-center mx-3 md:mx-10">
             <img
-              className="w-[100px] md:w-[200px]"
+              className="w-[100px] md:w-[220px]"
               src={puppetBrush}
               alt="inter-aid"
             />
@@ -57,7 +57,7 @@ export default function Clients() {
 
           <div className="flex justify-center items-center mx-3 md:mx-10">
             <img
-              className="w-[100px] md:w-[200px]"
+              className="w-[100px] md:w-[220px]"
               src={shodwe}
               alt="inter-aid"
             />

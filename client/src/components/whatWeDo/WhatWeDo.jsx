@@ -1,20 +1,20 @@
 // import React from 'react'
-import { FaChartSimple, FaHandshake, FaUserGroup } from "react-icons/fa6";
 
+import { MdExtension, MdFindInPage, MdInsertChart } from "react-icons/md";
 import DoCard from "./DoCard";
 
 export default function WhatWeDo() {
   return (
-    <div className=" pt-10 lg:pt-20 font-bodyFont text-darkPrimary bg-accentColor">
+    <div className=" pt-10 lg:pt-20 font-bodyFont text-darkBodyText bg-accentColor">
       <div className="flex flex-col gap-7 sm:gap-10 lg:gap-20">
         <div className="flex flex-col sm:flex-row gap-5 px-5 sm:px-7 lg:px-10 xl:px-20">
           <div className="w-full sm:w-[30%] flex flex-row gap-3 sm:gap-10">
-            <div className="uppercase font-semibold text-sm sm:text-lg text-darkPrimary">
+            <div className="uppercase font-semibold text-sm sm:text-lg text-darkBodyText">
               What we do
             </div>
             <div className="w-[2px] h-auto bg-lightPrimary"></div>
           </div>
-          <div className="w-full sm:w-[70%] uppercase font-titleFont font-bold text-[42px] sm:text-[54px] lg:text-6xl leading-none text-darkPrimary">
+          <div className="w-full sm:w-[70%] uppercase font-titleFont font-bold text-[42px] sm:text-[54px] lg:text-6xl leading-none text-darkTitleText">
             <span className="">Solution</span> that drive{" "}
             <span className="text-lightTitleText font-light">your success</span>
           </div>
@@ -35,25 +35,42 @@ export default function WhatWeDo() {
                 X
               </span>
             </div>
-            <div className="uppercase">Growth rate</div>
+            <div className="uppercase">Average Growth rate</div>
           </div>
         </div>
-        <div className="grid grid-cols-1 lg:grid-cols-3">
+        <div className="grid grid-cols-1 lg:grid-cols-3 xl:grid-cols-3">
           <DoCard
-            logo={<FaChartSimple />}
-            title="Accelerated Business Growth"
-            desc="Our solutions help scale your business up to 1.5x faster by streamlining operations and improving digital efficiency."
+            logo={<MdExtension />}
+            title="Software Development"
+            features={[
+              "Mobile & Web Design",
+              "System Design",
+              "UX Research & Plan",
+            ]}
+            desc="We craft custom software solutions tailored to meet your unique business needs, ensuring high-quality, scalable, and efficient digital products that drive growth and efficiency."
           />
           <DoCard
-            logo={<FaUserGroup />}
-            title="Improved Customer Engagement"
-            desc="Our design and marketing strategies foster meaningful interactions, increasing customer retention and brand loyalty."
+            logo={<MdInsertChart />}
+            title="Digital Marketing"
+            features={[
+              "Social Media Marketing",
+              "Search Engine Marketing",
+              "Email Marketing",
+            ]}
+            desc="Our data-driven digital marketing strategies help you reach and engage your target audience effectively, using techniques that boost brand visibility and customer engagement across online platforms."
           />
           <DoCard
+            logo={<MdFindInPage />}
+            title="Search Engine Optimization (SEO)"
+            features={["On-Page SEO", "Off-Page SEO", "Technical SEO"]}
+            desc="With expert SEO practices, we enhance your online presence, improve search engine rankings, and drive organic traffic to your website, making it easier for customers to find you."
+          />
+          {/* <DoCard
             logo={<FaHandshake />}
-            title="End-to-End Partnership"
-            desc="From idea to execution, we’re with you at every step, delivering personalized support to help you meet your goals."
-          />
+            title="Content Creation"
+            features={["Image Content", "Video Content", "Event Shooting"]}
+            desc="We develop impactful and engaging content tailored to your brand, from blogs and social media posts to visuals and videos, to establish a powerful connection with your audience and build brand authority.."
+          /> */}
         </div>
       </div>
     </div>

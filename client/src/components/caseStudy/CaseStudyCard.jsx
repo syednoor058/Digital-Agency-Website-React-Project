@@ -11,7 +11,7 @@ export default function CaseStudyCard(props) {
       </div>
       <div className="flex flex-col gap-2">
         <div className="flex flex-row gap-5">
-          <div className="w-[90%] uppercase text-lightPrimary font-light text-lg">
+          <div className="w-[90%] uppercase text-lightPrimary font-light font-titleFont text-lg">
             {props.title}
           </div>
           <div className="w-[10%]">
@@ -24,7 +24,7 @@ export default function CaseStudyCard(props) {
           </div>
         </div>
       </div>
-      <div className="text-sm">{props.desc}</div>
+      <div className="text-sm font-extralight">{props.desc}</div>
       <div className="flex flex-wrap gap-2 sm:gap-3 text-xs sm:text-sm text-center">
         {props.tags.map((tag, index) => (
           <div

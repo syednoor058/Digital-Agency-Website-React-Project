@@ -1,44 +1,66 @@
 /* eslint-disable react/prop-types */
 // import React from 'react'
-import { FaQuoteLeft } from "react-icons/fa";
 
 import { Avatar } from "@mui/material";
+import { useState } from "react";
+import { MdOutlineStar } from "react-icons/md";
 
 export default function TestimonialCard(props) {
+  const [expand, setExpand] = useState(false);
+  const toggleExpand = () => {
+    setExpand(!expand);
+  };
   return (
-    <div className="w-full h-full bg-darkPrimary flex flex-col gap-10 rounded-3xl shadow-md relative items-stretch">
-      <div className="p-5 text-lightSecondary flex flex-col gap-4">
-        <div className="text-lightPrimary text-4xl">
-          <FaQuoteLeft />
-        </div>
-        <div className="text-sm lg:text-base">{props.feedback}</div>
-      </div>
-      <div className="w-full bg-accentColor bottom-0 rounded-b-3xl">
-        <div className="w-full flex flex-col gap-3 justify-center items-center text-center leading-none -mt-10">
-          <div className="p-[7px] bg-darkPrimary rounded-[100%] relative">
+    <div className="w-full h-full bg-gray-200 flex flex-col gap-3 rounded-md shadow-md relative overflow-hidden p-5 text-darkBodyText">
+      <div className="w-full flex flex-row gap-5 items-center">
+        <div className="w-[90%] flex flex-col lg:flex-row gap-2 lg:items-center">
+          <div className="w-[20%]">
             <Avatar
               alt={props.client}
               src={props.image}
-              sx={{ width: 90, height: 90 }}
+              sx={{ width: 50, height: 50 }}
             />
-            <div className="w-7 h-7 top-[40px] -left-[27px] bg-darkPrimary absolute">
-              <div className="w-full h-full bg-accentColor rounded-tr-[100%]"></div>
-            </div>
-            <div className="w-7 h-7 top-[40px] -right-[27px] bg-darkPrimary absolute">
-              <div className="w-full h-full bg-accentColor rounded-tl-[100%]"></div>
-            </div>
           </div>
-          <div className="w-full flex flex-col gap-1 px-5 pb-5 text-darkSecondary leading-none uppercase">
-            <div className="text-lg  font-semibold text-darkPrimary uppercase">
+          <div className="w-[80%] flex flex-col gap-1">
+            <div className="text-base  font-semibold text-darkTitleText font-titleFont capitalize">
               {props.client}
             </div>
-            <div className="flex flex-col gap-[3px]">
-              <div className="">{props.company}</div>
-              <div className="text-xs font-light">{props.pos}</div>
+            <div className="flex flex-col gap-[3px] text-darkBodyText">
+              <div className="text-xs leading-none">{props.company}</div>
+              <div className="text-xs font-light leading-none">{props.pos}</div>
             </div>
           </div>
         </div>
+        <div className="w-[10%] text-4xl">{props.icon}</div>
       </div>
+      <div className="flex flex-row gap-1 text-xl text-[#ffcd00]">
+        <MdOutlineStar />
+        <MdOutlineStar />
+        <MdOutlineStar />
+        <MdOutlineStar />
+        <MdOutlineStar />
+      </div>
+      {!expand && props.feedback.length > 190 ? (
+        <div className="text-sm">
+          {props.feedback.substring(0, 191)}.....
+          <span
+            className="ps-1 font-medium underline underline-offset-2 cursor-pointer"
+            onClick={() => toggleExpand()}
+          >
+            Read More
+          </span>
+        </div>
+      ) : (
+        <div className="text-sm">
+          {props.feedback}.....
+          <span
+            className="ps-1 font-medium underline underline-offset-2 cursor-pointer"
+            onClick={() => toggleExpand()}
+          >
+            Read Less
+          </span>
+        </div>
+      )}
     </div>
   );
 }
