@@ -7,7 +7,7 @@ import Typography from "@mui/material/Typography";
 import React from "react";
 
 export default function AccordionTransition() {
-  const [expanded1, setExpanded1] = React.useState(false);
+  const [expanded1, setExpanded1] = React.useState(true);
   const [expanded2, setExpanded2] = React.useState(false);
   const [expanded3, setExpanded3] = React.useState(false);
   const [expanded4, setExpanded4] = React.useState(false);
@@ -34,9 +34,9 @@ export default function AccordionTransition() {
   };
 
   return (
-    <div className="py-10 lg:py-20 font-bodyFont text-lightBodyText bg-darkSecondary relative overflow-hidden">
+    <div className="py-10 lg:py-20 font-bodyFont text-lightBodyText bg-darkPrimary relative overflow-hidden">
       <div className="px-5 sm:px-7 lg:px-10 xl:px-20 flex flex-col lg:flex-row gap-7  lg:gap-10">
-        <div className="w-full lg:w-[40%] uppercase font-titleFont text-lightTitleText leading-none text-4xl lg:text-5xl font-bold flex flex-col gap-3">
+        <div className="w-full lg:w-[40%] uppercase font-bodyFont text-lightTitleText text-3xl sm:text-4xl lg:text-5xl font-bold flex flex-col gap-2">
           Frequently Asked Question
           <span>(FAQ)</span>
         </div>
@@ -72,7 +72,7 @@ export default function AccordionTransition() {
                 aria-controls="panel1-content"
                 id="panel1-header"
                 sx={{
-                  backgroundColor: "#1b1b1b",
+                  backgroundColor: "#121212",
                   color: "#ffffff",
                   borderBottomWidth: "1px",
                   borderColor: "#999999",
@@ -81,8 +81,8 @@ export default function AccordionTransition() {
                 <Typography
                   sx={{
                     fontFamily: "Poppins",
-                    fontWeight: 500,
-                    fontSize: "20px",
+                    fontWeight: 300,
+                    fontSize: "16px",
                   }}
                 >
                   How long does it take to complete a project?
@@ -90,14 +90,14 @@ export default function AccordionTransition() {
               </AccordionSummary>
               <AccordionDetails
                 sx={{
-                  backgroundColor: "#1b1b1b",
+                  backgroundColor: "#121212",
                   color: "#999999",
                 }}
               >
                 <Typography
                   sx={{
                     fontFamily: "Poppins",
-                    fontSize: "16px",
+                    fontSize: "14px",
                     fontWeight: 300,
                   }}
                 >
@@ -140,7 +140,7 @@ export default function AccordionTransition() {
                 aria-controls="panel2-content"
                 id="panel2-header"
                 sx={{
-                  backgroundColor: "#1b1b1b",
+                  backgroundColor: "#121212",
                   color: "#ffffff",
                   borderBottomWidth: "1px",
                   borderColor: "#999999",
@@ -149,8 +149,8 @@ export default function AccordionTransition() {
                 <Typography
                   sx={{
                     fontFamily: "Poppins",
-                    fontWeight: 500,
-                    fontSize: "20px",
+                    fontWeight: 300,
+                    fontSize: "16px",
                   }}
                 >
                   Do you provide ongoing support after the project is completed?
@@ -158,14 +158,14 @@ export default function AccordionTransition() {
               </AccordionSummary>
               <AccordionDetails
                 sx={{
-                  backgroundColor: "#1b1b1b",
+                  backgroundColor: "#121212",
                   color: "#999999",
                 }}
               >
                 <Typography
                   sx={{
                     fontFamily: "Poppins",
-                    fontSize: "16px",
+                    fontSize: "14px",
                     fontWeight: 300,
                   }}
                 >
@@ -208,7 +208,7 @@ export default function AccordionTransition() {
                 aria-controls="panel3-content"
                 id="panel3-header"
                 sx={{
-                  backgroundColor: "#1b1b1b",
+                  backgroundColor: "#121212",
                   color: "#ffffff",
                   borderBottomWidth: "1px",
                   borderColor: "#999999",
@@ -217,8 +217,8 @@ export default function AccordionTransition() {
                 <Typography
                   sx={{
                     fontFamily: "Poppins",
-                    fontWeight: 500,
-                    fontSize: "20px",
+                    fontWeight: 300,
+                    fontSize: "16px",
                   }}
                 >
                   Can you work with existing branding and design?
@@ -226,14 +226,14 @@ export default function AccordionTransition() {
               </AccordionSummary>
               <AccordionDetails
                 sx={{
-                  backgroundColor: "#1b1b1b",
+                  backgroundColor: "#121212",
                   color: "#999999",
                 }}
               >
                 <Typography
                   sx={{
                     fontFamily: "Poppins",
-                    fontSize: "16px",
+                    fontSize: "14px",
                     fontWeight: 300,
                   }}
                 >
@@ -276,7 +276,7 @@ export default function AccordionTransition() {
                 aria-controls="panel4-content"
                 id="panel4-header"
                 sx={{
-                  backgroundColor: "#1b1b1b",
+                  backgroundColor: "#121212",
                   color: "#ffffff",
                   borderBottomWidth: "1px",
                   borderColor: "#999999",
@@ -285,8 +285,8 @@ export default function AccordionTransition() {
                 <Typography
                   sx={{
                     fontFamily: "Poppins",
-                    fontWeight: 500,
-                    fontSize: "20px",
+                    fontWeight: 300,
+                    fontSize: "16px",
                   }}
                 >
                   What is your pricing structure?
@@ -294,14 +294,14 @@ export default function AccordionTransition() {
               </AccordionSummary>
               <AccordionDetails
                 sx={{
-                  backgroundColor: "#1b1b1b",
+                  backgroundColor: "#121212",
                   color: "#999999",
                 }}
               >
                 <Typography
                   sx={{
                     fontFamily: "Poppins",
-                    fontSize: "16px",
+                    fontSize: "14px",
                     fontWeight: 300,
                   }}
                 >
@@ -344,7 +344,7 @@ export default function AccordionTransition() {
                 aria-controls="panel5-content"
                 id="panel5-header"
                 sx={{
-                  backgroundColor: "#1b1b1b",
+                  backgroundColor: "#121212",
                   color: "#ffffff",
                   borderBottomWidth: "1px",
                   borderColor: "#999999",
@@ -353,8 +353,8 @@ export default function AccordionTransition() {
                 <Typography
                   sx={{
                     fontFamily: "Poppins",
-                    fontWeight: 500,
-                    fontSize: "20px",
+                    fontWeight: 300,
+                    fontSize: "16px",
                   }}
                 >
                   How do you measure the success of your projects?
@@ -362,14 +362,14 @@ export default function AccordionTransition() {
               </AccordionSummary>
               <AccordionDetails
                 sx={{
-                  backgroundColor: "#1b1b1b",
+                  backgroundColor: "#121212",
                   color: "#999999",
                 }}
               >
                 <Typography
                   sx={{
                     fontFamily: "Poppins",
-                    fontSize: "16px",
+                    fontSize: "14px",
                     fontWeight: 300,
                   }}
                 >
@@ -412,7 +412,7 @@ export default function AccordionTransition() {
                 aria-controls="panel6-content"
                 id="panel6-header"
                 sx={{
-                  backgroundColor: "#1b1b1b",
+                  backgroundColor: "#121212",
                   color: "#ffffff",
                   borderBottomWidth: "1px",
                   borderColor: "#999999",
@@ -421,8 +421,8 @@ export default function AccordionTransition() {
                 <Typography
                   sx={{
                     fontFamily: "Poppins",
-                    fontWeight: 500,
-                    fontSize: "20px",
+                    fontWeight: 300,
+                    fontSize: "16px",
                   }}
                 >
                   Do you offer custom solutions for unique business needs?
@@ -430,14 +430,14 @@ export default function AccordionTransition() {
               </AccordionSummary>
               <AccordionDetails
                 sx={{
-                  backgroundColor: "#1b1b1b",
+                  backgroundColor: "#121212",
                   color: "#999999",
                 }}
               >
                 <Typography
                   sx={{
                     fontFamily: "Poppins",
-                    fontSize: "16px",
+                    fontSize: "14px",
                     fontWeight: 300,
                   }}
                 >

@@ -9,7 +9,6 @@ export default {
       fontFamily: {
         bodyFont: ["Poppins", "sans-serif"],
         titleFont: ["Montserrat", "sans-serif"],
-        accentFont: ["Satisfy", "sans-serif"],
       },
       colors: {
         lightPrimary: "#FFFFFF",

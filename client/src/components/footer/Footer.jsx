@@ -4,7 +4,7 @@ import { IoLogoYoutube } from "react-icons/io";
 
 export default function Footer() {
   return (
-    <div className="mt-10 pt-16 lg:pt-20 font-bodyFont text-lightSecondary bg-darkPrimary">
+    <div className="mt-7 pt-10 lg:pt-20 font-bodyFont text-lightSecondary bg-darkPrimary">
       <div className="flex flex-col gap-10 px-5 sm:px-7 lg:px-10 xl:px-20">
         <div className="w-full flex flex-col lg:flex-row gap-10 xl:gap-20">
           <div className="w-full sm:w-[65%] lg:w-[45%] flex flex-col gap-3">

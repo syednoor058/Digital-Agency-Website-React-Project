@@ -1,62 +1,23 @@
-// // import React from 'react'
-// import TextField from "@mui/material/TextField";
-// import ctaImg from "../../assets/images/cta.png";
-// export default function CallToAction() {
-//   return (
-//     <div className="pt-6 pb-10 lg:pb-20 font-bodyFont text-darkSecondary bg-lightPrimary  ">
-//       <div className="w-full flex flex-row gap-5 bg-darkPrimary pt-5">
-//         <div className="uppercase flex flex-col gap-5 py-10 px-10 justify-center">
-//           <div className="flex flex-col gap-1 font-titleFont">
-//             <div className="text-lightPrimary text-5xl">
-//               Ready to <span className="font-extralight">Transform</span>
-//             </div>
-//             <div className="text-7xl text-lightPrimary font-bold">
-//               Your <span className="text-accentColor">Business</span>?
-//             </div>
-//           </div>
-//           <div className="flex flex-row">
-//             <TextField
-//               id="outlined-basic"
-//               label="Enter Email Address"
-//               variant="outlined"
-//               sx={{
-//                 "& .MuiOutlinedInput-root": {
-//                   borderRadius: 0,
-//                   "& fieldset": {
-//                     borderColor: "#ffffff", // Border color
-//                   },
-//                   "&:hover fieldset": {
-//                     borderColor: "#c8f31d", // Border color on hover
-//                   },
-//                   "&.Mui-focused fieldset": {
-//                     borderColor: "#c8f31d", // Border color when focused
-//                   },
-//                 },
-//                 input: {
-//                   color: "#ffffff", // Text color
-//                 },
-//                 "& .MuiInputLabel-root": {
-//                   color: "#B0C4DE", // Label color
-//                 },
-//                 "& .MuiInputLabel-root.Mui-focused": {
-//                   color: "#FFFFFF", // Label color when focused
-//                 },
-//                 width: "35ch",
-//               }}
-//             />
-//             <button className="flex justify-center items-center hover:bg-accentColor hover:text-darkPrimary hover:scale-[1.1] duration-500 rounded-sm bg-lightPrimary">
-//               <div className="w-full uppercase px-3 py-2  text-lg text-center">
-//                 Get Started
-//               </div>
-//             </button>
-//           </div>
-//         </div>
-//         <div className="w-[30%] flex justify-end">
-//           <div className="w-full aspect-square">
-//             <img className="w-full h-full" src={ctaImg} alt="call_to_action" />
-//           </div>
-//         </div>
-//       </div>
-//     </div>
-//   );
-// }
+import React from "react";
+import callToActionImg from "../../assets/images/call_to_action.png";
+
+export default function CallToAction() {
+  return (
+    <div className="w-full py-10 sm:py-14 lg:py-20 bg-darkSecondary flex justify-center items-center px-5 sm:px-7 lg:px-10 xl:px-20 relative">
+      <div className="h-full absolute right-0 opacity-60 lg:opacity-100">
+        <img className="h-full w-auto" src={callToActionImg} alt="" />
+      </div>
+      <div className="flex flex-col gap-1 lg:gap-3 relative">
+        <div className="uppercase text-lg sm:text-3xl lg:text-5xl font-bold text-center font-titleFont text-lightTitleText">
+          Let&apos;s start your experience
+        </div>
+        <div className="uppercase text-lg sm:text-3xl lg:text-5xl font-bold text-center font-titleFont text-lightTitleText">
+          With <span className="text-lightPrimary">Devion Ark</span>
+        </div>
+        <div className="uppercase font-titleFont font-light text-lightPrimary underline underline-offset-4 text-sm sm:text-base text-center pt-2 flex justify-center items-center gap-2">
+          Let&apos;s get in touch{" "}
+        </div>
+      </div>
+    </div>
+  );
+}
