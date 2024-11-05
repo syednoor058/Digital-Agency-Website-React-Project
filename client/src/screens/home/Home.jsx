@@ -2,6 +2,7 @@
 // import CallToAction from "../../components/callToAction/CallToAction";
 import CaseStudy from "../../components/caseStudy/CaseStudy";
 import Clients from "../../components/clients/Clients";
+import FAQ from "../../components/faq/FAQ";
 import Footer from "../../components/footer/Footer";
 import Hero3 from "../../components/hero/Hero3";
 import HowWeWork2 from "../../components/howWeWork/HowWeWork2";
@@ -22,6 +23,7 @@ export default function Home() {
       <WhyChooseUs />
       <Testimonials />
       {/* <CallToAction /> */}
+      <FAQ />
       <Footer />
     </div>
   );

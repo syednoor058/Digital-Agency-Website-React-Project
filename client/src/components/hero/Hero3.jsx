@@ -26,7 +26,7 @@ export default function Hero3() {
             phase of your project.
           </p>
           <div className="flex flex-row justify-center items-center gap-5 sm:gap-10">
-            <Link className="px-3 sm:px-5 py-2 bg-accentColor text-white rounded-full text-base sm:text-xl flex justify-center items-center">
+            <Link className="px-3 sm:px-5 py-2 bg-accentColor text-darkBodyText rounded-full text-base sm:text-xl flex justify-center items-center">
               Get Started{" "}
               <span className="ps-1">
                 <GoArrowRight />

@@ -44,7 +44,7 @@ export default function TestimonialCard(props) {
         <div className="text-sm">
           {props.feedback.substring(0, 191)}.....
           <span
-            className="ps-1 font-medium underline underline-offset-2 cursor-pointer"
+            className="ps-1 font-medium cursor-pointer"
             onClick={() => toggleExpand()}
           >
             Read More
@@ -54,7 +54,7 @@ export default function TestimonialCard(props) {
         <div className="text-sm">
           {props.feedback}.....
           <span
-            className="ps-1 font-medium underline underline-offset-2 cursor-pointer"
+            className="ps-1 font-medium cursor-pointer"
             onClick={() => toggleExpand()}
           >
             Read Less

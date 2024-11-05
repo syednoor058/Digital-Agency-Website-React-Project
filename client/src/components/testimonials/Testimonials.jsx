@@ -77,8 +77,8 @@ export default function Testimonials() {
   };
   return (
     <div className="pt-10 pb-20 lg:py-20 font-bodyFont text-lightBodyText bg-darkSecondary relative overflow-hidden">
-      <div className="w-full h-3/5 bg-accentColor absolute top-0 rounded-b-3xl"></div>
-      <div className="flex flex-col gap-10 xl:gap-20 relative">
+      <div className="w-full h-4/6 bg-accentColor absolute top-0 rounded-b"></div>
+      <div className="flex flex-col gap-7 md:gap-10 xl:gap-14 relative">
         <div className="flex flex-col sm:flex-row gap-5 px-5 sm:px-7 lg:px-10 xl:px-20">
           <div className="w-full sm:w-[30%] flex flex-row gap-3 sm:gap-10">
             <div className="uppercase font-semibold text-sm sm:text-lg text-darkSecondary">
@@ -91,7 +91,12 @@ export default function Testimonials() {
             <span className="text-lightPrimary font-light">Clients</span> Speak
           </div>
         </div>
-
+        <div className="w-full lg:w-[50%] text-sm sm:text-base text-darkBodyText px-5 sm:px-7 lg:px-10 xl:px-20">
+          We pride ourselves on building lasting partnerships with our clients.
+          Our commitment to excellence and innovation has transformed the way
+          they do business. Here's what some of them have to say about their
+          experience with us-
+        </div>
         <div className="px-5 sm:px-7 lg:px-10 xl:px-20">
           <Slider {...settings}>
             <div className="px-2 sm:px-3">

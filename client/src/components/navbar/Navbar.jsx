@@ -25,7 +25,7 @@ export default function Navbar() {
               }
             >
               Home
-              <div className="group-hover:translate-x-0 -translate-x-[105%] h-[2px] w-full bg-accentColor duration-[400ms]"></div>
+              <div className="group-hover:translate-x-0 -translate-x-[105%] h-[1px] w-full bg-accentColor duration-[400ms]"></div>
             </NavLink>
             <NavLink
               to="/services"
@@ -36,7 +36,7 @@ export default function Navbar() {
               }
             >
               Services
-              <div className="group-hover:translate-x-0 -translate-x-[105%] h-[2px] w-full bg-accentColor duration-[400ms]"></div>
+              <div className="group-hover:translate-x-0 -translate-x-[105%] h-[1px] w-full bg-accentColor duration-[400ms]"></div>
             </NavLink>
             <NavLink
               to="/projects"
@@ -47,7 +47,7 @@ export default function Navbar() {
               }
             >
               Projects
-              <div className="group-hover:translate-x-0 -translate-x-[105%] h-[2px] w-full bg-accentColor duration-[400ms]"></div>
+              <div className="group-hover:translate-x-0 -translate-x-[105%] h-[1px] w-full bg-accentColor duration-[400ms]"></div>
             </NavLink>
             <NavLink
               to="/pricing"
@@ -58,7 +58,7 @@ export default function Navbar() {
               }
             >
               Pricing
-              <div className="group-hover:translate-x-0 -translate-x-[105%] h-[2px] w-full bg-accentColor duration-[400ms]"></div>
+              <div className="group-hover:translate-x-0 -translate-x-[105%] h-[1px] w-full bg-accentColor duration-[400ms]"></div>
             </NavLink>
             <NavLink
               to="/about-us"
@@ -69,7 +69,7 @@ export default function Navbar() {
               }
             >
               About
-              <div className="group-hover:translate-x-0 -translate-x-[105%] h-[2px] w-full bg-accentColor duration-[400ms]"></div>
+              <div className="group-hover:translate-x-0 -translate-x-[105%] h-[1px] w-full bg-accentColor duration-[400ms]"></div>
             </NavLink>
             <NavLink
               to="/contact-us"
@@ -80,7 +80,7 @@ export default function Navbar() {
               }
             >
               Contact
-              <div className="group-hover:translate-x-0 -translate-x-[105%] h-[2px] w-full bg-accentColor duration-[400ms]"></div>
+              <div className="group-hover:translate-x-0 -translate-x-[105%] h-[1px] w-full bg-accentColor duration-[400ms]"></div>
             </NavLink>
           </div>
           <div className="w-[15%] px-3 py-2 border border-accentColor rounded-full flex justify-center items-center lg:text-sm">
@@ -98,7 +98,7 @@ export default function Navbar() {
               Free trial
             </div>
             <div
-              className="p-3 rounded border cursor-pointer"
+              className="p-2 rounded-full cursor-pointer text-lg"
               onClick={toggleMenu}
             >
               <RxHamburgerMenu />
@@ -111,7 +111,7 @@ export default function Navbar() {
           toggle ? "translate-x-0" : "-translate-x-[105%]"
         } duration-700 fixed z-[999]`}
       >
-        <div className="flex flex-col justify-center items-start lg:text-sm xl:text-base text-lightTitleText pt-10 divide-darkPrimary">
+        <div className="flex flex-col justify-center items-start lg:text-sm xl:text-base text-darkBodyText pt-10 divide-darkPrimary">
           <div className="w-full" onClick={toggleMenu}>
             <NavLink
               to="/"
