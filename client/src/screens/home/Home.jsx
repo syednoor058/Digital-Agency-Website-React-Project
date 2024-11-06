@@ -1,4 +1,5 @@
 // import React from 'react'
+import { useEffect } from "react";
 import CallToAction from "../../components/callToAction/CallToAction";
 import CaseStudy from "../../components/caseStudy/CaseStudy";
 import Clients from "../../components/clients/Clients";
@@ -12,6 +13,9 @@ import WhoWeAre from "../../components/whoWeAre/WhoWeAre";
 import WhyChooseUs from "../../components/whyChooseUs/WhyChooseUs";
 
 export default function Home() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  });
   return (
     <div className="pt-14 lg:pt-10 w-full h-full overflow-x-hidden bg-darkPrimary">
       <Hero3 />

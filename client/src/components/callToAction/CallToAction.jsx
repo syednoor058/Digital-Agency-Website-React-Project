@@ -3,7 +3,7 @@ import callToActionImg from "../../assets/images/call_to_action.png";
 
 export default function CallToAction() {
   return (
-    <div className="w-full py-10 sm:py-14 lg:py-20 bg-darkSecondary flex justify-center items-center px-5 sm:px-7 lg:px-10 xl:px-20 relative">
+    <div className="w-full py-20 bg-darkSecondary flex justify-center items-center px-5 sm:px-7 lg:px-10 xl:px-20 relative">
       <div className="h-full absolute right-0 opacity-60 lg:opacity-100">
         <img className="h-full w-auto" src={callToActionImg} alt="" />
       </div>
