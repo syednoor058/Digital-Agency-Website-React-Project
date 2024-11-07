@@ -16,6 +16,9 @@ export default function Home() {
   useEffect(() => {
     window.scrollTo(0, 0);
   });
+  useEffect(() => {
+    document.title = "Home - Best Agency in Affordable Budget | Devion Ark";
+  }, []);
   return (
     <div className="pt-14 lg:pt-10 w-full h-full overflow-x-hidden bg-darkPrimary">
       <Hero3 />

@@ -20,9 +20,13 @@ export default function Services() {
   useEffect(() => {
     window.scrollTo(0, 0);
   });
+  useEffect(() => {
+    document.title =
+      "Services - Best Service Delivery in Affordable Budget | Devion Ark";
+  }, []);
   return (
     <div className="pt-14 lg:pt-10 w-full overflow-x-hidden bg-darkPrimary text-lightBodyText font-bodyFont">
-      <div className="pt-10 lg:pt-20 flex flex-col  gap-10 sm:gap-14  md:gap-20 lg:gap-32">
+      <div className="pt-10 lg:pt-20 flex flex-col  gap-10 sm:gap-14  md:gap-20 lg:gap-28">
         {/* Hero Section */}
         <div className="px-5 sm:px-7 lg:px-10 xl:px-20">
           <div className="flex flex-col lg:flex-row gap-5 sm:gap-7 md:gap-10 lg:gap-20">
@@ -404,10 +408,12 @@ export default function Services() {
           </div>
         </div>
 
-        {/* Call To Action Section */}
-        <CallToAction />
-        {/* Footer Section */}
-        <Footer />
+        <div className="flex flex-col">
+          {/* Call To Action Section */}
+          <CallToAction />
+          {/* Footer Section */}
+          <Footer />
+        </div>
       </div>
     </div>
   );
