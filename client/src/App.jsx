@@ -18,33 +18,61 @@ export default function App() {
   useLayoutEffect(() => {
     let ctx = gsap.context(() => {
       const t1 = gsap.timeline();
-      t1.from("#intro-slider", {
+      t1.from("#intro-end-shutter", {
         yPercent: "-100",
         duration: 1,
-        delay: 0.3,
-        ease: "expoScale(0.5,7,none)",
+        ease: "expo.inOut",
+        delay: 0.5,
       })
-        .from(["#title1", "#title2", "#title3", "#title4", "#title5"], {
-          opacity: 0,
-          y: "+=30",
-          stagger: 0.3,
-        })
-        .to(["#title1", "#title2", "#title3", "#title4", "#title5"], {
-          opacity: 0,
-          y: "-=30",
-          delay: 0.3,
-          stagger: 0.3,
-        })
-        .to("#intro-slider", {
-          yPercent: "100",
-          duration: 1,
-          ease: "expoScale(0.5,7,none)",
-        })
-        .from("#main-container", {
-          opacity: 0,
-          duration: 1,
-          delay: 0.1,
-        });
+        .from(
+          [
+            "#intro-title",
+            "#intro-title1",
+            "#intro-title2",
+            "#intro-title3",
+            "#intro-title4",
+          ],
+          {
+            opacity: 0,
+            y: "+=30",
+            duration: 0.3,
+            stagger: 0.1,
+          }
+        )
+        .to(
+          [
+            "#intro-title",
+            "#intro-title1",
+            "#intro-title2",
+            "#intro-title3",
+            "#intro-title4",
+          ],
+          {
+            opacity: 0,
+            y: "-=30",
+            delay: 0.5,
+            duration: 0.3,
+            stagger: 0.1,
+          }
+        )
+        .to(
+          "#intro-end-shutter",
+          {
+            yPercent: "100",
+            duration: 1,
+            ease: "expo.inOut",
+          },
+          "<0.5"
+        )
+        .to(
+          "#intro-end",
+          {
+            yPercent: "100",
+            duration: 0.5,
+            ease: "expo.inOut",
+          },
+          "<0.7"
+        );
     }, comp);
 
     return () => ctx.revert();
@@ -53,17 +81,27 @@ export default function App() {
     <BrowserRouter>
       <div className="relative bg-darkPrimary" ref={comp}>
         <div
-          id="intro-slider"
-          className="w-full h-screen flex  justify-center items-center bg-accentColor fixed top-0 z-[200000] overflow-hidden"
+          id="intro-end-shutter"
+          className="w-full h-screen bg-darkPrimary fixed z-[1900] px-5 flex  justify-center items-center overflow-hidden text-center top-0 left-0 text-lightPrimary uppercase font-bold text-[4vw] leading-none"
         >
-          <div className="flex flex-col gap-5 mx-5 text-3xl sm:text-[10vh] md:text-[8vh] lg:text-[10vh] xl:text-[13vh] text-darkTitleText font-bodyFont uppercase leading-none font-extrabold">
-            <h1 id="title1">Software Development</h1>
-            <h1 id="title2">Digital Marketing</h1>
-            <h1 id="title3">Search Engine Optimization</h1>
-            <h1 id="title4">Data Analytics & Insights</h1>
-            <h1 id="title5">Quality Assurance</h1>
+          <div className="flex flex-row gap-5 justify-center items-center">
+            <div id="intro-title">Envision</div>
+            <div
+              id="intro-title1"
+              className="w-[1vw] h-[1vw] bg-accentColor"
+            ></div>
+            <div id="intro-title2">Elevate</div>
+            <div
+              id="intro-title3"
+              className="w-[1vw] h-[1vw] bg-accentColor"
+            ></div>
+            <div id="intro-title4">Empower</div>
           </div>
         </div>
+        <div
+          id="intro-end"
+          className="w-full min-h-screen bg-accentColor fixed top-0 left-0 z-[1800]"
+        ></div>
         <div id="main-container">
           <div className="w-full fixed top-0 z-[1000] bg-lightPrimary bg-opacity-90 backdrop-blur-[6px]">
             <Navbar />
