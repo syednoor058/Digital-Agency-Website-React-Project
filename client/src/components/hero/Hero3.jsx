@@ -1,4 +1,6 @@
-import React from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import React, { useLayoutEffect, useRef } from "react";
 import { GoArrowRight, GoClock } from "react-icons/go";
 import { IoIosPlayCircle } from "react-icons/io";
 import { IoPersonOutline } from "react-icons/io5";
@@ -7,32 +9,116 @@ import { Link } from "react-router-dom";
 import heroImg1 from "../../assets/images/hero1.png";
 import heroImg2 from "../../assets/images/hero2.png";
 
+// Register ScrollTrigger with GSAP
+gsap.registerPlugin(ScrollTrigger);
+
 export default function Hero3() {
+  const comp = useRef(null);
+  useLayoutEffect(() => {
+    let ctx = gsap.context(() => {
+      const heroTimeline = gsap.timeline();
+      heroTimeline
+        .from("#bg-second", {
+          xPercent: "100",
+          duration: 1,
+          delay: 4.1,
+          ease: "expo.inOut",
+        })
+        .from(
+          ["#hero-title", "#hero-title-2"],
+          {
+            y: "+=30",
+            duration: 0.5,
+            ease: "expo.inOut",
+            opacity: 0,
+            stagger: 0.2,
+          },
+          "<0.2"
+        )
+        .from(
+          "#hero-desc",
+          {
+            y: "+=30",
+            duration: 0.5,
+            ease: "expo.inOut",
+            opacity: 0,
+          },
+          "<0.2"
+        )
+        .from(
+          "#hero-btn-1",
+          {
+            y: "+=30",
+            duration: 0.5,
+            ease: "expo.inOut",
+            opacity: 0,
+            scrollTrigger: {
+              trigger: "#hero-btn-1",
+              start: "top 90%", // Adjust based on when you want it to start
+            },
+          },
+          "<0.2"
+        )
+        .from(
+          "#hero-btn-2",
+          {
+            y: "+=30",
+            duration: 0.5,
+            ease: "expo.inOut",
+            opacity: 0,
+            // scrollTrigger: {
+            //   trigger: "#hero-btn-2",
+            //   start: "top 90%", // Adjust based on when you want it to start
+            // },
+          },
+          "<0.2"
+        );
+    }, comp);
+
+    return () => ctx.revert();
+  }, []);
   return (
-    <div className="w-full min-h-screen font-bodyFont text-lightBodyText   bg-darkPrimary relative">
-      <div className="w-[40%] hidden lg:flex h-full bg-darkSecondary absolute z-[2] right-0"></div>
+    <div
+      ref={comp}
+      className="w-full min-h-screen font-bodyFont text-lightBodyText   bg-darkPrimary relative"
+    >
+      <div
+        id="bg-second"
+        className="w-[40%] hidden lg:flex h-full bg-darkSecondary absolute z-[2] right-0"
+      ></div>
       <div className="w-full h-full px-5 sm:px-7 lg:px-10 xl:px-20 py-10 lg:pt-24 lg:pb-10 relative z-[5] backdrop-blur-[1px] flex flex-col gap-10 md:gap-16">
         <div className="flex flex-col gap-5 md:gap-7">
           <div className="uppercase font-titleFont font-bold text-[28px] sm:text-5xl leading-none text-center text-lightTitleText">
-            <h1 className="font-light">Transforming Your ideas into</h1>
-            <h1 className="text-[35px] sm:text-6xl md:text-7xl">
+            <h1 id="hero-title" className="font-light overflow-hidden">
+              Transforming Your ideas into
+            </h1>
+            <h1
+              id="hero-title-2"
+              className="text-[35px] sm:text-6xl md:text-7xl"
+            >
               Digital <span className="text-accentColor">reality</span>
             </h1>
           </div>
-          <p className="text-center text-sm sm:text-lg">
+          <p id="hero-desc" className="text-center text-sm sm:text-lg">
             Driven by innovation and client-focused solutions, we elevate brands
             with seamless digital experiences. From tailored software design to
             strategic digital marketing, our team brings expertise to every
             phase of your project.
           </p>
           <div className="flex flex-row justify-center items-center gap-5 sm:gap-10">
-            <Link className="px-3 sm:px-5 py-2 bg-accentColor text-darkBodyText rounded-full text-base sm:text-xl flex justify-center items-center">
+            <Link
+              id="hero-btn-1"
+              className="px-3 sm:px-5 py-2 bg-accentColor text-darkBodyText rounded-full text-base sm:text-xl flex justify-center items-center"
+            >
               Get Started{" "}
               <span className="ps-1">
                 <GoArrowRight />
               </span>
             </Link>
-            <div className="flex justify-center items-center text-base sm:text-xl border border-accentColor rounded-full px-3 sm:px-5 py-2">
+            <div
+              id="hero-btn-2"
+              className="flex justify-center items-center text-base sm:text-xl border border-accentColor rounded-full px-3 sm:px-5 py-2"
+            >
               Watch Video{" "}
               <span className="ps-1">
                 <IoIosPlayCircle />

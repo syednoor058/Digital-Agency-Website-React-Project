@@ -16,33 +16,33 @@ export default function Navbar() {
       const navTimeline = gsap.timeline();
       navTimeline
         .from(["#navLogo", "#mobile-nav0", "#mobile-nav1", "#mobile-nav2"], {
-          yPercent: "-=30",
+          yPercent: "+=30",
           opacity: 0,
           delay: 4.1,
-          duration: 0.4,
+          duration: 0.5,
           ease: "expo.inOut",
           stagger: 0.1,
         })
         .from(
           ["#nav0", "#nav1", "#nav2", "#nav3", "#nav4", "#nav5"],
           {
-            y: "-=30",
+            y: "+=30",
             opacity: 0,
-            duration: 0.3,
+            duration: 0.5,
             ease: "expo.inOut",
             stagger: 0.1,
           },
-          "<0.3"
+          "<"
         )
         .from(
           "#nav-cta",
           {
-            yPercent: "-=30",
+            yPercent: "+=30",
             opacity: 0,
-            duration: 0.3,
+            duration: 0.5,
             ease: "expo.inOut",
           },
-          "<0.7"
+          "<"
         );
     }, comp);
 

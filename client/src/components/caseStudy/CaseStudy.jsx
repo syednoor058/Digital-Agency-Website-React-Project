@@ -44,9 +44,9 @@ export default function CaseStudy() {
             <div className="w-[90%] flex flex-col gap-5">
               <div className="flex flex-col gap-2">
                 <div className="uppercase text-lightPrimary font-light text-lg">
-                  Sportwear E-commerce Web Application
+                  Sportswear E-commerce Web Application
                 </div>
-                <div className="text-sm">
+                <div className="text-sm font-extralight">
                   Developed a house price prediction model using machine
                   learning algorithms. Built a user-friendly website with
                   React.js and FastAPI for the backend.
