@@ -1,5 +1,4 @@
 import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import React, { useLayoutEffect, useRef } from "react";
 import { GoArrowRight, GoClock } from "react-icons/go";
 import { IoIosPlayCircle } from "react-icons/io";
@@ -10,7 +9,7 @@ import heroImg1 from "../../assets/images/hero1.png";
 import heroImg2 from "../../assets/images/hero2.png";
 
 // Register ScrollTrigger with GSAP
-gsap.registerPlugin(ScrollTrigger);
+// gsap.registerPlugin(ScrollTrigger);
 
 export default function Hero3() {
   const comp = useRef(null);
@@ -24,18 +23,20 @@ export default function Hero3() {
       });
       heroTimeline
         .from("#bg-second", {
-          xPercent: "100",
+          // xPercent: "100",
+
           delay: 4.4,
-          duration: 1,
+          duration: 0.6,
           ease: "expo.inOut",
         })
         .from(
           ["#hero-title", "#hero-title-2"],
           {
-            y: "+=30",
-            duration: 0.5,
+            y: "+=20",
+            duration: 1,
             ease: "expo.inOut",
             opacity: 0,
+
             stagger: 0.2,
           },
           "<0.2"
@@ -43,9 +44,10 @@ export default function Hero3() {
         .from(
           "#hero-desc",
           {
-            y: "+=30",
-            duration: 0.5,
+            y: "+=20",
+            duration: 0.3,
             ease: "expo.inOut",
+
             opacity: 0,
           },
           "<0.2"
@@ -53,8 +55,8 @@ export default function Hero3() {
         .from(
           "#hero-btn-1",
           {
-            y: "+=30",
-            duration: 0.5,
+            y: "+=20",
+            duration: 0.3,
             ease: "expo.inOut",
             opacity: 0,
           },
@@ -63,8 +65,8 @@ export default function Hero3() {
         .from(
           "#hero-btn-2",
           {
-            y: "+=30",
-            duration: 0.5,
+            y: "+=20",
+            duration: 0.3,
             ease: "expo.inOut",
             opacity: 0,
           },
@@ -73,8 +75,9 @@ export default function Hero3() {
         .from(
           ["#exp-1", "#exp-2"],
           {
-            y: "+=30",
-            duration: 0.5,
+            y: "+=20",
+            duration: 0.4,
+
             ease: "expo.inOut",
             opacity: 0,
             stagger: 0.2,
@@ -84,39 +87,59 @@ export default function Hero3() {
         .from(
           ["#client-1", "#client-2"],
           {
-            y: "+=30",
-            duration: 0.5,
+            y: "+=20",
+            duration: 0.4,
             ease: "expo.inOut",
+
             opacity: 0,
             stagger: 0.2,
           },
           "<0.2"
+        )
+        .from(
+          "#pro-1",
+          {
+            y: "+=20",
+            duration: 0.2,
+            ease: "expo.inOut",
+            opacity: 0,
+          },
+          "<0.2"
+        )
+        .from(
+          "#pro-2",
+          {
+            y: "+=20",
+            duration: 0.2,
+            ease: "expo.inOut",
+            opacity: 0,
+          },
+          "<0.2"
         );
-
-      heroTimeline.add(() => {
-        gsap.from("#pro-1", {
-          y: "+=30",
-          duration: 0.5,
-          ease: "expo.inOut",
-          opacity: 0,
-          rotateX: "-90",
-          scrollTrigger: {
-            trigger: "#pro-1",
-            start: "top bottom",
-          },
-        });
-        gsap.from("#pro-2", {
-          y: "+=20",
-          duration: 0.5,
-          ease: "expo.inOut",
-          opacity: 0,
-          rotateX: "-90",
-          scrollTrigger: {
-            trigger: "#pro-2",
-            start: "top bottom",
-          },
-        });
-      }, comp.current);
+      gsap.to("#hero-img-1-cover", {
+        xPercent: "100",
+        duration: 1,
+        ease: "expo.inOut",
+        delay: 4.8,
+      });
+      gsap.from("#hero-img-1", {
+        scale: 1.1,
+        duration: 1,
+        ease: "expo.inOut",
+        delay: 4.8,
+      });
+      gsap.to("#hero-img-2-cover", {
+        xPercent: "100",
+        duration: 1,
+        ease: "expo.inOut",
+        delay: 4.8,
+      });
+      gsap.from("#hero-img-2", {
+        scale: 1.1,
+        duration: 1,
+        ease: "expo.inOut",
+        delay: 4.8,
+      });
     }, comp);
 
     return () => ctx.revert();
@@ -127,10 +150,10 @@ export default function Hero3() {
       id="landing-hero"
       className="w-full min-h-screen font-bodyFont text-lightBodyText   bg-darkPrimary relative"
     >
-      <div
+      {/* <div
         id="bg-second"
-        className="w-[40%] hidden lg:flex h-full bg-darkSecondary absolute z-[2] right-0"
-      ></div>
+        className="w-[40%] hidden lg:flex h-full bg-darkSecondary absolute z-[2] left-0"
+      ></div> */}
       <div className="w-full h-full px-5 sm:px-7 lg:px-10 xl:px-20 py-10 lg:pt-24 lg:pb-10 relative z-[5] backdrop-blur-[1px] flex flex-col gap-10 md:gap-16">
         <div className="flex flex-col gap-5 md:gap-7">
           <div className="uppercase font-titleFont font-bold text-[28px] sm:text-5xl leading-none text-center text-lightTitleText">
@@ -224,12 +247,26 @@ export default function Hero3() {
             </div>
           </div>
           <div className="w-full lg:w-[60%] grid grid-cols-2 gap-1 lg:gap-5">
-            <div className="flex justify-center items-end">
-              <img className="w-full h-auto" src={heroImg1} alt="businessman" />
-            </div>
-            <div className="flex justify-center items-end">
+            <div className="flex justify-center items-end relative overflow-hidden">
+              <div
+                id="hero-img-1-cover"
+                className="w-full h-full bg-darkPrimary absolute top-0 left-0 z-[5]"
+              ></div>
               <img
-                className="w-full h-auto"
+                id="hero-img-1"
+                className="w-full h-auto z-[2]"
+                src={heroImg1}
+                alt="businessman"
+              />
+            </div>
+            <div className="flex justify-center items-end relative overflow-hidden">
+              <div
+                id="hero-img-2-cover"
+                className="w-full h-full bg-darkPrimary absolute top-0 left-0 z-[5]"
+              ></div>
+              <img
+                id="hero-img-2"
+                className="w-full h-auto z-[2]"
                 src={heroImg2}
                 alt="google_review"
               />

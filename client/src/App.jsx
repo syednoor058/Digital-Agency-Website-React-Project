@@ -36,7 +36,7 @@ export default function App() {
             "#intro-title4",
           ],
           {
-            y: "+=30",
+            y: "+=15",
             opacity: 0,
             duration: 0.3,
             ease: "expo.inOut",
@@ -53,7 +53,7 @@ export default function App() {
             "#intro-title4",
           ],
           {
-            y: "-=30",
+            y: "-=15",
             opacity: 0,
             delay: 0.5,
             duration: 0.3,
