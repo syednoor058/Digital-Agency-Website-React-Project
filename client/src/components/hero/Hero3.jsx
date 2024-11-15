@@ -16,12 +16,17 @@ export default function Hero3() {
   const comp = useRef(null);
   useLayoutEffect(() => {
     let ctx = gsap.context(() => {
-      const heroTimeline = gsap.timeline();
+      const heroTimeline = gsap.timeline({
+        scrollTrigger: {
+          trigger: "#landing-hero",
+          start: "top 90%",
+        },
+      });
       heroTimeline
         .from("#bg-second", {
           xPercent: "100",
+          delay: 4.4,
           duration: 1,
-          delay: 4.1,
           ease: "expo.inOut",
         })
         .from(
@@ -52,10 +57,6 @@ export default function Hero3() {
             duration: 0.5,
             ease: "expo.inOut",
             opacity: 0,
-            scrollTrigger: {
-              trigger: "#hero-btn-1",
-              start: "top 90%", // Adjust based on when you want it to start
-            },
           },
           "<0.2"
         )
@@ -66,13 +67,56 @@ export default function Hero3() {
             duration: 0.5,
             ease: "expo.inOut",
             opacity: 0,
-            // scrollTrigger: {
-            //   trigger: "#hero-btn-2",
-            //   start: "top 90%", // Adjust based on when you want it to start
-            // },
+          },
+          "<0.2"
+        )
+        .from(
+          ["#exp-1", "#exp-2"],
+          {
+            y: "+=30",
+            duration: 0.5,
+            ease: "expo.inOut",
+            opacity: 0,
+            stagger: 0.2,
+          },
+          "<0.2"
+        )
+        .from(
+          ["#client-1", "#client-2"],
+          {
+            y: "+=30",
+            duration: 0.5,
+            ease: "expo.inOut",
+            opacity: 0,
+            stagger: 0.2,
           },
           "<0.2"
         );
+
+      heroTimeline.add(() => {
+        gsap.from("#pro-1", {
+          y: "+=30",
+          duration: 0.5,
+          ease: "expo.inOut",
+          opacity: 0,
+          rotateX: "-90",
+          scrollTrigger: {
+            trigger: "#pro-1",
+            start: "top bottom",
+          },
+        });
+        gsap.from("#pro-2", {
+          y: "+=20",
+          duration: 0.5,
+          ease: "expo.inOut",
+          opacity: 0,
+          rotateX: "-90",
+          scrollTrigger: {
+            trigger: "#pro-2",
+            start: "top bottom",
+          },
+        });
+      }, comp.current);
     }, comp);
 
     return () => ctx.revert();
@@ -80,6 +124,7 @@ export default function Hero3() {
   return (
     <div
       ref={comp}
+      id="landing-hero"
       className="w-full min-h-screen font-bodyFont text-lightBodyText   bg-darkPrimary relative"
     >
       <div
@@ -130,37 +175,49 @@ export default function Hero3() {
           <div className="w-full lg:w-[40%] flex flex-col gap-7 xl:gap-16">
             <div className="flex flex-row gap-7 xl:gap-16 justify-center">
               <div className="w-[50%] flex items-center flex-col gap-2 ">
-                <div className="text-3xl sm:text-5xl font-medium flex gap-2 justify-center items-center">
+                <div
+                  id="exp-1"
+                  className="text-3xl sm:text-5xl font-medium flex gap-2 justify-center items-center"
+                >
                   <span className="text-5xl sm:text-6xl text-accentColor">
                     <GoClock />
                   </span>
                   3+
                 </div>
-                <div className="text-center text-sm sm:text-base">
+                <div id="exp-2" className="text-center text-sm sm:text-base">
                   Years of Experience
                 </div>
               </div>
               <div className="w-[50%] items-center flex flex-col gap-2">
-                <div className="text-3xl sm:text-5xl font-medium flex gap-2 justify-center items-center">
+                <div
+                  id="client-1"
+                  className="text-3xl sm:text-5xl font-medium flex gap-2 justify-center items-center"
+                >
                   <span className="text-5xl sm:text-6xl text-accentColor">
                     <IoPersonOutline />
                   </span>
                   12
                 </div>
-                <div className="w-full text-center text-sm sm:text-base">
+                <div
+                  id="client-2"
+                  className="w-full text-center text-sm sm:text-base"
+                >
                   Satisfied Clients All Over the World
                 </div>
               </div>
             </div>
             <div className="flex justify-center">
               <div className="flex flex-col gap-2 ">
-                <div className="text-3xl sm:text-5xl font-medium flex gap-2 justify-center items-center">
+                <div
+                  id="pro-1"
+                  className="text-3xl sm:text-5xl font-medium flex gap-2 justify-center items-center"
+                >
                   <span className="text-5xl sm:text-6xl text-accentColor">
                     <RiTaskLine />
                   </span>
                   20
                 </div>
-                <div className="text-center text-sm sm:text-base">
+                <div id="pro-2" className="text-center text-sm sm:text-base">
                   Projects Completed Successfully
                 </div>
               </div>
