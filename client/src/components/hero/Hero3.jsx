@@ -32,9 +32,9 @@ export default function Hero3() {
         .from(
           ["#hero-title", "#hero-title-2"],
           {
-            y: "+=20",
-            duration: 1,
-            ease: "expo.inOut",
+            translateY: "100%",
+            duration: 0.5,
+            ease: "power2.inOut",
             opacity: 0,
 
             stagger: 0.2,
@@ -44,7 +44,7 @@ export default function Hero3() {
         .from(
           "#hero-desc",
           {
-            y: "+=20",
+            translateY: "100%",
             duration: 0.3,
             ease: "expo.inOut",
 
@@ -55,7 +55,7 @@ export default function Hero3() {
         .from(
           "#hero-btn-1",
           {
-            y: "+=20",
+            translateY: "100%",
             duration: 0.3,
             ease: "expo.inOut",
             opacity: 0,
@@ -65,7 +65,7 @@ export default function Hero3() {
         .from(
           "#hero-btn-2",
           {
-            y: "+=20",
+            translateY: "100%",
             duration: 0.3,
             ease: "expo.inOut",
             opacity: 0,
@@ -75,31 +75,31 @@ export default function Hero3() {
         .from(
           ["#exp-1", "#exp-2"],
           {
-            y: "+=20",
+            translateY: "100%",
             duration: 0.4,
 
             ease: "expo.inOut",
             opacity: 0,
             stagger: 0.2,
           },
-          "<0.2"
+          "<0.1"
         )
         .from(
           ["#client-1", "#client-2"],
           {
-            y: "+=20",
+            translateY: "100%",
             duration: 0.4,
             ease: "expo.inOut",
 
             opacity: 0,
             stagger: 0.2,
           },
-          "<0.2"
+          "<0.1"
         )
         .from(
           "#pro-1",
           {
-            y: "+=20",
+            translateY: "100%",
             duration: 0.2,
             ease: "expo.inOut",
             opacity: 0,
@@ -109,7 +109,7 @@ export default function Hero3() {
         .from(
           "#pro-2",
           {
-            y: "+=20",
+            translateY: "100%",
             duration: 0.2,
             ease: "expo.inOut",
             opacity: 0,
@@ -123,7 +123,7 @@ export default function Hero3() {
         delay: 4.8,
       });
       gsap.from("#hero-img-1", {
-        scale: 1.1,
+        scale: 1.5,
         duration: 1,
         ease: "expo.inOut",
         delay: 4.8,
@@ -132,13 +132,13 @@ export default function Hero3() {
         xPercent: "100",
         duration: 1,
         ease: "expo.inOut",
-        delay: 4.8,
+        delay: 5,
       });
       gsap.from("#hero-img-2", {
-        scale: 1.1,
+        scale: 1.5,
         duration: 1,
         ease: "expo.inOut",
-        delay: 4.8,
+        delay: 5,
       });
     }, comp);
 
@@ -157,21 +157,24 @@ export default function Hero3() {
       <div className="w-full h-full px-5 sm:px-7 lg:px-10 xl:px-20 py-10 lg:pt-24 lg:pb-10 relative z-[5] backdrop-blur-[1px] flex flex-col gap-10 md:gap-16">
         <div className="flex flex-col gap-5 md:gap-7">
           <div className="uppercase font-titleFont font-bold text-[28px] sm:text-5xl leading-none text-center text-lightTitleText">
-            <h1 id="hero-title" className="font-light overflow-hidden">
-              Transforming Your ideas into
+            <h1 className="font-light overflow-hidden">
+              <span id="hero-title" className="inline-block">
+                Transforming Your ideas into
+              </span>
             </h1>
-            <h1
-              id="hero-title-2"
-              className="text-[35px] sm:text-6xl md:text-7xl"
-            >
-              Digital <span className="text-accentColor">reality</span>
+            <h1 className="text-[35px] sm:text-6xl md:text-7xl overflow-hidden">
+              <span id="hero-title-2" className="inline-block">
+                Digital <span className="text-accentColor">reality</span>
+              </span>
             </h1>
           </div>
-          <p id="hero-desc" className="text-center text-sm sm:text-lg">
-            Driven by innovation and client-focused solutions, we elevate brands
-            with seamless digital experiences. From tailored software design to
-            strategic digital marketing, our team brings expertise to every
-            phase of your project.
+          <p className="text-center text-sm sm:text-lg overflow-hidden">
+            <span id="hero-desc" className="inline-block">
+              Driven by innovation and client-focused solutions, we elevate
+              brands with seamless digital experiences. From tailored software
+              design to strategic digital marketing, our team brings expertise
+              to every phase of your project.
+            </span>
           </p>
           <div className="flex flex-row justify-center items-center gap-5 sm:gap-10">
             <Link
@@ -198,34 +201,39 @@ export default function Hero3() {
           <div className="w-full lg:w-[40%] flex flex-col gap-7 xl:gap-16">
             <div className="flex flex-row gap-7 xl:gap-16 justify-center">
               <div className="w-[50%] flex items-center flex-col gap-2 ">
-                <div
-                  id="exp-1"
-                  className="text-3xl sm:text-5xl font-medium flex gap-2 justify-center items-center"
-                >
-                  <span className="text-5xl sm:text-6xl text-accentColor">
-                    <GoClock />
+                <div className="text-3xl sm:text-5xl font-medium overflow-hidden">
+                  <span
+                    id="exp-1"
+                    className="flex gap-2 justify-center items-center"
+                  >
+                    <span className="text-5xl sm:text-6xl text-accentColor">
+                      <GoClock />
+                    </span>
+                    3+
                   </span>
-                  3+
                 </div>
-                <div id="exp-2" className="text-center text-sm sm:text-base">
-                  Years of Experience
+                <div className="text-center text-sm sm:text-base overflow-hidden">
+                  <span id="exp-2" className="inline-block">
+                    Years of Experience
+                  </span>
                 </div>
               </div>
               <div className="w-[50%] items-center flex flex-col gap-2">
-                <div
-                  id="client-1"
-                  className="text-3xl sm:text-5xl font-medium flex gap-2 justify-center items-center"
-                >
-                  <span className="text-5xl sm:text-6xl text-accentColor">
-                    <IoPersonOutline />
+                <div className="text-3xl sm:text-5xl font-medium overflow-hidden">
+                  <span
+                    id="client-1"
+                    className="flex gap-2 justify-center items-center"
+                  >
+                    <span className="text-5xl sm:text-6xl text-accentColor">
+                      <IoPersonOutline />
+                    </span>
+                    12
                   </span>
-                  12
                 </div>
-                <div
-                  id="client-2"
-                  className="w-full text-center text-sm sm:text-base"
-                >
-                  Satisfied Clients All Over the World
+                <div className="w-full text-center text-sm sm:text-base overflow-hidden">
+                  <span id="client-2" className="inline-block">
+                    Satisfied Clients All Over the World
+                  </span>
                 </div>
               </div>
             </div>

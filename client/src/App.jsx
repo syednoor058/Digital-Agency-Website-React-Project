@@ -36,7 +36,7 @@ export default function App() {
             "#intro-title4",
           ],
           {
-            y: "+=15",
+            translateY: "100%",
             opacity: 0,
             duration: 0.3,
             ease: "expo.inOut",
@@ -53,12 +53,12 @@ export default function App() {
             "#intro-title4",
           ],
           {
-            y: "-=15",
+            translateY: "-100%",
             opacity: 0,
             delay: 0.5,
             duration: 0.3,
             ease: "expo.inOut",
-            rotateX: "90",
+
             stagger: 0.1,
           }
         )
@@ -88,17 +88,33 @@ export default function App() {
           className="w-full h-screen bg-darkPrimary fixed z-[1900] px-5 flex justify-center items-center overflow-hidden text-center top-0 left-0 text-lightPrimary uppercase font-bold text-[4vw] leading-none"
         >
           <div className="flex flex-row gap-5 justify-center items-center">
-            <div id="intro-title">Envision</div>
-            <div
-              id="intro-title1"
-              className="w-[1vw] h-[1vw] bg-accentColor"
-            ></div>
-            <div id="intro-title2">Elevate</div>
-            <div
-              id="intro-title3"
-              className="w-[1vw] h-[1vw] bg-accentColor"
-            ></div>
-            <div id="intro-title4">Empower</div>
+            <div className="overflow-hidden">
+              <span id="intro-title" className="inline-block">
+                Envision
+              </span>
+            </div>
+            <div className="overflow-hidden">
+              <div
+                id="intro-title1"
+                className="w-[1vw] h-[1vw] bg-accentColor"
+              ></div>
+            </div>
+            <div className="overflow-hidden">
+              <span id="intro-title2" className="inline-block">
+                Elevate
+              </span>
+            </div>
+            <div className="overflow-hidden">
+              <div
+                id="intro-title3"
+                className="w-[1vw] h-[1vw] bg-accentColor"
+              ></div>
+            </div>
+            <div className="overflow-hidden">
+              <span className="inline-block" id="intro-title4">
+                Empower
+              </span>
+            </div>
           </div>
         </div>
         <div

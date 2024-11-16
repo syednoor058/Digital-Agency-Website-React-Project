@@ -11,7 +11,7 @@ export default function CaseStudy() {
     <div className="py-10 lg:py-20 font-bodyFont text-lightSecondary bg-darkPrimary">
       <div className="flex flex-col gap-7 sm:gap-10 lg:gap-16 px-5 sm:px-7 lg:px-10 xl:px-20">
         <div className="flex flex-row gap-2 items-center">
-          <div className="uppercase font-semibold text-sm sm:text-lg pe-3 border-r-[2px] border-accentColor">
+          <div className="uppercase font-semibold text-sm sm:text-lg pe-3 border-r-[2px] border-accentColor whitespace-nowrap">
             Case Studies
           </div>
         </div>
