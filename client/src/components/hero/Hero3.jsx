@@ -21,124 +21,98 @@ export default function Hero3() {
           start: "top 90%",
         },
       });
-      heroTimeline
-        .from("#bg-second", {
-          // xPercent: "100",
+      gsap.from("#bg-second", {
+        // xPercent: "100",
 
-          delay: 4.4,
-          duration: 0.6,
-          ease: "expo.inOut",
-        })
-        .from(
-          ["#hero-title", "#hero-title-2"],
-          {
-            translateY: "100%",
-            duration: 0.5,
-            ease: "power2.inOut",
-            opacity: 0,
+        delay: 4.4,
+        duration: 0.6,
+        ease: "expo.inOut",
+      });
+      gsap.from(["#hero-title", "#hero-title-2"], {
+        translateY: "100%",
+        duration: 1,
+        ease: "power2.inOut",
+        opacity: 0,
+        delay: 5.8,
 
-            stagger: 0.2,
-          },
-          "<0.2"
-        )
-        .from(
-          "#hero-desc",
-          {
-            translateY: "100%",
-            duration: 0.3,
-            ease: "expo.inOut",
+        stagger: 0.2,
+      });
+      gsap.from("#hero-desc", {
+        translateY: "100%",
+        duration: 0.5,
+        ease: "power2.inOut",
+        delay: 5.8,
+        opacity: 0,
+      });
+      gsap.from("#hero-btn-1", {
+        translateY: "100%",
+        duration: 0.5,
+        ease: "expo.inOut",
+        opacity: 0,
+        delay: 5.8,
+      });
+      gsap.from("#hero-btn-2", {
+        translateY: "100%",
+        duration: 0.5,
+        ease: "expo.inOut",
+        opacity: 0,
+        delay: 5.8,
+      });
+      gsap.from(["#exp-1", "#exp-2"], {
+        translateY: "100%",
+        duration: 1,
 
-            opacity: 0,
-          },
-          "<0.2"
-        )
-        .from(
-          "#hero-btn-1",
-          {
-            translateY: "100%",
-            duration: 0.3,
-            ease: "expo.inOut",
-            opacity: 0,
-          },
-          "<0.2"
-        )
-        .from(
-          "#hero-btn-2",
-          {
-            translateY: "100%",
-            duration: 0.3,
-            ease: "expo.inOut",
-            opacity: 0,
-          },
-          "<0.2"
-        )
-        .from(
-          ["#exp-1", "#exp-2"],
-          {
-            translateY: "100%",
-            duration: 0.4,
+        ease: "power2.inOut",
+        opacity: 0,
+        stagger: 0.2,
+        delay: 5.8,
+      });
+      gsap.from(["#client-1", "#client-2"], {
+        translateY: "100%",
+        delay: 5.8,
+        duration: 1,
+        ease: "power2.inOut",
 
-            ease: "expo.inOut",
-            opacity: 0,
-            stagger: 0.2,
-          },
-          "<0.1"
-        )
-        .from(
-          ["#client-1", "#client-2"],
-          {
-            translateY: "100%",
-            duration: 0.4,
-            ease: "expo.inOut",
-
-            opacity: 0,
-            stagger: 0.2,
-          },
-          "<0.1"
-        )
-        .from(
-          "#pro-1",
-          {
-            translateY: "100%",
-            duration: 0.2,
-            ease: "expo.inOut",
-            opacity: 0,
-          },
-          "<0.2"
-        )
-        .from(
-          "#pro-2",
-          {
-            translateY: "100%",
-            duration: 0.2,
-            ease: "expo.inOut",
-            opacity: 0,
-          },
-          "<0.2"
-        );
+        opacity: 0,
+        stagger: 0.2,
+      });
+      gsap.from("#pro-1", {
+        translateY: "100%",
+        duration: 0.5,
+        ease: "power2.inOut",
+        opacity: 0,
+        delay: 5.8,
+      });
+      gsap.from("#pro-2", {
+        translateY: "100%",
+        duration: 0.5,
+        ease: "power2.inOut",
+        opacity: 0,
+        delay: 5.8,
+      });
       gsap.to("#hero-img-1-cover", {
         xPercent: "100",
         duration: 1,
         ease: "expo.inOut",
-        delay: 4.8,
+        delay: 5.8,
       });
       gsap.from("#hero-img-1", {
         scale: 1.5,
         duration: 1,
         ease: "expo.inOut",
-        delay: 4.8,
+        delay: 5.8,
       });
       gsap.to("#hero-img-2-cover", {
         xPercent: "100",
         duration: 1,
         ease: "expo.inOut",
-        delay: 5,
+        delay: 6.1,
       });
       gsap.from("#hero-img-2", {
         scale: 1.5,
         duration: 1,
         ease: "expo.inOut",
-        delay: 5,
+        delay: 6.1,
       });
     }, comp);
 

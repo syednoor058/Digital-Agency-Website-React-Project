@@ -38,11 +38,12 @@ export default function App() {
           {
             translateY: "100%",
             opacity: 0,
-            duration: 0.3,
-            ease: "expo.inOut",
-            rotateX: "-90",
-            stagger: 0.1,
-          }
+            duration: 1,
+            ease: "power2.inOut",
+
+            stagger: 0.2,
+          },
+          "<0.6"
         )
         .to(
           [
@@ -55,11 +56,11 @@ export default function App() {
           {
             translateY: "-100%",
             opacity: 0,
-            delay: 0.5,
-            duration: 0.3,
+            delay: 0.1,
+            duration: 1,
             ease: "expo.inOut",
 
-            stagger: 0.1,
+            stagger: 0.2,
           }
         )
         .to("#intro-end-shutter", {

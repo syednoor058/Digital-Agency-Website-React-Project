@@ -18,7 +18,7 @@ export default function Navbar() {
         .from(["#navLogo", "#mobile-nav0", "#mobile-nav1", "#mobile-nav2"], {
           yPercent: "+=30",
           opacity: 0,
-          delay: 4.4,
+          delay: 5.8,
           duration: 0.5,
           ease: "expo.inOut",
           stagger: 0.1,
@@ -28,7 +28,7 @@ export default function Navbar() {
           {
             y: "+=30",
             opacity: 0,
-            duration: 0.5,
+            duration: 0.6,
             ease: "expo.inOut",
             stagger: 0.1,
           },
