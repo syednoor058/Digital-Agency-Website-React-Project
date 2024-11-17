@@ -95,7 +95,7 @@ export default function HowWeWork2() {
                   src={discoverImg}
                   alt=""
                 />
-                <div className="bg-darkSecondary rounded p-5 w-[50%] absolute text-lightBodyText top-[15%] left-0 flex flex-col gap-5 justify-center items-center shadow-lg shadow-darkBodyText">
+                <div className="bg-darkSecondary rounded p-5 w-[50%] absolute text-lightBodyText top-[15%] left-0 flex flex-col gap-5 justify-center items-center shadow-2xl shadow-[#36363680]/50">
                   <div className="w-full h-auto">
                     <img src={discoverSubImg} alt="" />
                   </div>
@@ -117,7 +117,7 @@ export default function HowWeWork2() {
                   src={designImg}
                   alt=""
                 />
-                <div className="bg-darkSecondary rounded p-5 w-[50%] absolute text-lightBodyText top-[15%] left-0 flex flex-col gap-5 justify-center items-center shadow-lg shadow-darkBodyText">
+                <div className="bg-darkSecondary rounded p-5 w-[50%] absolute text-lightBodyText top-[15%] left-0 flex flex-col gap-5 justify-center items-center shadow-2xl shadow-[#36363680]/50">
                   <div className="w-full h-auto">
                     <img src={designSubImg} alt="" />
                   </div>
@@ -140,7 +140,7 @@ export default function HowWeWork2() {
                   src={developImg}
                   alt=""
                 />
-                <div className="bg-darkSecondary rounded p-5 w-[50%] absolute text-lightBodyText top-[15%] left-0 flex flex-col gap-5 justify-center items-center shadow-lg shadow-darkBodyText">
+                <div className="bg-darkSecondary rounded p-5 w-[50%] absolute text-lightBodyText top-[15%] left-0 flex flex-col gap-5 justify-center items-center shadow-2xl shadow-[#36363680]/50">
                   <div className="w-full h-auto">
                     <img src={developSubImg} alt="" />
                   </div>
@@ -163,7 +163,7 @@ export default function HowWeWork2() {
                   src={deliverImg}
                   alt=""
                 />
-                <div className="bg-darkSecondary rounded p-5 w-[50%] absolute text-lightBodyText top-[15%] left-0 flex flex-col gap-5 justify-center items-center shadow-lg shadow-darkBodyText">
+                <div className="bg-darkSecondary rounded p-5 w-[50%] absolute text-lightBodyText top-[15%] left-0 flex flex-col gap-5 justify-center items-center shadow-2xl shadow-[#36363680]/50">
                   <div className="w-full h-auto">
                     <img src={deliverSubImg} alt="" />
                   </div>
@@ -199,7 +199,7 @@ export default function HowWeWork2() {
                 src={discoverImg}
                 alt=""
               />
-              <div className="bg-darkSecondary rounded p-5 w-[90%] absolute text-lightBodyText bottom-[15%] left-0 flex flex-row gap-5 justify-center items-center shadow-lg shadow-darkBodyText">
+              <div className="bg-darkSecondary rounded p-5 w-[90%] absolute text-lightBodyText bottom-[15%] left-0 flex flex-row gap-5 justify-center items-center shadow-2xl shadow-[#36363680]/50">
                 <div className="w-[50%] h-auto">
                   <img src={discoverSubImg} alt="" />
                 </div>

@@ -80,13 +80,13 @@ export default function Testimonials() {
       <div className="w-full h-4/6 bg-accentColor absolute top-0 rounded-b"></div>
       <div className="flex flex-col gap-7 md:gap-10 xl:gap-14 relative">
         <div className="flex flex-col sm:flex-row gap-5 px-5 sm:px-7 lg:px-10 xl:px-20">
-          <div className="w-full sm:w-[30%] flex flex-row gap-3 sm:gap-10">
+          <div className="w-full sm:w-[40%] flex flex-row gap-2 sm:gap-10">
             <div className="uppercase font-semibold text-sm sm:text-lg text-darkSecondary">
               Testimonials
             </div>
             <div className="w-[2px] h-auto bg-lightPrimary"></div>
           </div>
-          <div className="w-full sm:w-[70%] uppercase font-titleFont font-bold text-[42px] sm:text-[54px] lg:text-6xl leading-none text-darkPrimary">
+          <div className="w-full sm:w-[60%] uppercase font-titleFont font-bold text-[42px] sm:text-[54px] lg:text-6xl leading-none text-darkPrimary">
             <span className="">Our</span> Happy{" "}
             <span className="text-lightPrimary font-light">Clients</span> Speak
           </div>

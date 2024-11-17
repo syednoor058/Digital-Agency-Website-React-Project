@@ -21,7 +21,7 @@ export default function WhoWeAre() {
       //   ease: "power2.inOut",
       //   scrollTrigger: {
       //     trigger: "#who-we-are",
-      //     start: "top 90%",
+      //     start: "top 95%",
       //   },
       // });
       gsap.from("#who-bar", {
@@ -31,7 +31,7 @@ export default function WhoWeAre() {
         ease: "power2.inOut",
         scrollTrigger: {
           trigger: "#who-bar",
-          start: "top 90%",
+          start: "top 95%",
         },
       });
       gsap.from("#who-title-1", {
@@ -41,7 +41,7 @@ export default function WhoWeAre() {
         ease: "power2.inOut",
         scrollTrigger: {
           trigger: "#who-title-1",
-          start: "top 90%",
+          start: "top 95%",
         },
       });
 
@@ -52,7 +52,7 @@ export default function WhoWeAre() {
         ease: "power2.inOut",
         scrollTrigger: {
           trigger: "#who-title-2",
-          start: "top 90%",
+          start: "top 95%",
         },
       });
       gsap.from("#who-title-3", {
@@ -62,7 +62,7 @@ export default function WhoWeAre() {
         ease: "power2.inOut",
         scrollTrigger: {
           trigger: "#who-title-3",
-          start: "top 90%",
+          start: "top 95%",
         },
       });
       gsap.from("#who-subdesc", {
@@ -72,7 +72,7 @@ export default function WhoWeAre() {
         ease: "power2.inOut",
         scrollTrigger: {
           trigger: "#who-subdesc",
-          start: "top 90%",
+          start: "top 95%",
         },
       });
       gsap.from("#who-desc", {
@@ -82,7 +82,7 @@ export default function WhoWeAre() {
         ease: "power2.inOut",
         scrollTrigger: {
           trigger: "#who-desc",
-          start: "top 90%",
+          start: "top bottom",
         },
       });
     }, comp);
@@ -94,7 +94,7 @@ export default function WhoWeAre() {
       ref={comp}
       className="px-5 sm:px-7 lg:px-10 xl:px-20 py-10 lg:py-20 font-bodyFont text-lightBodyText bg-darkSecondary relative overflow-hidden"
     >
-      <div className="w-[90%] sm:w-[70%] lg:w-[50%] aspect-square bg-darkPrimary rounded-[100%] absolute -right-32 -bottom-32 sm:-right-36 lg:-right-60 sm:-bottom-36 lg:-bottom-60 p-20 sm:p-28 lg:p-40 z-[2]">
+      <div className="w-[95%] sm:w-[70%] lg:w-[50%] aspect-square bg-darkPrimary rounded-[100%] absolute -right-32 -bottom-32 sm:-right-36 lg:-right-60 sm:-bottom-36 lg:-bottom-60 p-20 sm:p-28 lg:p-40 z-[2]">
         <div className="w-full aspect-square rounded-[100%] bg-darkSecondary"></div>
       </div>
       <div className="flex flex-col lg:flex-row gap-7 lg:gap-10 relative z-[5]">

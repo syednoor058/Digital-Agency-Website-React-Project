@@ -221,7 +221,7 @@ export default function Hero3() {
           <div className="w-full lg:w-[60%] grid grid-cols-2 gap-1 lg:gap-5">
             <div
               data-scroll
-              data-scroll-speed="-0.07"
+              data-scroll-speed="0.3"
               className="flex justify-center items-end relative overflow-hidden"
             >
               <div
@@ -237,7 +237,7 @@ export default function Hero3() {
             </div>
             <div
               data-scroll
-              data-scroll-speed=".07"
+              data-scroll-speed="0.1"
               className="flex justify-center items-end relative overflow-hidden "
             >
               <div

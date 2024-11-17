@@ -24,6 +24,7 @@ export default function Home() {
       <Hero3 />
       <Clients />
       <WhoWeAre />
+
       <WhatWeDo />
       <HowWeWork2 />
       <CaseStudy />
