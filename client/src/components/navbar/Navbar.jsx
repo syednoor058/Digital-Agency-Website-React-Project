@@ -18,19 +18,19 @@ export default function Navbar() {
         .from(["#navLogo", "#mobile-nav0", "#mobile-nav1", "#mobile-nav2"], {
           yPercent: "+=30",
           opacity: 0,
-          delay: 5.8,
-          duration: 0.5,
-          ease: "expo.inOut",
-          stagger: 0.1,
+          delay: 5,
+          duration: 1,
+          ease: "power2.inOut",
+          stagger: 0.2,
         })
         .from(
           ["#nav0", "#nav1", "#nav2", "#nav3", "#nav4", "#nav5"],
           {
             y: "+=30",
             opacity: 0,
-            duration: 0.6,
-            ease: "expo.inOut",
-            stagger: 0.1,
+            duration: 1,
+            ease: "power2.inOut",
+            stagger: 0.2,
           },
           "<"
         )
@@ -39,8 +39,8 @@ export default function Navbar() {
           {
             yPercent: "+=30",
             opacity: 0,
-            duration: 0.5,
-            ease: "expo.inOut",
+            duration: 1,
+            ease: "power.inOut",
           },
           "<"
         );
@@ -51,7 +51,7 @@ export default function Navbar() {
   return (
     <div
       ref={comp}
-      className="w-full font-titleFont capitalize text-lightBodyText bg-darkPrimary"
+      className="w-full font-bodyFont capitalize text-lightBodyText bg-darkPrimary"
     >
       <div className="w-full h-16 px-3 md:px-8 lg:px-8 xl:px-20 hidden lg:flex flex-row gap-10 items-center justify-between">
         <div id="navLogo" className="w-[15%]">
@@ -141,9 +141,9 @@ export default function Navbar() {
           </div>
           <div
             id="nav-cta"
-            className="w-[15%] px-3 py-2 border border-accentColor rounded-full flex justify-center items-center lg:text-sm"
+            className="w-[15%] px-3 py-2 border border-accentColor rounded-full flex justify-center items-center lg:text-sm font-bodyFont"
           >
-            Free trial
+            Get a quote
           </div>
         </div>
       </div>
@@ -155,9 +155,9 @@ export default function Navbar() {
           <div className="flex flex-row gap-2 sm:gap-3 justify-end items-center">
             <div
               id="mobile-nav1"
-              className="px-3 py-2 border border-accentColor rounded-full flex justify-center items-center "
+              className="px-3 py-2 border border-accentColor rounded-full flex justify-center items-center font-bodyFont"
             >
-              Free trial
+              Get a Quote
             </div>
             <div
               id="mobile-nav2"

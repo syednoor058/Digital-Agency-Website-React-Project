@@ -1,6 +1,7 @@
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import LocomotiveScroll from "locomotive-scroll";
+import "locomotive-scroll/dist/locomotive-scroll.css";
 import { useLayoutEffect, useRef } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Navbar from "./components/navbar/Navbar";
@@ -38,7 +39,7 @@ export default function App() {
           {
             translateY: "100%",
             opacity: 0,
-            duration: 1,
+            duration: 0.6,
             ease: "power2.inOut",
 
             stagger: 0.2,
@@ -57,8 +58,8 @@ export default function App() {
             translateY: "-100%",
             opacity: 0,
             delay: 0.1,
-            duration: 1,
-            ease: "expo.inOut",
+            duration: 0.6,
+            ease: "power2.inOut",
 
             stagger: 0.2,
           }

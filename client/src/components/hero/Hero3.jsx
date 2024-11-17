@@ -15,104 +15,102 @@ export default function Hero3() {
   const comp = useRef(null);
   useLayoutEffect(() => {
     let ctx = gsap.context(() => {
-      const heroTimeline = gsap.timeline({
-        scrollTrigger: {
-          trigger: "#landing-hero",
-          start: "top 90%",
-        },
-      });
-      gsap.from("#bg-second", {
-        // xPercent: "100",
+      // const heroTimeline = gsap.timeline({
+      //   scrollTrigger: {
+      //     trigger: "#landing-hero",
+      //     start: "top 90%",
+      //   },
+      // });
+      // gsap.from("#bg-second", {
+      //   // xPercent: "100",
 
-        delay: 4.4,
-        duration: 0.6,
-        ease: "expo.inOut",
-      });
+      //   delay: 4.4,
+      //   duration: 0.6,
+      //   ease: "expo.inOut",
+      // });
       gsap.from(["#hero-title", "#hero-title-2"], {
         translateY: "100%",
-        duration: 1,
+        duration: 1.5,
         ease: "power2.inOut",
         opacity: 0,
-        delay: 5.8,
+        delay: 5,
 
         stagger: 0.2,
       });
       gsap.from("#hero-desc", {
         translateY: "100%",
-        duration: 0.5,
+        duration: 1,
         ease: "power2.inOut",
-        delay: 5.8,
+        delay: 5,
         opacity: 0,
       });
       gsap.from("#hero-btn-1", {
         translateY: "100%",
-        duration: 0.5,
-        ease: "expo.inOut",
+        duration: 1,
+        ease: "power2.inOut",
         opacity: 0,
-        delay: 5.8,
+        delay: 5,
       });
       gsap.from("#hero-btn-2", {
         translateY: "100%",
-        duration: 0.5,
-        ease: "expo.inOut",
+        duration: 1,
+        ease: "power2.inOut",
         opacity: 0,
-        delay: 5.8,
+        delay: 5,
       });
       gsap.from(["#exp-1", "#exp-2"], {
         translateY: "100%",
-        duration: 1,
-
+        duration: 1.8,
         ease: "power2.inOut",
         opacity: 0,
         stagger: 0.2,
-        delay: 5.8,
+        delay: 5,
       });
       gsap.from(["#client-1", "#client-2"], {
         translateY: "100%",
-        delay: 5.8,
-        duration: 1,
+        delay: 5,
+        duration: 1.8,
         ease: "power2.inOut",
-
         opacity: 0,
         stagger: 0.2,
       });
       gsap.from("#pro-1", {
         translateY: "100%",
-        duration: 0.5,
+        duration: 1.1,
         ease: "power2.inOut",
         opacity: 0,
-        delay: 5.8,
+        delay: 5,
       });
       gsap.from("#pro-2", {
         translateY: "100%",
-        duration: 0.5,
+        duration: 1.1,
         ease: "power2.inOut",
         opacity: 0,
-        delay: 5.8,
+        delay: 5.2,
       });
       gsap.to("#hero-img-1-cover", {
         xPercent: "100",
         duration: 1,
         ease: "expo.inOut",
-        delay: 5.8,
+        delay: 5,
       });
       gsap.from("#hero-img-1", {
-        scale: 1.5,
+        scale: 1.2,
         duration: 1,
         ease: "expo.inOut",
-        delay: 5.8,
+        delay: 5,
       });
       gsap.to("#hero-img-2-cover", {
         xPercent: "100",
         duration: 1,
         ease: "expo.inOut",
-        delay: 6.1,
+        delay: 5.3,
       });
       gsap.from("#hero-img-2", {
-        scale: 1.5,
+        scale: 1.2,
         duration: 1,
         ease: "expo.inOut",
-        delay: 6.1,
+        delay: 5.3,
       });
     }, comp);
 
@@ -121,8 +119,9 @@ export default function Hero3() {
   return (
     <div
       ref={comp}
+      data-scroll-container
       id="landing-hero"
-      className="w-full min-h-screen font-bodyFont text-lightBodyText   bg-darkPrimary relative"
+      className="w-full min-h-screen font-bodyFont text-lightBodyText   bg-darkPrimary overflow-hidden relative"
     >
       {/* <div
         id="bg-second"
@@ -150,7 +149,7 @@ export default function Hero3() {
               to every phase of your project.
             </span>
           </p>
-          <div className="flex flex-row justify-center items-center gap-5 sm:gap-10">
+          <div className="flex flex-row justify-center items-center gap-5 sm:gap-10 overflow-hidden">
             <Link
               id="hero-btn-1"
               className="px-3 sm:px-5 py-2 bg-accentColor text-darkBodyText rounded-full text-base sm:text-xl flex justify-center items-center"
@@ -213,23 +212,31 @@ export default function Hero3() {
             </div>
             <div className="flex justify-center">
               <div className="flex flex-col gap-2 ">
-                <div
-                  id="pro-1"
-                  className="text-3xl sm:text-5xl font-medium flex gap-2 justify-center items-center"
-                >
-                  <span className="text-5xl sm:text-6xl text-accentColor">
-                    <RiTaskLine />
-                  </span>
-                  20
+                <div className="overflow-hidden">
+                  <div
+                    id="pro-1"
+                    className="text-3xl sm:text-5xl font-medium flex gap-2 justify-center items-center"
+                  >
+                    <span className="text-5xl sm:text-6xl text-accentColor">
+                      <RiTaskLine />
+                    </span>
+                    20
+                  </div>
                 </div>
-                <div id="pro-2" className="text-center text-sm sm:text-base">
-                  Projects Completed Successfully
+                <div className="text-center text-sm sm:text-base overflow-hidden">
+                  <span id="pro-2" className="inline-block">
+                    Projects Completed Successfully
+                  </span>
                 </div>
               </div>
             </div>
           </div>
           <div className="w-full lg:w-[60%] grid grid-cols-2 gap-1 lg:gap-5">
-            <div className="flex justify-center items-end relative overflow-hidden">
+            <div
+              data-scroll
+              data-scroll-speed="-0.1"
+              className="flex justify-center items-end relative overflow-hidden"
+            >
               <div
                 id="hero-img-1-cover"
                 className="w-full h-full bg-darkPrimary absolute top-0 left-0 z-[5]"
@@ -241,7 +248,11 @@ export default function Hero3() {
                 alt="businessman"
               />
             </div>
-            <div className="flex justify-center items-end relative overflow-hidden">
+            <div
+              data-scroll
+              data-scroll-speed=".1"
+              className="flex justify-center items-end relative overflow-hidden"
+            >
               <div
                 id="hero-img-2-cover"
                 className="w-full h-full bg-darkPrimary absolute top-0 left-0 z-[5]"
