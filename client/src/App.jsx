@@ -5,6 +5,7 @@ import "locomotive-scroll/dist/locomotive-scroll.css";
 import { useLayoutEffect, useRef } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Navbar from "./components/navbar/Navbar";
+import ScrollToTop from "./components/scrollToTop/ScrollToTop";
 import About from "./screens/about/About";
 import Contact from "./screens/contact/Contact";
 import Home from "./screens/home/Home";
@@ -127,6 +128,7 @@ export default function App() {
           <div className="w-full fixed top-0 z-[1000] bg-lightPrimary bg-opacity-90 backdrop-blur-[6px]">
             <Navbar />
           </div>
+          <ScrollToTop />
           <Routes>
             <Route exact path="/" element={<Home />} />
             <Route exact path="/services" element={<Services />} />

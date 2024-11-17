@@ -15,19 +15,6 @@ export default function Hero3() {
   const comp = useRef(null);
   useLayoutEffect(() => {
     let ctx = gsap.context(() => {
-      // const heroTimeline = gsap.timeline({
-      //   scrollTrigger: {
-      //     trigger: "#landing-hero",
-      //     start: "top 90%",
-      //   },
-      // });
-      // gsap.from("#bg-second", {
-      //   // xPercent: "100",
-
-      //   delay: 4.4,
-      //   duration: 0.6,
-      //   ease: "expo.inOut",
-      // });
       gsap.from(["#hero-title", "#hero-title-2"], {
         translateY: "100%",
         duration: 1.5,
@@ -95,7 +82,7 @@ export default function Hero3() {
         delay: 5,
       });
       gsap.from("#hero-img-1", {
-        scale: 1.2,
+        scale: 1,
         duration: 1,
         ease: "expo.inOut",
         delay: 5,
@@ -107,7 +94,7 @@ export default function Hero3() {
         delay: 5.3,
       });
       gsap.from("#hero-img-2", {
-        scale: 1.2,
+        scale: 1,
         duration: 1,
         ease: "expo.inOut",
         delay: 5.3,
@@ -234,7 +221,7 @@ export default function Hero3() {
           <div className="w-full lg:w-[60%] grid grid-cols-2 gap-1 lg:gap-5">
             <div
               data-scroll
-              data-scroll-speed="-0.1"
+              data-scroll-speed="-0.07"
               className="flex justify-center items-end relative overflow-hidden"
             >
               <div
@@ -250,8 +237,8 @@ export default function Hero3() {
             </div>
             <div
               data-scroll
-              data-scroll-speed=".1"
-              className="flex justify-center items-end relative overflow-hidden"
+              data-scroll-speed=".07"
+              className="flex justify-center items-end relative overflow-hidden "
             >
               <div
                 id="hero-img-2-cover"
@@ -259,7 +246,7 @@ export default function Hero3() {
               ></div>
               <img
                 id="hero-img-2"
-                className="w-full h-auto z-[2]"
+                className="w-full h-auto z-[2] object-cover"
                 src={heroImg2}
                 alt="google_review"
               />

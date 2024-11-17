@@ -19,7 +19,7 @@ import Footer from "../../components/footer/Footer";
 export default function Services() {
   useEffect(() => {
     window.scrollTo(0, 0);
-  });
+  }, []);
   useEffect(() => {
     document.title =
       "Services - Best Service Delivery in Affordable Budget | Devion Ark";

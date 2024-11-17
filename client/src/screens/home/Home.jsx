@@ -15,7 +15,7 @@ import WhyChooseUs from "../../components/whyChooseUs/WhyChooseUs";
 export default function Home() {
   useEffect(() => {
     window.scrollTo(0, 0);
-  });
+  }, []);
   useEffect(() => {
     document.title = "Home - Best Agency in Affordable Budget | Devion Ark";
   }, []);
