@@ -228,7 +228,7 @@ export default function HowWeWork2() {
             </div>
             <div className="w-full relative flex justify-end">
               <img className="w-[90%] h-auto relative" src={designImg} alt="" />
-              <div className="bg-darkSecondary rounded p-5 w-[90%] absolute text-lightBodyText bottom-[15%] left-0 flex flex-row gap-5 justify-center items-center shadow-lg shadow-darkBodyText">
+              <div className="bg-darkSecondary rounded p-5 w-[90%] absolute text-lightBodyText bottom-[15%] left-0 flex flex-row gap-5 justify-center items-center shadow-2xl shadow-[#36363680]/50">
                 <div className="w-[50%] h-auto">
                   <img src={designSubImg} alt="" />
                 </div>
@@ -260,7 +260,7 @@ export default function HowWeWork2() {
                 src={developImg}
                 alt=""
               />
-              <div className="bg-darkSecondary rounded p-5 w-[90%] absolute text-lightBodyText bottom-[15%] left-0 flex flex-row gap-5 justify-center items-center shadow-lg shadow-darkBodyText">
+              <div className="bg-darkSecondary rounded p-5 w-[90%] absolute text-lightBodyText bottom-[15%] left-0 flex flex-row gap-5 justify-center items-center shadow-2xl shadow-[#36363680]/50">
                 <div className="w-[50%] h-auto">
                   <img src={developSubImg} alt="" />
                 </div>
@@ -292,7 +292,7 @@ export default function HowWeWork2() {
                 src={deliverImg}
                 alt=""
               />
-              <div className="bg-darkSecondary rounded p-5 w-[90%] absolute text-lightBodyText bottom-[15%] left-0 flex flex-row gap-5 justify-center items-center shadow-lg shadow-darkBodyText">
+              <div className="bg-darkSecondary rounded p-5 w-[90%] absolute text-lightBodyText bottom-[15%] left-0 flex flex-row gap-5 justify-center items-center shadow-2xl shadow-[#36363680]/50">
                 <div className="w-[50%] h-auto">
                   <img src={deliverSubImg} alt="" />
                 </div>

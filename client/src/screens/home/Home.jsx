@@ -21,18 +21,24 @@ export default function Home() {
   }, []);
   return (
     <div className="pt-14 lg:pt-10 w-full h-full overflow-x-hidden bg-darkPrimary">
-      <Hero3 />
-      <Clients />
-      <WhoWeAre />
+      <section data-scroll data-scroll-section data-scroll-speed="-0.3">
+        <Hero3 />
+      </section>
+      <section data-scroll data-scroll-section data-scroll-speed="0.2">
+        <Clients />
+        <WhoWeAre />
+        <WhatWeDo />
+        <HowWeWork2 />
+        <CaseStudy />
+        <WhyChooseUs />
+        <Testimonials />
+        <FAQ />
+      </section>
 
-      <WhatWeDo />
-      <HowWeWork2 />
-      <CaseStudy />
-      <WhyChooseUs />
-      <Testimonials />
-      <FAQ />
-      <CallToAction />
-      <Footer />
+      <section>
+        <CallToAction />
+        <Footer />
+      </section>
     </div>
   );
 }

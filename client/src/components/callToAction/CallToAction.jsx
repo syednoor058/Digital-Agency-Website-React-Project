@@ -7,16 +7,16 @@ export default function CallToAction() {
       <div className="h-full absolute right-0 opacity-60 lg:opacity-100">
         <img className="h-full w-auto" src={callToActionImg} alt="" />
       </div>
-      <div className="flex flex-col gap-1 lg:gap-3 relative">
-        <div className="uppercase text-lg sm:text-3xl lg:text-5xl font-bold text-center font-titleFont text-lightTitleText">
+      <div className="flex flex-col items-center gap-1 lg:gap-3 relative">
+        <div className="uppercase text-lg sm:text-3xl lg:text-5xl font-bold text-center font-titleFont text-lightTitleText leading-none">
           Let&apos;s start your experience
         </div>
-        <div className="uppercase text-lg sm:text-3xl lg:text-5xl font-bold text-center font-titleFont text-lightTitleText">
+        <div className="uppercase text-lg sm:text-3xl lg:text-5xl font-bold text-center font-titleFont text-lightTitleText leading-none">
           With <span className="text-lightPrimary">Devion Ark</span>
         </div>
-        <div className="uppercase font-titleFont font-light text-lightPrimary underline underline-offset-4 text-sm sm:text-base text-center pt-2 flex justify-center items-center gap-2">
-          Let&apos;s get in touch{" "}
-        </div>
+        <button className="w-[50%] lg:w-[30%] uppercase font-bodyFont font-light text-lightPrimary text-sm sm:text-base text-center mt-5 block justify-center items-center gap-2 rounded-full border border-accentColor px-5 py-2">
+          Get a quote{" "}
+        </button>
       </div>
     </div>
   );
