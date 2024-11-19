@@ -16,7 +16,7 @@ export default function CaseStudy() {
           </div>
         </div>
         <div className="flex flex-col-reverse lg:flex-row-reverse gap-7 xl:gap-10 items-end">
-          <div className="w-full lg:w-[55%] xl:w-[45%] text-sm lg:text-base">
+          <div className="w-full lg:w-[55%] xl:w-[45%] text-sm lg:text-base font-light">
             See how we’ve turned challenges into opportunities and ideas into
             impactful solutions. Our case studies showcase real-world examples
             of how we’ve helped businesses grow, optimize operations, and

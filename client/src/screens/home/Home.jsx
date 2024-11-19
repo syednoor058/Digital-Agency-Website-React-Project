@@ -1,5 +1,6 @@
 // import React from 'react'
-import { useEffect } from "react";
+// import { gsap } from "gsap";
+import { useEffect, useRef } from "react";
 import CallToAction from "../../components/callToAction/CallToAction";
 import CaseStudy from "../../components/caseStudy/CaseStudy";
 import Clients from "../../components/clients/Clients";
@@ -13,6 +14,8 @@ import WhoWeAre from "../../components/whoWeAre/WhoWeAre";
 import WhyChooseUs from "../../components/whyChooseUs/WhyChooseUs";
 
 export default function Home() {
+  const containerRef = useRef(null);
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -20,11 +23,15 @@ export default function Home() {
     document.title = "Home - Best Agency in Affordable Budget | Devion Ark";
   }, []);
   return (
-    <div className="pt-14 lg:pt-10 w-full h-full overflow-x-hidden bg-darkPrimary">
-      <section data-scroll data-scroll-section data-scroll-speed="-0.3">
+    <div
+      ref={containerRef}
+      id="home-container"
+      className="pt-14 lg:pt-10 w-full h-full overflow-x-hidden bg-darkPrimary"
+    >
+      <section>
         <Hero3 />
       </section>
-      <section data-scroll data-scroll-section data-scroll-speed="0.2">
+      <section>
         <Clients />
         <WhoWeAre />
         <WhatWeDo />
@@ -33,9 +40,6 @@ export default function Home() {
         <WhyChooseUs />
         <Testimonials />
         <FAQ />
-      </section>
-
-      <section>
         <CallToAction />
         <Footer />
       </section>

@@ -14,16 +14,6 @@ export default function WhoWeAre() {
   const comp = useRef(null);
   useLayoutEffect(() => {
     let ctx = gsap.context(() => {
-      // gsap.from("#who-we-are", {
-      //   translateY: "100%",
-      //   duration: 0.6,
-      //   opacity: 0,
-      //   ease: "power2.inOut",
-      //   scrollTrigger: {
-      //     trigger: "#who-we-are",
-      //     start: "top 95%",
-      //   },
-      // });
       gsap.from("#who-bar", {
         translateY: "-100%",
         duration: 0.6,
@@ -32,6 +22,8 @@ export default function WhoWeAre() {
         scrollTrigger: {
           trigger: "#who-bar",
           start: "top 95%",
+          end: "top 90%",
+          scrub: 2,
         },
       });
       gsap.from("#who-title-1", {
@@ -41,7 +33,10 @@ export default function WhoWeAre() {
         ease: "power2.inOut",
         scrollTrigger: {
           trigger: "#who-title-1",
+          // scroller: comp,
           start: "top 95%",
+          end: "top 90%",
+          scrub: 2,
         },
       });
 
@@ -52,7 +47,10 @@ export default function WhoWeAre() {
         ease: "power2.inOut",
         scrollTrigger: {
           trigger: "#who-title-2",
+          // scroller: comp,
           start: "top 95%",
+          end: "top 90%",
+          scrub: 2,
         },
       });
       gsap.from("#who-title-3", {
@@ -62,7 +60,10 @@ export default function WhoWeAre() {
         ease: "power2.inOut",
         scrollTrigger: {
           trigger: "#who-title-3",
+          // scroller: comp,
           start: "top 95%",
+          end: "top 90%",
+          scrub: 2,
         },
       });
       gsap.from("#who-subdesc", {
@@ -73,6 +74,8 @@ export default function WhoWeAre() {
         scrollTrigger: {
           trigger: "#who-subdesc",
           start: "top 95%",
+          end: "top 90%",
+          scrub: 2,
         },
       });
       gsap.from("#who-desc", {
@@ -82,7 +85,9 @@ export default function WhoWeAre() {
         ease: "power2.inOut",
         scrollTrigger: {
           trigger: "#who-desc",
-          start: "top bottom",
+          start: "top 95%",
+          end: "top 90%",
+          scrub: 2,
         },
       });
     }, comp);

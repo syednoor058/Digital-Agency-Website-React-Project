@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import gsap from "gsap";
+import React, { useLayoutEffect, useRef, useState } from "react";
 import discoverSubImg from "../../assets/images/howWeDo/1.1.png";
 import discoverImg from "../../assets/images/howWeDo/1.webp";
 import designSubImg from "../../assets/images/howWeDo/2.1.png";
@@ -9,12 +10,45 @@ import deliverSubImg from "../../assets/images/howWeDo/4.1.png";
 import deliverImg from "../../assets/images/howWeDo/4.webp";
 
 export default function HowWeWork2() {
+  const comp = useRef(null);
+  useLayoutEffect(() => {
+    let ctx = gsap.context(() => {
+      gsap.to("#discover-img-cover", {
+        translateX: "100%",
+        duration: 1,
+        // opacity: 0,
+        ease: "expo.inOut",
+        scrollTrigger: {
+          trigger: "#discover-img-cover",
+          start: "top 85%",
+          end: "top 50%",
+          scrub: 1,
+        },
+      });
+      gsap.from("#discover-img", {
+        scale: 1.2,
+        duration: 1,
+        ease: "expo.inOut",
+        scrollTrigger: {
+          trigger: "#discover-img",
+          start: "top 95%",
+          end: "top 70%",
+          scrub: 2,
+        },
+      });
+    }, comp);
+    return () => ctx.revert();
+  }, []);
+
   const [toggledState, setToggledState] = useState("discover");
   const toggleState = (stateName) => {
     setToggledState(stateName);
   };
   return (
-    <div className=" py-10 lg:py-20 font-bodyFont text-darkBodyText bg-lightPrimary">
+    <div
+      ref={comp}
+      className=" py-10 lg:py-20 font-bodyFont text-darkBodyText bg-lightPrimary"
+    >
       <div className="flex flex-col gap-7 sm:gap-10 lg:gap-20 px-5 sm:px-7 lg:px-10 xl:px-20">
         <div className="flex flex-col sm:flex-row gap-5 ">
           <div className="w-full flex flex-row gap-2">
@@ -90,12 +124,20 @@ export default function HowWeWork2() {
           <div className="w-[55%] flex items-center justify-end relative">
             {toggledState === "discover" && (
               <div className="w-full relative flex justify-end">
-                <img
-                  className="w-[80%] h-auto relative"
-                  src={discoverImg}
-                  alt=""
-                />
-                <div className="bg-darkSecondary rounded p-5 w-[50%] absolute text-lightBodyText top-[15%] left-0 flex flex-col gap-5 justify-center items-center shadow-2xl shadow-[#36363680]/50">
+                <div className="w-[80%] aspect-[9/10] relative overflow-hidden">
+                  <div
+                    id="discover-img-cover"
+                    className="absolute bg-lightPrimary w-full h-full top-0 left-0 z-[5]"
+                  ></div>
+                  <img
+                    id="discover-img"
+                    className="w-full h-full object-cover relative z-[2]"
+                    src={discoverImg}
+                    alt=""
+                  />
+                </div>
+
+                <div className="bg-darkSecondary rounded p-5 w-[50%] absolute text-lightBodyText top-[15%] left-0 flex flex-col gap-5 justify-center items-center shadow-2xl shadow-[#36363680]/50 z-[6]">
                   <div className="w-full h-auto">
                     <img src={discoverSubImg} alt="" />
                   </div>
@@ -193,12 +235,15 @@ export default function HowWeWork2() {
                 root and strategies align with your goals.
               </div>
             </div>
-            <div className="w-full relative flex justify-end">
-              <img
-                className="w-[90%] h-auto relative"
-                src={discoverImg}
-                alt=""
-              />
+            <div className="w-full relative flex justify-end overflow-hidden">
+              <div className="w-[90%] aspect-[9/10] relative overflow-hidden">
+                <img
+                  className="w-full h-full scale-[1.2]"
+                  src={discoverImg}
+                  alt=""
+                />
+              </div>
+
               <div className="bg-darkSecondary rounded p-5 w-[90%] absolute text-lightBodyText bottom-[15%] left-0 flex flex-row gap-5 justify-center items-center shadow-2xl shadow-[#36363680]/50">
                 <div className="w-[50%] h-auto">
                   <img src={discoverSubImg} alt="" />
@@ -293,7 +338,7 @@ export default function HowWeWork2() {
                 alt=""
               />
               <div className="bg-darkSecondary rounded p-5 w-[90%] absolute text-lightBodyText bottom-[15%] left-0 flex flex-row gap-5 justify-center items-center shadow-2xl shadow-[#36363680]/50">
-                <div className="w-[50%] h-auto">
+                <div className="w-[50%] aspect-[9/10] h-auto">
                   <img src={deliverSubImg} alt="" />
                 </div>
                 <div className="w-[50%] flex flex-col gap-1">

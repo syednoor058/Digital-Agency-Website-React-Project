@@ -158,7 +158,7 @@ export default function Hero3() {
           </div>
         </div>
         <div className="w-full flex flex-col lg:flex-row gap-10 xl:gap-16">
-          <div className="w-full lg:w-[40%] flex flex-col gap-7 xl:gap-16">
+          <div className="w-full lg:w-[40%] hidden flex-col gap-7 xl:gap-16">
             <div className="flex flex-row gap-7 xl:gap-16 justify-center">
               <div className="w-[50%] flex items-center flex-col gap-2 ">
                 <div className="text-3xl sm:text-5xl font-medium overflow-hidden">

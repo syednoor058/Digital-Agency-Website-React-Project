@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import callToActionImg from "../../assets/images/call_to_action.png";
 
 export default function CallToAction() {
@@ -14,9 +15,12 @@ export default function CallToAction() {
         <div className="uppercase text-lg sm:text-3xl lg:text-5xl font-bold text-center font-titleFont text-lightTitleText leading-none">
           With <span className="text-lightPrimary">Devion Ark</span>
         </div>
-        <button className="w-[50%] lg:w-[30%] uppercase font-bodyFont font-light text-lightPrimary text-sm sm:text-base text-center mt-5 block justify-center items-center gap-2 rounded-full border border-accentColor px-5 py-2">
+        <Link
+          to=""
+          className="uppercase font-bodyFont font-light text-lightPrimary text-sm sm:text-base text-center mt-5 flex justify-center items-center gap-2 rounded-full border border-accentColor px-7 py-2"
+        >
           Get a quote{" "}
-        </button>
+        </Link>
       </div>
     </div>
   );
