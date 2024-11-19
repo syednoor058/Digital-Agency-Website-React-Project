@@ -17,6 +17,7 @@
     "@mui/styled-engine-sc": "^6.1.6",
     "framer-motion": "^11.11.10",
     "gsap": "^3.12.5",
+    "gsap-trial": "^3.12.5",
     "locomotive-scroll": "^5.0.0-beta.21",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
@@ -25,6 +26,7 @@
     "react-router-dom": "^6.27.0",
     "react-slick": "^0.30.2",
     "slick-carousel": "^1.8.1",
+    "split-type": "^0.3.4",
     "styled-components": "^6.1.13"
   },
   "devDependencies": {

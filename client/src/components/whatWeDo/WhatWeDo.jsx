@@ -3,58 +3,88 @@
 import gsap from "gsap";
 import { useLayoutEffect, useRef } from "react";
 import { MdExtension, MdFindInPage, MdInsertChart } from "react-icons/md";
+import SplitType from "split-type";
 import DoCard from "./DoCard";
 
 export default function WhatWeDo() {
   const comp = useRef(null);
+  const whatWeDoSplitTextLinesRef = useRef(null);
+  const whatWeDoSplitTextTitleLinesRef = useRef(null);
   useLayoutEffect(() => {
+    let whatWeDoSplitText = new SplitType(whatWeDoSplitTextLinesRef.current, {
+      type: "lines",
+    });
+    let whatWeDoLines = whatWeDoSplitText.lines;
+
+    let whatWeDoTitleSplitText = new SplitType(
+      whatWeDoSplitTextTitleLinesRef.current,
+      {
+        type: "lines",
+      }
+    );
+    let whatWeDoTitleLines = whatWeDoTitleSplitText.lines;
+
+    whatWeDoTitleLines.forEach((line) => {
+      const wrapper = document.createElement("div");
+      wrapper.style.overflow = "hidden";
+      line.parentNode.insertBefore(wrapper, line);
+      wrapper.appendChild(line);
+    });
+
+    // Wrap each line in a container to hide overflow
+    whatWeDoLines.forEach((line) => {
+      const wrapper = document.createElement("div");
+      wrapper.style.overflow = "hidden";
+      line.parentNode.insertBefore(wrapper, line);
+      wrapper.appendChild(line);
+    });
     let ctx = gsap.context(() => {
       gsap.from("#what-we-do-bar", {
         translateY: "-100%",
-        duration: 1,
-        opacity: 0,
+        duration: 5,
         ease: "power2.inOut",
         scrollTrigger: {
           trigger: "#what-we-do-bar",
-          start: "top 90%",
-          end: "top 80%",
+          start: "top 80%",
+          end: "top 40%",
           scrub: 2,
         },
       });
-      gsap.from("#what-we-do-title", {
-        translateY: "100%",
-        duration: 1,
-        opacity: 0,
+
+      gsap.from(whatWeDoTitleLines, {
+        yPercent: "130",
+        stagger: 1,
+        duration: 5,
         ease: "power2.inOut",
         scrollTrigger: {
-          trigger: "#what-we-do-title",
-          start: "top 95%",
-          end: "top 90%",
+          trigger: whatWeDoSplitTextTitleLinesRef.current,
+          start: "top 90%",
+          end: "top 60%",
           scrub: 2,
         },
       });
-      gsap.from("#what-we-do-desc", {
-        // translateY: "100%",
-        rotateY: "-90",
-        duration: 0.6,
-        opacity: 0,
+
+      gsap.from(whatWeDoLines, {
+        yPercent: "130",
+        stagger: 1,
+        duration: 5,
         ease: "power2.inOut",
         scrollTrigger: {
-          trigger: "#what-we-do-desc",
+          trigger: whatWeDoSplitTextLinesRef.current,
           start: "top 90%",
-          end: "top 80%",
+          end: "top 60%",
           scrub: 2,
         },
       });
+
       gsap.from("#growth-rate", {
-        translateY: "100%",
-        duration: 0.6,
-        opacity: 0,
+        yPercent: "100",
+        duration: 1,
         ease: "power2.inOut",
         scrollTrigger: {
           trigger: "#growth-rate",
-          start: "top 90%",
-          end: "top 80%",
+          start: "top 95%",
+          end: "top 70%",
           scrub: 2,
         },
       });
@@ -78,8 +108,12 @@ export default function WhatWeDo() {
             ></div>
           </div>
           <div className="w-full sm:w-[70%] uppercase font-titleFont font-bold text-[42px] sm:text-[54px] lg:text-6xl leading-none text-darkTitleText overflow-hidden">
-            <span id="what-we-do-title" className="inline-block">
-              <span className="">Solution</span> that drive{" "}
+            <span
+              ref={whatWeDoSplitTextTitleLinesRef}
+              id="what-we-do-title"
+              className="block"
+            >
+              Solution that drive{" "}
               <span className="text-lightTitleText font-light">
                 your success
               </span>
@@ -89,8 +123,9 @@ export default function WhatWeDo() {
         <div className="w-full flex flex-col sm:flex-row justify-start px-5 sm:px-7 lg:px-10 xl:px-20 gap-7">
           <div className="w-full sm:w-[60%] xl:w-[40%] text-sm lg:text-base font-light overflow-hidden">
             <span
+              ref={whatWeDoSplitTextLinesRef}
               id="what-we-do-desc"
-              className="inline-block align-text-bottom overflow-hidden"
+              className="what-we-do-split-text-lines block overflow-hidden"
             >
               We specialize in building solutions that help your business thrive
               in a digital world. From intuitive software and stunning websites
