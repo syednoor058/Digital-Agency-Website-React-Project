@@ -1,9 +1,7 @@
 import gsap from "gsap";
 import React, { useLayoutEffect, useRef } from "react";
-import { GoArrowRight, GoClock } from "react-icons/go";
+import { GoArrowRight } from "react-icons/go";
 import { IoIosPlayCircle } from "react-icons/io";
-import { IoPersonOutline } from "react-icons/io5";
-import { RiTaskLine } from "react-icons/ri";
 import { Link } from "react-router-dom";
 import heroImg1 from "../../assets/images/hero1.png";
 import heroImg2 from "../../assets/images/hero2.png";
@@ -108,7 +106,7 @@ export default function Hero3() {
       ref={comp}
       data-scroll-container
       id="landing-hero"
-      className="w-full min-h-screen font-bodyFont text-lightBodyText   bg-darkPrimary overflow-hidden relative"
+      className="w-full font-bodyFont text-lightBodyText   bg-darkPrimary overflow-hidden relative"
     >
       {/* <div
         id="bg-second"
@@ -157,73 +155,15 @@ export default function Hero3() {
             </div>
           </div>
         </div>
-        <div className="w-full flex flex-col lg:flex-row gap-10 xl:gap-16">
-          <div className="w-full lg:w-[40%] hidden flex-col gap-7 xl:gap-16">
-            <div className="flex flex-row gap-7 xl:gap-16 justify-center">
-              <div className="w-[50%] flex items-center flex-col gap-2 ">
-                <div className="text-3xl sm:text-5xl font-medium overflow-hidden">
-                  <span
-                    id="exp-1"
-                    className="flex gap-2 justify-center items-center"
-                  >
-                    <span className="text-5xl sm:text-6xl text-accentColor">
-                      <GoClock />
-                    </span>
-                    3+
-                  </span>
-                </div>
-                <div className="text-center text-sm sm:text-base overflow-hidden">
-                  <span id="exp-2" className="inline-block">
-                    Years of Experience
-                  </span>
-                </div>
-              </div>
-              <div className="w-[50%] items-center flex flex-col gap-2">
-                <div className="text-3xl sm:text-5xl font-medium overflow-hidden">
-                  <span
-                    id="client-1"
-                    className="flex gap-2 justify-center items-center"
-                  >
-                    <span className="text-5xl sm:text-6xl text-accentColor">
-                      <IoPersonOutline />
-                    </span>
-                    12
-                  </span>
-                </div>
-                <div className="w-full text-center text-sm sm:text-base overflow-hidden">
-                  <span id="client-2" className="inline-block">
-                    Satisfied Clients All Over the World
-                  </span>
-                </div>
-              </div>
-            </div>
-            <div className="flex justify-center">
-              <div className="flex flex-col gap-2 ">
-                <div className="overflow-hidden">
-                  <div
-                    id="pro-1"
-                    className="text-3xl sm:text-5xl font-medium flex gap-2 justify-center items-center"
-                  >
-                    <span className="text-5xl sm:text-6xl text-accentColor">
-                      <RiTaskLine />
-                    </span>
-                    20
-                  </div>
-                </div>
-                <div className="text-center text-sm sm:text-base overflow-hidden">
-                  <span id="pro-2" className="inline-block">
-                    Projects Completed Successfully
-                  </span>
-                </div>
-              </div>
+        <div className="w-full flex flex-col-reverse lg:flex-row-reverse gap-3 lg:gap-7">
+          <div className="w-full lg:w-[40%] rounded-xl">
+            <div className="flex flex-col gap-3 lg:gap-10  justify-center">
+              <div className="w-full aspect-[16/7] bg-accentColor rounded-xl"></div>
+              <div className="w-full aspect-[16/7] bg-accentColor rounded-xl"></div>
             </div>
           </div>
           <div className="w-full lg:w-[60%] grid grid-cols-2 gap-1 lg:gap-5">
-            <div
-              data-scroll
-              data-scroll-speed="-0.05"
-              className="flex justify-center items-end relative overflow-hidden"
-            >
+            <div className="flex justify-center items-end relative overflow-hidden">
               <div
                 id="hero-img-1-cover"
                 className="w-full h-full bg-darkPrimary absolute top-0 left-0 z-[5]"
@@ -235,11 +175,7 @@ export default function Hero3() {
                 alt="businessman"
               />
             </div>
-            <div
-              data-scroll
-              data-scroll-speed="0.1"
-              className="flex justify-center items-end relative overflow-hidden "
-            >
+            <div className="flex justify-center items-end relative overflow-hidden ">
               <div
                 id="hero-img-2-cover"
                 className="w-full h-full bg-darkPrimary absolute top-0 left-0 z-[5]"

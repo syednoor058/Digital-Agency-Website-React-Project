@@ -3,7 +3,8 @@
 import gsap from "gsap";
 import { useLayoutEffect, useRef } from "react";
 import { MdExtension, MdFindInPage, MdInsertChart } from "react-icons/md";
-import SplitType from "split-type";
+import Splitting from "splitting";
+import "splitting/dist/splitting.css"; // Include required CSS for Splitting.js
 import DoCard from "./DoCard";
 
 export default function WhatWeDo() {
@@ -11,33 +12,13 @@ export default function WhatWeDo() {
   const whatWeDoSplitTextLinesRef = useRef(null);
   const whatWeDoSplitTextTitleLinesRef = useRef(null);
   useLayoutEffect(() => {
-    let whatWeDoSplitText = new SplitType(whatWeDoSplitTextLinesRef.current, {
-      type: "lines",
-    });
-    let whatWeDoLines = whatWeDoSplitText.lines;
+    const splitTitle = Splitting({ target: "#what-we-do-title", by: "lines" });
+    const splitDesc = Splitting({ target: "#what-we-do-desc", by: "lines" });
 
-    let whatWeDoTitleSplitText = new SplitType(
-      whatWeDoSplitTextTitleLinesRef.current,
-      {
-        type: "lines",
-      }
-    );
-    let whatWeDoTitleLines = whatWeDoTitleSplitText.lines;
+    // If Splitting.js returns valid lines, proceed to wrap them
+    const titleLines = splitTitle?.[0]?.lines || [];
+    const descLines = splitDesc?.[0]?.lines || [];
 
-    whatWeDoTitleLines.forEach((line) => {
-      const wrapper = document.createElement("div");
-      wrapper.style.overflow = "hidden";
-      line.parentNode.insertBefore(wrapper, line);
-      wrapper.appendChild(line);
-    });
-
-    // Wrap each line in a container to hide overflow
-    whatWeDoLines.forEach((line) => {
-      const wrapper = document.createElement("div");
-      wrapper.style.overflow = "hidden";
-      line.parentNode.insertBefore(wrapper, line);
-      wrapper.appendChild(line);
-    });
     let ctx = gsap.context(() => {
       gsap.from("#what-we-do-bar", {
         translateY: "-100%",
@@ -51,28 +32,30 @@ export default function WhatWeDo() {
         },
       });
 
-      gsap.from(whatWeDoTitleLines, {
+      gsap.from(titleLines, {
         yPercent: "130",
-        stagger: 1,
+        stagger: 0.5,
+        opacity: 0,
         duration: 5,
         ease: "power2.inOut",
         scrollTrigger: {
           trigger: whatWeDoSplitTextTitleLinesRef.current,
           start: "top 90%",
-          end: "top 60%",
+          end: "top 50%",
           scrub: 2,
         },
       });
 
-      gsap.from(whatWeDoLines, {
+      gsap.from(descLines, {
         yPercent: "130",
-        stagger: 1,
+        stagger: 0.5,
         duration: 5,
+        opacity: 0,
         ease: "power2.inOut",
         scrollTrigger: {
           trigger: whatWeDoSplitTextLinesRef.current,
           start: "top 90%",
-          end: "top 60%",
+          end: "top 50%",
           scrub: 2,
         },
       });
@@ -84,7 +67,7 @@ export default function WhatWeDo() {
         scrollTrigger: {
           trigger: "#growth-rate",
           start: "top 95%",
-          end: "top 70%",
+          end: "top 90%",
           scrub: 2,
         },
       });
@@ -127,12 +110,12 @@ export default function WhatWeDo() {
               id="what-we-do-desc"
               className="what-we-do-split-text-lines block overflow-hidden"
             >
-              We specialize in building solutions that help your business thrive
-              in a digital world. From intuitive software and stunning websites
-              to strategic marketing and seamless testing, we align technology
-              with your goals. Our multidisciplinary approach ensures every
-              project we undertake drives growth, enhances visibility, and
-              creates lasting value.
+              We specialise in developing solutions that help your business
+              prosper in the digital age. From intuitive software to attractive
+              websites to strategic marketing and flawless testing, we match
+              technology with business objectives. Our comprehensive approach
+              guarantees that every project we do promotes development,
+              increases visibility, and delivers long-term value.
             </span>
           </div>
           <div className="w-full sm:w-[40%] lg:w-[60%] flex flex-row gap-5 items-center justify-end">
