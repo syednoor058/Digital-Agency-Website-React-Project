@@ -5,98 +5,76 @@ import { IoIosPlayCircle } from "react-icons/io";
 import { Link } from "react-router-dom";
 import heroImg1 from "../../assets/images/hero1.png";
 import heroImg2 from "../../assets/images/hero2.png";
-
+import { useAnimation } from "../../context/animationContext/AnimationContextProvider";
 // Register ScrollTrigger with GSAP
 // gsap.registerPlugin(ScrollTrigger);
 
 export default function Hero3() {
+  const { delayLandingPage, setDelayLandingPage } = useAnimation();
   const comp = useRef(null);
   useLayoutEffect(() => {
     let ctx = gsap.context(() => {
-      gsap.from(["#hero-title", "#hero-title-2"], {
-        translateY: "100%",
-        duration: 1.5,
-        ease: "power2.inOut",
-        opacity: 0,
-        delay: 5,
+      if (delayLandingPage > 0) {
+        gsap.from(["#hero-title", "#hero-title-2"], {
+          translateY: "100%",
+          duration: 1.5,
+          ease: "power2.inOut",
+          opacity: 0,
+          delay: delayLandingPage,
 
-        stagger: 0.2,
-      });
-      gsap.from("#hero-desc", {
-        translateY: "100%",
-        duration: 1,
-        ease: "power2.inOut",
-        delay: 5,
-        opacity: 0,
-      });
-      gsap.from("#hero-btn-1", {
-        translateY: "100%",
-        duration: 1,
-        ease: "power2.inOut",
-        opacity: 0,
-        delay: 5,
-      });
-      gsap.from("#hero-btn-2", {
-        translateY: "100%",
-        duration: 1,
-        ease: "power2.inOut",
-        opacity: 0,
-        delay: 5,
-      });
-      gsap.from(["#exp-1", "#exp-2"], {
-        translateY: "100%",
-        duration: 1.8,
-        ease: "power2.inOut",
-        opacity: 0,
-        stagger: 0.2,
-        delay: 5,
-      });
-      gsap.from(["#client-1", "#client-2"], {
-        translateY: "100%",
-        delay: 5,
-        duration: 1.8,
-        ease: "power2.inOut",
-        opacity: 0,
-        stagger: 0.2,
-      });
-      gsap.from("#pro-1", {
-        translateY: "100%",
-        duration: 1.1,
-        ease: "power2.inOut",
-        opacity: 0,
-        delay: 5,
-      });
-      gsap.from("#pro-2", {
-        translateY: "100%",
-        duration: 1.1,
-        ease: "power2.inOut",
-        opacity: 0,
-        delay: 5.2,
-      });
-      gsap.to("#hero-img-1-cover", {
-        xPercent: "100",
-        duration: 1,
-        ease: "expo.inOut",
-        delay: 5,
-      });
-      gsap.from("#hero-img-1", {
-        scale: 1,
-        duration: 1,
-        ease: "expo.inOut",
-        delay: 5,
-      });
-      gsap.to("#hero-img-2-cover", {
-        xPercent: "100",
-        duration: 1,
-        ease: "expo.inOut",
-        delay: 5.3,
-      });
-      gsap.from("#hero-img-2", {
-        scale: 1,
-        duration: 1,
-        ease: "expo.inOut",
-        delay: 5.3,
-      });
+          stagger: 0.2,
+        });
+        gsap.from("#hero-desc", {
+          translateY: "100%",
+          duration: 1,
+          ease: "power2.inOut",
+          delay: delayLandingPage,
+          opacity: 0,
+        });
+        gsap.from("#hero-btn-1", {
+          translateY: "100%",
+          duration: 1,
+          ease: "power2.inOut",
+          opacity: 0,
+          delay: delayLandingPage,
+        });
+        gsap.from("#hero-btn-2", {
+          translateY: "100%",
+          duration: 1,
+          ease: "power2.inOut",
+          opacity: 0,
+          delay: delayLandingPage,
+        });
+        gsap.from("#hero-img-1-cover", {
+          translateX: "0",
+          duration: 1.5,
+          ease: "expo.inOut",
+          delay: delayLandingPage,
+        });
+        gsap.from("#hero-img-1", {
+          scale: 1,
+          duration: 1.5,
+          ease: "expo.inOut",
+          delay: delayLandingPage,
+        });
+        gsap.from("#hero-img-2-cover", {
+          translateX: "0",
+          duration: 1.5,
+          ease: "expo.inOut",
+          delay: delayLandingPage,
+        });
+        gsap.from("#hero-img-2", {
+          scale: 1,
+          duration: 1.5,
+          ease: "expo.inOut",
+          delay: delayLandingPage,
+        });
+      }
+
+      // After the first animation, set delay to 0
+      if (delayLandingPage !== 0) {
+        setDelayLandingPage(0);
+      }
     }, comp);
 
     return () => ctx.revert();
@@ -137,20 +115,26 @@ export default function Hero3() {
           <div className="flex flex-row justify-center items-center gap-5 sm:gap-10 overflow-hidden">
             <Link
               id="hero-btn-1"
-              className="px-3 sm:px-5 py-2 bg-accentColor text-darkBodyText rounded-full text-base sm:text-xl flex justify-center items-center"
+              className="px-3 sm:px-5 py-2 bg-accentColor text-darkBodyText hover:text-darkTitleText duration-500 rounded-full text-base sm:text-xl relative group overflow-hidden ease-in-out"
             >
-              Get Started{" "}
-              <span className="ps-1">
-                <GoArrowRight />
+              <span className="w-full h-full rounded-full bg-lightPrimary absolute top-0 left-0 translate-x-[-100%] group-hover:translate-x-0 duration-500 ease-in-out"></span>
+              <span className="flex justify-center items-center relative">
+                Get Started{" "}
+                <span className="ps-1">
+                  <GoArrowRight />
+                </span>
               </span>
             </Link>
             <div
               id="hero-btn-2"
-              className="flex justify-center items-center text-base sm:text-xl border border-accentColor rounded-full px-3 sm:px-5 py-2"
+              className="text-base sm:text-xl border border-accentColor rounded-full px-3 sm:px-5 py-2 relative overflow-hidden group cursor-pointer duration-500 hover:border-lightPrimary"
             >
-              Watch Video{" "}
-              <span className="ps-1">
-                <IoIosPlayCircle />
+              <span className="w-full h-full bg-lightPrimary absolute top-0 left-0 translate-x-[-100%] group-hover:translate-x-0 duration-500 rounded-full"></span>
+              <span className="relative flex justify-center items-center group-hover:text-darkTitleText duration-500">
+                Watch Video{" "}
+                <span className="ps-1">
+                  <IoIosPlayCircle />
+                </span>
               </span>
             </div>
           </div>
@@ -166,7 +150,7 @@ export default function Hero3() {
             <div className="flex justify-center items-end relative overflow-hidden">
               <div
                 id="hero-img-1-cover"
-                className="w-full h-full bg-darkPrimary absolute top-0 left-0 z-[5]"
+                className="w-full h-full bg-darkPrimary absolute top-0 left-0 z-[5] translate-x-[100%]"
               ></div>
               <img
                 id="hero-img-1"
@@ -178,7 +162,7 @@ export default function Hero3() {
             <div className="flex justify-center items-end relative overflow-hidden ">
               <div
                 id="hero-img-2-cover"
-                className="w-full h-full bg-darkPrimary absolute top-0 left-0 z-[5]"
+                className="w-full h-full bg-darkPrimary absolute top-0 left-0 z-[5] translate-x-[100%]"
               ></div>
               <img
                 id="hero-img-2"

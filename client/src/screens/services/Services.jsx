@@ -29,7 +29,7 @@ export default function Services() {
       <div className="pt-10 lg:pt-20 flex flex-col  gap-10 sm:gap-14  md:gap-20 lg:gap-28">
         {/* Hero Section */}
         <div className="px-5 sm:px-7 lg:px-10 xl:px-20">
-          <div className="flex flex-col lg:flex-row gap-5 sm:gap-7 md:gap-10 lg:gap-20">
+          <div className="flex flex-col lg:flex-row gap-5 sm:gap-7 md:gap-10 lg:gap-20 items-end">
             <div className="w-full lg:w-[60%] flex flex-col gap-5 sm:gap-7 lg:gap-10">
               <div>
                 <h1 className="uppercase font-titleFont text-[28px] sm:text-5xl leading-none text-lightTitleText font-light">
@@ -39,7 +39,7 @@ export default function Services() {
                   Your <span className="text-accentColor">Success</span>
                 </h1>
               </div>
-              <p className="text-sm sm:text-base text-start lg:text-end">
+              <p className="text-sm sm:text-base xl:text-lg font-light text-start">
                 From software development to digital marketing and beyond, our
                 services are designed to elevate your business at every step. We
                 combine technical expertise with strategic insights to deliver
@@ -51,36 +51,21 @@ export default function Services() {
                   <PiArrowSquareUpRightThin />
                 </div>
               </div>
-              <div className="w-60 h-60 hidden rounded-[100%] bg-accentColor xl:flex justify-center items-center">
-                <div className="flex flex-col uppercase font-bold text-4xl text-darkBodyText">
-                  <div>Explore</div>
-                  <div>More</div>
-                </div>
-              </div>
             </div>
-            <div className="w-full lg:w-[40%]">
-              <img
-                src={serviceHeroImg}
-                alt="service_home_img"
-                className="w-full h-auto"
-              />
+            <div className="w-full lg:w-[40%] overflow-hidden">
+              <div className="w-full aspect-[7/8] overflow-hidden">
+                <img
+                  src={serviceHeroImg}
+                  alt="service_home_img"
+                  className="w-full object-cover"
+                />
+              </div>
             </div>
           </div>
         </div>
         {/* Services Section */}
         <div className="px-5 sm:px-7 lg:px-10 xl:px-20">
           <div className="flex flex-col gap-5 sm:gap-7 md:gap-10 lg:gap-20">
-            <div className="w-full lg:w-[70%] uppercase font-titleFont text-lightPrimary text-[28px] sm:text-5xl font-semibold leading-none">
-              Crafting Solutions that Drive Results
-            </div>
-            <div className="flex justify-end">
-              <div className="w-full lg:w-[60%] xl:w-[40%] text-sm sm:text-base text-start lg:text-end">
-                Our range of services is built to propel your business forward
-                with precision and impact. From innovative software development
-                to data-driven digital marketing, each service is tailored to
-                meet your unique needs.{" "}
-              </div>
-            </div>
             <div>
               <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-y-5 lg:gap-y-10 gap-x-5">
                 <div className="flex flex-col gap-3 border-b lg:border-b-0 lg:border-r border-lightBodyText border-opacity-40 p-3">

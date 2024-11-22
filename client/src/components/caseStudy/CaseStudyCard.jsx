@@ -17,7 +17,7 @@ export default function CaseStudyCard(props) {
           <div className="w-[10%]">
             <Link
               to={props.to}
-              className="w-full text-accentColor hover:text-lightPrimary hover:scale-[1.1] duration-300 text-4xl cursor-pointer flex justify-end"
+              className="w-full text-accentColor hover:text-lightPrimary hover:scale-[1.1] duration-500 text-4xl cursor-pointer flex justify-end"
             >
               <BsFillArrowUpRightCircleFill />
             </Link>

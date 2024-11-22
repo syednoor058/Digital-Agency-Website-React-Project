@@ -110,9 +110,10 @@ export default function CaseStudy() {
           />
         </div>
         <div className="w-ful flex justify-center pt-5 lg:pt-10">
-          <div className="uppercase text-lightPrimary font-extralight text-base sm:text-xl px-5 py-2 border border-lightPrimary rounded-sm hover:scale-[1.1] duration-200 hover:bg-accentColor hover:border-none hover:text-darkPrimary hover:font-light text-center">
-            <Link className="">Discover More Case Studies</Link>
-          </div>
+          <Link className="uppercase text-lightPrimary text-sm sm:text-base px-5 py-2 border border-lightPrimary  hover:border-accentColor hover:text-darkPrimary text-center rounded-full duration-500 relative group overflow-hidden">
+            <span className="w-full h-full bg-accentColor absolute top-0 left-0 translate-x-[-100%] rounded-full group-hover:translate-x-0 duration-500"></span>
+            <span className="relative">Discover More Case Studies</span>
+          </Link>
         </div>
       </div>
     </div>
