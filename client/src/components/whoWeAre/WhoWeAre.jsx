@@ -2,9 +2,10 @@
 import Avatar from "@mui/material/Avatar";
 import AvatarGroup from "@mui/material/AvatarGroup";
 import gsap from "gsap";
-// import Stack from "@mui/material/Stack";
 import { useLayoutEffect, useRef } from "react";
 import { PiArrowSquareUpRightThin } from "react-icons/pi";
+import Splitting from "splitting";
+import "splitting/dist/splitting.css"; // Include required CSS for Splitting.js
 import azizul from "../../assets/images/testimonials/azizul.webp";
 import rhitu from "../../assets/images/testimonials/rhitu.webp";
 import sharar from "../../assets/images/testimonials/sharar.webp";
@@ -12,57 +13,63 @@ import tanha from "../../assets/images/testimonials/tanha.webp";
 
 export default function WhoWeAre() {
   const comp = useRef(null);
+  const whoWeAreSplitTextLinesRef = useRef(null);
   useLayoutEffect(() => {
+    const splitDescText = Splitting({
+      target: whoWeAreSplitTextLinesRef.current,
+      by: "lines",
+    });
+    const descLines = splitDescText?.[0]?.lines || [];
     let ctx = gsap.context(() => {
       gsap.from("#who-bar", {
         translateY: "-100%",
-        duration: 0.6,
+        duration: 2,
         opacity: 0,
         ease: "power2.inOut",
         scrollTrigger: {
           trigger: "#who-bar",
-          start: "top 95%",
-          end: "top 90%",
+          start: "top 90%",
+          end: "top 70%",
           scrub: 2,
         },
       });
       gsap.from("#who-title-1", {
-        translateY: "100%",
-        duration: 0.6,
+        yPercent: "100",
+        duration: 1,
         opacity: 0,
         ease: "power2.inOut",
         scrollTrigger: {
           trigger: "#who-title-1",
           // scroller: comp,
-          start: "top 95%",
-          end: "top 90%",
+          start: "top 90%",
+          end: "top 60%",
           scrub: 2,
         },
       });
 
       gsap.from("#who-title-2", {
-        translateY: "100%",
-        duration: 0.6,
+        yPercent: "100",
+        duration: 1,
         opacity: 0,
         ease: "power2.inOut",
         scrollTrigger: {
           trigger: "#who-title-2",
           // scroller: comp,
-          start: "top 95%",
-          end: "top 90%",
+          start: "top 90%",
+          end: "top 60%",
           scrub: 2,
         },
       });
       gsap.from("#who-title-3", {
-        translateY: "100%",
-        duration: 0.6,
+        yPercent: "100",
+        duration: 1,
         opacity: 0,
         ease: "power2.inOut",
         scrollTrigger: {
           trigger: "#who-title-3",
           // scroller: comp,
-          start: "top 95%",
-          end: "top 90%",
+          start: "top 90%",
+          end: "top 60%",
           scrub: 2,
         },
       });
@@ -78,15 +85,16 @@ export default function WhoWeAre() {
           scrub: 2,
         },
       });
-      gsap.from("#who-desc", {
-        translateY: "100%",
-        duration: 0.6,
+      gsap.from(descLines, {
+        yPercent: "100",
+        duration: 5,
         opacity: 0,
         ease: "power2.inOut",
+        stagger: 0.5,
         scrollTrigger: {
           trigger: "#who-desc",
-          start: "top 95%",
-          end: "top 90%",
+          start: "top 90%",
+          end: "top 60%",
           scrub: 2,
         },
       });
@@ -174,7 +182,11 @@ export default function WhoWeAre() {
             </div>
           </div>
           <div className="text-sm sm:text-base overflow-hidden">
-            <span id="who-desc" className="inline-block">
+            <span
+              ref={whoWeAreSplitTextLinesRef}
+              id="who-desc"
+              className="inline-block"
+            >
               We are more than just a service provider — we are your strategic
               partner. Our mission is to empower your business with tailored
               digital solutions that drive growth, enhance visibility, and
