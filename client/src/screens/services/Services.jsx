@@ -1,5 +1,6 @@
 // import React from 'react'
 import { useEffect } from "react";
+import { HiMiniArrowUpRight } from "react-icons/hi2";
 import {
   LuGlobe2,
   LuKanbanSquare,
@@ -12,6 +13,7 @@ import {
 } from "react-icons/lu";
 import { MdControlPoint } from "react-icons/md";
 import { PiArrowSquareUpRightThin } from "react-icons/pi";
+import { Link } from "react-router-dom";
 import serviceHeroImg from "../../assets/images/services_hero.png";
 import CallToAction from "../../components/callToAction/CallToAction";
 import Footer from "../../components/footer/Footer";
@@ -46,8 +48,18 @@ export default function Services() {
                 solutions that align with your goals, enhance customer
                 experiences, and drive lasting growth.
               </p>
-              <div className="flex justify-end pe-10 sm:pe-32 opacity-60">
-                <div className="w-fit rounded text-8xl border-lightBodyText rotate-180">
+              <div className="flex justify-between items-center pe-0 sm:pe-32">
+                <div className="flex flex-row hover:flex-row-reverse duration-500 items-center">
+                  <Link to="/pricing">
+                    <div className="text-center text-base sm:text-xl px-8 py-2 sm:py-3 rounded-full bg-accentColor text-darkTitleText">
+                      Get Started
+                    </div>
+                  </Link>
+                  <div className="w-10 sm:w-12 h-10 sm:h-12 rounded-full flex justify-center items-center bg-accentColor text-darkTitleText text-lg sm:text-xl">
+                    <HiMiniArrowUpRight />
+                  </div>
+                </div>
+                <div className="w-fit rounded text-8xl border-lightBodyText rotate-180 opacity-60">
                   <PiArrowSquareUpRightThin />
                 </div>
               </div>

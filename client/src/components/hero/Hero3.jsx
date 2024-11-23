@@ -97,9 +97,9 @@ export default function Hero3() {
       ref={comp}
       data-scroll-container
       id="landing-hero"
-      className="w-full font-bodyFont text-lightBodyText   bg-darkPrimary overflow-hidden relative"
+      className="w-full h-full lg:min-h-screen font-bodyFont text-lightBodyText   bg-darkPrimary overflow-hidden relative"
     >
-      <div className="w-full min-h-screen px-5 sm:px-7 lg:px-10 xl:px-20 py-10 lg:pt-24 lg:pb-10 relative z-[5] backdrop-blur-[1px] flex flex-col lg:flex-row gap-10 md:gap-16">
+      <div className="w-full px-5 sm:px-7 lg:px-10 xl:px-20 py-10 lg:pt-24 lg:pb-10 relative z-[5] backdrop-blur-[1px] flex flex-col lg:flex-row gap-10 md:gap-16">
         <div className="w-full lg:w-[50%] flex flex-col gap-5 md:gap-7">
           <div className="uppercase font-titleFont font-bold text-[28px] sm:text-5xl lg:text-[30px] leading-none text-center lg:text-start text-lightTitleText">
             <h1 className="font-light overflow-hidden">
