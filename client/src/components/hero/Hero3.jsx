@@ -69,11 +69,10 @@ export default function Hero3() {
           ease: "expo.inOut",
           delay: delayLandingPage,
         });
-      }
 
-      // After the first animation, set delay to 0
-      if (delayLandingPage !== 0) {
-        setDelayLandingPage(0);
+        if (delayLandingPage !== 0) {
+          setDelayLandingPage(0);
+        }
       }
     }, comp);
 
@@ -113,29 +112,33 @@ export default function Hero3() {
             </span>
           </p>
           <div className="flex flex-row justify-center items-center gap-5 sm:gap-10 overflow-hidden">
-            <Link
+            <div
               id="hero-btn-1"
-              className="px-3 sm:px-5 py-2 bg-accentColor text-darkBodyText hover:text-darkTitleText duration-500 rounded-full text-base sm:text-xl relative group overflow-hidden ease-in-out"
+              className="bg-accentColor text-darkBodyText rounded-full text-base sm:text-xl group overflow-hidden relative"
             >
-              <span className="w-full h-full rounded-full bg-lightPrimary absolute top-0 left-0 translate-x-[-100%] group-hover:translate-x-0 duration-500 ease-in-out"></span>
-              <span className="flex justify-center items-center relative">
-                Get Started{" "}
-                <span className="ps-1">
-                  <GoArrowRight />
+              <Link to="/pricing" className="w-full h-full ">
+                <span className="w-full h-full rounded-full bg-lightPrimary absolute top-0 left-0 translate-x-[-100%] group-hover:translate-x-0 duration-500 ease-in-out"></span>
+                <span className="flex justify-center items-center relative px-3 sm:px-5 py-2">
+                  Get Started{" "}
+                  <span className="ps-1">
+                    <GoArrowRight />
+                  </span>
                 </span>
-              </span>
-            </Link>
+              </Link>
+            </div>
             <div
               id="hero-btn-2"
-              className="text-base sm:text-xl border border-accentColor rounded-full px-3 sm:px-5 py-2 relative overflow-hidden group cursor-pointer duration-500 hover:border-lightPrimary"
+              className="border border-lightPrimary text-lightBodyText rounded-full text-base sm:text-xl group overflow-hidden relative"
             >
-              <span className="w-full h-full bg-lightPrimary absolute top-0 left-0 translate-x-[-100%] group-hover:translate-x-0 duration-500 rounded-full"></span>
-              <span className="relative flex justify-center items-center group-hover:text-darkTitleText duration-500">
-                Watch Video{" "}
-                <span className="ps-1">
-                  <IoIosPlayCircle />
+              <Link to="/pricing" className="w-full h-full ">
+                <span className="w-full h-full rounded-full bg-lightPrimary absolute top-0 left-0 translate-x-[-100%] group-hover:translate-x-0 duration-500"></span>
+                <span className="flex justify-center items-center relative px-3 sm:px-5 py-2 group-hover:text-darkTitleText duration-500">
+                  Watch Video{" "}
+                  <span className="ps-1">
+                    <IoIosPlayCircle />
+                  </span>
                 </span>
-              </span>
+              </Link>
             </div>
           </div>
         </div>
