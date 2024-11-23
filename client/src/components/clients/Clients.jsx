@@ -9,7 +9,7 @@ import shodwe from "../../assets/images/clients/6.png";
 
 export default function Clients() {
   return (
-    <div className="py-10 lg:py-16 bg-lightPrimary">
+    <div className="py-7 sm:py-10 bg-lightPrimary">
       <div className="">
         <Marquee
           autoFill={true}
@@ -17,23 +17,23 @@ export default function Clients() {
           direction="left"
           className="hover:cursor-pointer opacity-60"
         >
-          <div className="flex justify-center items-center mx-3 md:mx-10">
+          <div className="flex justify-center items-center mx-3 md:mx-6">
             <img
-              className="w-[100px] md:w-[220px]"
+              className="w-[100px] md:w-[150px]"
               src={interAid}
               alt="inter-aid"
             />
           </div>
           <div className="flex justify-center items-center mx-3 md:mx-10">
             <img
-              className="w-[100px] md:w-[220px]"
+              className="w-[100px] md:w-[150px]"
               src={sato}
               alt="inter-aid"
             />
           </div>
           <div className="flex justify-center items-center mx-3 md:mx-10">
             <img
-              className="w-[100px] md:w-[220px]"
+              className="w-[100px] md:w-[150px]"
               src={qahaf}
               alt="inter-aid"
             />
@@ -41,7 +41,7 @@ export default function Clients() {
 
           <div className="flex justify-center items-center mx-3 md:mx-10">
             <img
-              className="w-[100px] md:w-[220px]"
+              className="w-[100px] md:w-[150px]"
               src={quantumQube}
               alt="inter-aid"
             />
@@ -49,7 +49,7 @@ export default function Clients() {
 
           <div className="flex justify-center items-center mx-3 md:mx-10">
             <img
-              className="w-[100px] md:w-[220px]"
+              className="w-[100px] md:w-[150px]"
               src={puppetBrush}
               alt="inter-aid"
             />
@@ -57,7 +57,7 @@ export default function Clients() {
 
           <div className="flex justify-center items-center mx-3 md:mx-10">
             <img
-              className="w-[100px] md:w-[220px]"
+              className="w-[100px] md:w-[150px]"
               src={shodwe}
               alt="inter-aid"
             />

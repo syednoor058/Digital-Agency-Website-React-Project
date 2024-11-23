@@ -2,7 +2,7 @@
 import gsap from "gsap";
 import { useLayoutEffect, useRef, useState } from "react";
 import { RxHamburgerMenu } from "react-icons/rx";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import lightLogo from "../../assets/logo/dark_mode_logo.png";
 export default function Navbar() {
   const [toggle, setToggle] = useState(false);
@@ -53,7 +53,7 @@ export default function Navbar() {
       ref={comp}
       className="w-full font-bodyFont capitalize text-lightBodyText bg-darkPrimary"
     >
-      <div className="w-full h-16 px-3 md:px-8 lg:px-8 xl:px-20 hidden lg:flex flex-row gap-10 items-center justify-between">
+      <div className="w-full h-16 px-5 sm:px-10 xl:px-20 hidden lg:flex flex-row gap-10 items-center justify-between">
         <div id="navLogo" className="w-[15%]">
           <img className="w-full h-auto" src={lightLogo} alt="light_logo" />
         </div>
@@ -141,16 +141,25 @@ export default function Navbar() {
           </div>
           <div
             id="nav-cta"
-            className="w-[15%] px-3 py-2 border border-accentColor rounded-full flex justify-center items-center lg:text-sm font-bodyFont"
+            className="w-[15%] px-3 py-2 border border-accentColor rounded-full flex justify-center items-center text-sm font-bodyFont group relative overflow-hidden"
           >
-            Get a quote
+            <span className="w-full h-full absolute bg-accentColor translate-x-[-100%] group-hover:translate-x-0 duration-500 rounded-full top-0 left-0"></span>
+            <Link className="w-full h-full relative flex justify-center items-center">
+              <span className="group-hover:text-darkTitleText duration-500 text-center">
+                Get a quote
+              </span>
+            </Link>
           </div>
         </div>
       </div>
-      <div className="w-full h-14 px-3 md:px-8 lg:px-8 xl:px-20 text-xs sm:text-sm  flex lg:hidden items-center">
+      <div className="w-full h-14 px-5 md:px-10 lg:px-10 xl:px-20 text-xs sm:text-sm  flex lg:hidden items-center">
         <div className="w-full flex flex-row gap-10 items-center justify-between  text-lightTitleText">
           <div className="" id="mobile-nav0">
-            <img className="w-auto h-14" src={lightLogo} alt="light_logo" />
+            <img
+              className="w-auto h-14 object-contain"
+              src={lightLogo}
+              alt="light_logo"
+            />
           </div>
           <div className="flex flex-row gap-2 sm:gap-3 justify-end items-center">
             <div

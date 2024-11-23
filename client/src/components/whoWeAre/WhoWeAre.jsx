@@ -174,7 +174,7 @@ export default function WhoWeAre() {
             <div className="overflow-hidden">
               <span id="who-subdesc" className="inline-block">
                 We have{" "}
-                <span className="font-semibold underline underline-offset-4">
+                <span className="font-medium underline underline-offset-4 text-lightTitleText">
                   12+ satisfied clients
                 </span>{" "}
                 all around the world.
