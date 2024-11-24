@@ -11,7 +11,7 @@ import HowWeWork2 from "../../components/howWeWork/HowWeWork2";
 import Testimonials from "../../components/testimonials/Testimonials";
 import WhatWeDo from "../../components/whatWeDo/WhatWeDo";
 import WhoWeAre from "../../components/whoWeAre/WhoWeAre";
-import WhyChooseUs from "../../components/whyChooseUs/WhyChooseUs";
+// import WhyChooseUs from "../../components/whyChooseUs/WhyChooseUs";
 
 export default function Home() {
   const containerRef = useRef(null);
@@ -37,7 +37,7 @@ export default function Home() {
         <WhatWeDo />
         <HowWeWork2 />
         <CaseStudy />
-        <WhyChooseUs />
+        {/* <WhyChooseUs /> */}
         <Testimonials />
         <FAQ />
         <CallToAction />
