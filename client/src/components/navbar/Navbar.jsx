@@ -24,7 +24,7 @@ export default function Navbar() {
           stagger: 0.2,
         })
         .from(
-          ["#nav0", "#nav1", "#nav2", "#nav3", "#nav4", "#nav5"],
+          ["#nav0", "#nav1", "#nav2", "#nav3", "#nav4"],
           {
             y: "+=30",
             opacity: 0,
@@ -101,19 +101,6 @@ export default function Navbar() {
             </div>
             <div className="overflow-hidden" id="nav3">
               <NavLink
-                to="/pricing"
-                className={({ isActive }) =>
-                  isActive
-                    ? " duration-300 group text-accentColor overflow-hidden"
-                    : "flex flex-col justify-center items-center overflow-hidden group"
-                }
-              >
-                Pricing
-                <div className="group-hover:translate-x-0 -translate-x-[105%] h-[1px] w-full bg-accentColor duration-[400ms]"></div>
-              </NavLink>
-            </div>
-            <div className="overflow-hidden" id="nav4">
-              <NavLink
                 to="/about-us"
                 className={({ isActive }) =>
                   isActive
@@ -125,7 +112,7 @@ export default function Navbar() {
                 <div className="group-hover:translate-x-0 -translate-x-[105%] h-[1px] w-full bg-accentColor duration-[400ms]"></div>
               </NavLink>
             </div>
-            <div className="overflow-hidden" id="nav5">
+            <div className="overflow-hidden" id="nav4">
               <NavLink
                 to="/contact-us"
                 className={({ isActive }) =>
@@ -218,18 +205,6 @@ export default function Navbar() {
               }
             >
               <div className="w-full px-5 md:px-7 py-3">Projects</div>
-            </NavLink>
-          </div>
-          <div className="w-full" onClick={toggleMenu}>
-            <NavLink
-              to="/pricing"
-              className={({ isActive }) =>
-                isActive
-                  ? "w-full bg-darkPrimary  duration-300 group text-lightPrimary overflow-hidden flex flex-col justify-center gap-3"
-                  : "flex flex-col justify-center overflow-hidden group gap-3 border-b-[0.5px] border-darkSecondary border-opacity-30"
-              }
-            >
-              <div className="w-full px-5 md:px-7 py-3">Pricing</div>
             </NavLink>
           </div>
           <div className="w-full" onClick={toggleMenu}>

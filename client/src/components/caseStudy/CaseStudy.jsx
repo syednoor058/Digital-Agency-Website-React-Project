@@ -69,7 +69,7 @@ export default function CaseStudy() {
                   MongoDB
                 </div>
                 <div className="px-3 py-1 sm:py-2 border border-accentColor rounded-xl">
-                  Vecel
+                  Vercel
                 </div>
               </div>
             </div>
@@ -110,7 +110,10 @@ export default function CaseStudy() {
           />
         </div>
         <div className="w-ful flex justify-center pt-5 lg:pt-10">
-          <Link className="uppercase text-lightPrimary text-sm sm:text-base px-5 py-2 border border-lightPrimary  hover:border-accentColor hover:text-darkPrimary text-center rounded-full duration-500 relative group overflow-hidden">
+          <Link
+            to="/projects"
+            className="uppercase text-lightPrimary text-sm sm:text-base px-5 py-2 border border-lightPrimary  hover:border-accentColor hover:text-darkPrimary text-center rounded-full duration-500 relative group overflow-hidden"
+          >
             <span className="w-full h-full bg-accentColor absolute top-0 left-0 translate-x-[-100%] rounded-full group-hover:translate-x-0 duration-500"></span>
             <span className="relative">Discover More Case Studies</span>
           </Link>
