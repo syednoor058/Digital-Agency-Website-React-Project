@@ -1,7 +1,7 @@
 import gsap from "gsap";
 import React, { useEffect, useRef } from "react";
 import { FaRegFolderOpen } from "react-icons/fa6";
-import { GoArrowRight } from "react-icons/go";
+import { HiMiniArrowUpRight } from "react-icons/hi2";
 import { IoIosPlayCircle } from "react-icons/io";
 import { IoPersonCircle } from "react-icons/io5";
 import { Link } from "react-router-dom";
@@ -99,21 +99,21 @@ export default function Hero3() {
       id="landing-hero"
       className="w-full h-full lg:min-h-screen font-bodyFont text-lightBodyText   bg-darkPrimary overflow-hidden relative"
     >
-      <div className="w-full px-5 sm:px-7 lg:px-10 xl:px-20 py-10 lg:pt-24 lg:pb-10 relative z-[5] backdrop-blur-[1px] flex flex-col lg:flex-row gap-10 md:gap-16">
-        <div className="w-full lg:w-[50%] flex flex-col gap-5 md:gap-7">
-          <div className="uppercase font-titleFont font-bold text-[28px] sm:text-5xl lg:text-[30px] leading-none text-center lg:text-start text-lightTitleText">
-            <h1 className="font-light overflow-hidden">
+      <section className="w-full px-5 sm:px-7 lg:px-10 xl:px-20 py-10 lg:pt-24 lg:pb-10 relative z-[5] backdrop-blur-[1px] flex flex-col lg:flex-row gap-10">
+        <div className="w-full lg:w-[70%] flex flex-col lg:flex-col-reverse gap-5 md:gap-7">
+          <div className="uppercase font-titleFont font-bold text-[28px] sm:text-5xl lg:text-[32px] xl:text-[40px] leading-none text-center lg:text-start text-lightTitleText">
+            <h1 className="font-semibold overflow-hidden">
               <span id="hero-title" className="inline-block">
                 Transforming Your ideas into
               </span>
             </h1>
-            <h1 className="text-[35px] sm:text-6xl md:text-7xl lg:text-6xl overflow-hidden">
+            <h1 className="text-[35px] sm:text-6xl md:text-7xl lg:text-6xl xl:text-[88px] overflow-hidden">
               <span id="hero-title-2" className="inline-block">
                 Digital <span className="text-accentColor">reality</span>
               </span>
             </h1>
           </div>
-          <p className="text-center lg:text-start text-sm sm:text-lg lg:text-base overflow-hidden">
+          <p className="w-full lg:w-[70%] text-center lg:text-start text-sm sm:text-lg lg:text-sm overflow-hidden font-light">
             <span id="hero-desc" className="inline-block">
               Driven by innovation and client-focused solutions, we elevate
               brands with seamless digital experiences. From tailored software
@@ -124,27 +124,32 @@ export default function Hero3() {
           <div className="flex flex-row justify-center lg:justify-start items-center gap-5 sm:gap-10 overflow-hidden">
             <div
               id="hero-btn-1"
-              className="bg-accentColor text-darkBodyText rounded-full text-base sm:text-xl group overflow-hidden relative"
+              className=" text-darkBodyText  text-base sm:text-xl group overflow-hidden relative"
             >
-              <Link to="/pricing" className="w-full h-full ">
-                <span className="w-full h-full rounded-full bg-lightPrimary absolute top-0 left-0 translate-x-[-100%] group-hover:translate-x-0 duration-500 ease-in-out"></span>
-                <span className="flex justify-center items-center relative px-3 sm:px-5 py-2">
-                  Get Started{" "}
-                  <span className="ps-1">
-                    <GoArrowRight />
+              <Link to="/pricing" className="w-full h-full">
+                {/* <span className="w-full h-full rounded-full bg-lightPrimary absolute top-0 left-0 translate-x-[-100%] group-hover:translate-x-0 duration-500"></span> */}
+                <div className="flex flex-row items-center">
+                  <span className="flex justify-center items-center relative px-3 sm:px-5 py-2 bg-accentColor rounded-full">
+                    Get Started{" "}
                   </span>
-                </span>
+                  <span className="w-[34px] h-[34px] sm:w-[37px] sm:h-[37px] rounded-full bg-accentColor flex justify-center items-center">
+                    <HiMiniArrowUpRight />
+                  </span>
+                </div>
               </Link>
             </div>
             <div
               id="hero-btn-2"
-              className="border border-lightPrimary text-lightBodyText rounded-full text-base sm:text-xl group overflow-hidden relative"
+              className="text-lightBodyText rounded-full text-base sm:text-xl group overflow-hidden relative"
             >
-              <Link to="/pricing" className="w-full h-full ">
-                <span className="w-full h-full rounded-full bg-lightPrimary absolute top-0 left-0 translate-x-[-100%] group-hover:translate-x-0 duration-500"></span>
-                <span className="flex justify-center items-center relative px-3 sm:px-5 py-2 group-hover:text-darkTitleText duration-500">
+              <Link
+                to="/pricing"
+                className="w-full h-full flex flex-row justify-center items-center"
+              >
+                {/* <span className="w-full h-full rounded-full bg-lightPrimary absolute top-0 left-0 translate-x-[-100%] group-hover:translate-x-0 duration-500"></span> */}
+                <span className="flex flex-row-reverse justify-center items-center relative px-3 sm:px-5 py-2 group-hover:scale-[1.1] duration-500">
                   Watch Video{" "}
-                  <span className="ps-1">
+                  <span className="pe-2 text-xl sm:text-2xl">
                     <IoIosPlayCircle />
                   </span>
                 </span>
@@ -188,7 +193,7 @@ export default function Hero3() {
             </div>
           </div>
         </div>
-        <div className="w-full lg:w-[50%] flex flex-col-reverse lg:flex-row-reverse gap-3 lg:gap-7">
+        <div className="w-full lg:w-[30%] flex flex-col-reverse lg:flex-row-reverse gap-3 lg:gap-7">
           <div className="w-full grid grid-cols-2 gap-1 lg:gap-5">
             <div className="flex justify-center items-start relative overflow-hidden">
               <div
@@ -202,7 +207,7 @@ export default function Hero3() {
                 alt="businessman"
               />
             </div>
-            <div className="flex justify-center items-end relative overflow-hidden ">
+            <div className="flex justify-center items-center relative overflow-hidden ">
               <div
                 id="hero-img-2-cover"
                 className="w-full h-full bg-darkPrimary absolute top-0 left-0 z-[5] translate-x-[100%]"
@@ -216,7 +221,14 @@ export default function Hero3() {
             </div>
           </div>
         </div>
-      </div>
+      </section>
+      <section className="hidden lg:flex flex-col gap-5 pb-10 lg:pb-20">
+        <div className="w-full h-[1px] bg-lightSecondary"></div>
+        <div className="flex flex-row justify-between px-5 sm:px-7 lg:px-10 xl:px-20 text-xs sm:text-base">
+          <div>&copy; Copyright 2024</div>
+          <div>Scroll To Explore</div>
+        </div>
+      </section>
     </div>
   );
 }

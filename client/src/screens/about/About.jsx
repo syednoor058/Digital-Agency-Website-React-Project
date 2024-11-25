@@ -1,5 +1,12 @@
 // import React from 'react'
+import {
+  FaFacebookSquare,
+  FaGlobeAmericas,
+  FaInstagramSquare,
+  FaLinkedin,
+} from "react-icons/fa";
 import { LuArrowUpRight } from "react-icons/lu";
+import syedNoorImg from "../../assets/images/team/syed_noor.png";
 import CallToAction from "../../components/callToAction/CallToAction";
 import Footer from "../../components/footer/Footer";
 export default function About() {
@@ -32,7 +39,7 @@ export default function About() {
           <div className="w-full flex flex-col gap-4">
             <div className="w-full h-[1px] bg-lightSecondary"></div>
             <div className="flex flex-row justify-between px-5 sm:px-7 lg:px-10 xl:px-20">
-              <div>&copy; 2024</div>
+              <div>&copy; Copyright 2024</div>
               <div>Scroll To Explore</div>
             </div>
           </div>
@@ -71,9 +78,59 @@ export default function About() {
             </div>
           </div>
         </section>
-        <section>
+        <section className="px-5 sm:px-7 lg:px-10 xl:px-20 flex flex-col gap-5 sm:gap-7 lg:gap-10 xl:gap-20">
           <div className="font-titleFont font-bold text-4xl md:text-5xl text-center text-lightPrimary uppercase">
             Meet the <span className="text-accentColor">Team</span>
+          </div>
+          <div className="grid grid-cols-2 xl:grid-cols-4 gap-5">
+            <div className="flex flex-col gap-3">
+              <div className="w-full h-auto">
+                <img
+                  className="w-full h-auto object-cover"
+                  src={syedNoorImg}
+                  alt="syed-noor"
+                />
+              </div>
+              <div className="flex flex-col font-light leading-none text-xs sm:text-base">
+                <div className="uppercase text-lg font-semibold text-lightPrimary leading-none">
+                  Syed Shaeduzzaman Noor
+                </div>
+                <div className="pt-2">
+                  <div>Founder & CEO</div>
+                  <div>Software Engineer</div>
+                </div>
+              </div>
+              <div className="flex flex-row gap-5 text-lg sm:text-xl">
+                <FaFacebookSquare />
+                <FaInstagramSquare />
+                <FaLinkedin />
+                <FaGlobeAmericas />
+              </div>
+            </div>
+            <div className="flex flex-col gap-3">
+              <div className="w-full h-auto">
+                <img
+                  className="w-full h-auto object-cover"
+                  src={syedNoorImg}
+                  alt="syed-noor"
+                />
+              </div>
+              <div className="flex flex-col font-light leading-none text-xs sm:text-base">
+                <div className="uppercase text-lg font-semibold text-lightPrimary leading-none">
+                  Kazi Sharar
+                </div>
+                <div className="pt-2">
+                  <div>Co-founder & CEO</div>
+                  <div>SEO Specialist</div>
+                </div>
+              </div>
+              <div className="flex flex-row gap-5 text-lg sm:text-xl">
+                <FaFacebookSquare />
+                <FaInstagramSquare />
+                <FaLinkedin />
+                <FaGlobeAmericas />
+              </div>
+            </div>
           </div>
         </section>
         <section className="flex flex-col pt-10">

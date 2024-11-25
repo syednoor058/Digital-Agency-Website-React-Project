@@ -26,7 +26,7 @@ export default function Home() {
     <div
       ref={containerRef}
       id="home-container"
-      className="pt-14 lg:pt-10 w-full h-full overflow-x-hidden bg-darkPrimary"
+      className="pt-14 lg:pt-10 xl:pt-5 w-full h-full overflow-x-hidden bg-darkPrimary"
     >
       <section>
         <Hero3 />
