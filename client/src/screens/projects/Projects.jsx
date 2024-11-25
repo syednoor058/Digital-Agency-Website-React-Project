@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import Marquee from "react-fast-marquee";
 import { HiMiniArrowUpRight } from "react-icons/hi2";
 import { Link } from "react-router-dom";
+import projectPageHeroImg from "../../assets/images/project_page_hero.png";
 import portfolioImg from "../../assets/images/projects/2.webp";
 import kickOffImg from "../../assets/images/projects/3.webp";
 import carsPredImg from "../../assets/images/projects/4.webp";
@@ -39,34 +40,55 @@ export default function Projects() {
       "Case Studies - Best Agency in Affordable Budget | Devion Ark";
   }, []);
   return (
-    <div className="pt-14 lg:pt-10 w-full min-h-screen font-bodyFont overflow-x-hidden bg-darkPrimary text-lightBodyText">
+    <div className="pt-14 lg:pt-10 w-full font-bodyFont overflow-x-hidden bg-darkPrimary text-lightBodyText">
       <div className="pt-10 lg:pt-20 flex flex-col gap-14  md:gap-20 lg:gap-28">
-        <section className="px-5 sm:px-7 lg:px-10 xl:px-20 flex flex-col gap-5 sm:gap-10">
-          <div className="text-start sm:text-center font-titleFont text-lightTitleText font-bold text-[34px] sm:text-6xl lg:text-7xl uppercase leading-none">
-            Proven Results <span className="text-accentColor">Unveiled</span>
-          </div>
-          <div className="text-start sm:text-center font-extralight sm:text-base sm:font-normal text-sm lg:text-lg">
-            Behind every project lies a journey of exploration, creativity, and
-            measurable success. Our case studies go beyond the surface to reveal
-            the innovative processes and tangible outcomes that set our work
-            apart. From overcoming unique challenges to crafting impactful
-            solutions, these stories reflect our dedication to empowering
-            businesses.
-          </div>
-          <div className="flex justify-center items-center">
-            <div className="flex flex-row hover:flex-row-reverse duration-500 items-center">
-              <Link to="/pricing">
-                <div className="text-center text-base sm:text-xl px-8 py-2 sm:py-3 rounded-full bg-accentColor text-darkTitleText">
-                  Get Started
+        <section className="w-full h-full lg:min-h-screen px-5 sm:px-7 lg:px-10 xl:px-20 flex flex-col gap-20">
+          <div className="flex flex-col lg:flex-row gap-10">
+            <div className="w-full lg:w-[70%] flex flex-col-reverse justify-end gap-5">
+              <div className="flex items-center">
+                <div className="flex flex-row hover:flex-row-reverse duration-500 items-center">
+                  <Link to="/pricing">
+                    <div className="text-center text-base sm:text-xl px-8 py-2 sm:py-3 rounded-full bg-accentColor text-darkTitleText">
+                      Get Started
+                    </div>
+                  </Link>
+                  <div className="w-10 sm:w-12 h-10 sm:h-12 rounded-full flex justify-center items-center bg-accentColor text-darkTitleText text-lg sm:text-xl">
+                    <HiMiniArrowUpRight />
+                  </div>
                 </div>
-              </Link>
-              <div className="w-10 sm:w-12 h-10 sm:h-12 rounded-full flex justify-center items-center bg-accentColor text-darkTitleText text-lg sm:text-xl">
-                <HiMiniArrowUpRight />
+              </div>
+              <div className="flex flex-col lg:flex-col-reverse gap-5">
+                <div className="font-titleFont text-lightTitleText font-bold text-[34px] sm:text-6xl lg:text-7xl uppercase leading-none">
+                  Proven Results{" "}
+                  <span className="text-accentColor">Unveiled</span>
+                </div>
+                <div className="w-full lg:w-[60%] font-extralight sm:text-base sm:font-normal text-sm lg:text-base">
+                  Behind every project lies a journey of exploration,
+                  creativity, and measurable success. Our case studies go beyond
+                  the surface to reveal the innovative processes and tangible
+                  outcomes that set our work apart.
+                </div>
+              </div>
+            </div>
+            <div className="w-full lg:w-[30%]">
+              <div className="w-full">
+                <img
+                  className="w-full h-auto object cover"
+                  src={projectPageHeroImg}
+                  alt="project-page-hero-img"
+                />
               </div>
             </div>
           </div>
+          <div className="w-full hidden lg:flex flex-col gap-4">
+            <div className="w-full h-[1px] bg-lightSecondary"></div>
+            <div className="flex flex-row justify-between px-5 sm:px-7 lg:px-10 xl:px-20">
+              <div>&copy; Copyright 2024</div>
+              <div>Scroll To Explore</div>
+            </div>
+          </div>
         </section>
-        <section className="flex flex-col gap-5 sm:gap-10">
+        <section className="flex flex-col gap-5 sm:gap-10 lg:-mt-20">
           <div className="flex flex-col gap-1 leading-none font-titleFont font-semibold text-lightPrimary text-[23px] sm:text-5xl uppercase text-center px-5 sm:px-7 lg:px-10 xl:px-20">
             <div>
               We use <span className="text-accentColor">technologies</span>
@@ -253,48 +275,54 @@ export default function Projects() {
             </Marquee>
           </div>
         </section>
-        <section className="w-full px-5 sm:px-7 lg:px-10 xl:px-20 grid grid-cols-1 lg:grid-cols-2 gap-7 sm:gap-10 xl:gap-16 pt-7 md:pt-10">
-          <CaseStudyCard
-            image={kickOffImg}
-            title="Sportswear E-commerce Web Application"
-            desc="Developed a house price prediction model using machine
+        <section className="w-full px-5 sm:px-7 lg:px-10 xl:px-20 pt-7 flex flex-col gap-10 lg:gap-16 xl:gap-20">
+          <div className="font-titleFont font-semibold text-lightPrimary text-[23px] sm:text-5xl uppercase text-center leading-none">
+            Innovating <span className="text-accentColor">Real-World</span>{" "}
+            Solutions
+          </div>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-7 sm:gap-10 xl:gap-16">
+            <CaseStudyCard
+              image={kickOffImg}
+              title="Sportswear E-commerce Web Application"
+              desc="Developed a house price prediction model using machine
                   learning algorithms. Built a user-friendly website with
                   React.js and FastAPI for the backend."
-            tags={[
-              "React",
-              "Tailwind",
-              "Framer-Motion",
-              "Node",
-              "Marquee",
-              "MongoDB",
-              "Vercel",
-            ]}
-            to="/"
-          />
-          <CaseStudyCard
-            image={portfolioImg}
-            title="Personal Portfolio Website with Material UI"
-            desc="Built a personal portfolio website using React and Tailwind CSS. Showcases work, skills, and experiences in a clean, modern design, reflecting proficiency in front-end development."
-            tags={["React", "Tailwind", "Framer-Motion", "Figma", "Marquee"]}
-            to="/"
-          />
-          <CaseStudyCard
-            image={carsPredImg}
-            title="Pre-owned Vehicle Price Prediction System"
-            desc="Developed a pre-owned car price prediction model with machine learning. Built a responsive website using React.js, FastAPI, and Tailwind CSS, allowing users to estimate car prices accurately."
-            tags={[
-              "Machine Learning",
-              "Python",
-              "NumPy",
-              "Data Science",
-              "Pandas",
-              "Seaborn",
-              "Scikit Learn",
-              "React",
-              "FastAPI",
-            ]}
-            to="/"
-          />
+              tags={[
+                "React",
+                "Tailwind",
+                "Framer-Motion",
+                "Node",
+                "Marquee",
+                "MongoDB",
+                "Vercel",
+              ]}
+              to="/"
+            />
+            <CaseStudyCard
+              image={portfolioImg}
+              title="Personal Portfolio Website with Material UI"
+              desc="Built a personal portfolio website using React and Tailwind CSS. Showcases work, skills, and experiences in a clean, modern design, reflecting proficiency in front-end development."
+              tags={["React", "Tailwind", "Framer-Motion", "Figma", "Marquee"]}
+              to="/"
+            />
+            <CaseStudyCard
+              image={carsPredImg}
+              title="Pre-owned Vehicle Price Prediction System"
+              desc="Developed a pre-owned car price prediction model with machine learning. Built a responsive website using React.js, FastAPI, and Tailwind CSS, allowing users to estimate car prices accurately."
+              tags={[
+                "Machine Learning",
+                "Python",
+                "NumPy",
+                "Data Science",
+                "Pandas",
+                "Seaborn",
+                "Scikit Learn",
+                "React",
+                "FastAPI",
+              ]}
+              to="/"
+            />
+          </div>
         </section>
         <section className="flex flex-col">
           {/* Call To Action Section */}

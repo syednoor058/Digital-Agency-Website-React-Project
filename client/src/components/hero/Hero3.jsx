@@ -132,7 +132,7 @@ export default function Hero3() {
                   <span className="flex justify-center items-center relative px-3 sm:px-5 py-2 bg-accentColor rounded-full">
                     Get Started{" "}
                   </span>
-                  <span className="w-[34px] h-[34px] sm:w-[37px] sm:h-[37px] rounded-full bg-accentColor flex justify-center items-center">
+                  <span className="w-[35px] h-[35px] sm:w-[37px] sm:h-[37px] rounded-full bg-accentColor flex justify-center items-center">
                     <HiMiniArrowUpRight />
                   </span>
                 </div>

@@ -30,7 +30,7 @@ export default function Services() {
     <div className="pt-14 lg:pt-10 w-full overflow-x-hidden bg-darkPrimary text-lightBodyText font-bodyFont">
       <div className="pt-10 lg:pt-20 flex flex-col  gap-10 sm:gap-14  md:gap-20 lg:gap-28">
         {/* Hero Section */}
-        <div className="px-5 sm:px-7 lg:px-10 xl:px-20">
+        <section className="px-5 sm:px-7 lg:px-10 xl:px-20">
           <div className="flex flex-col lg:flex-row gap-5 sm:gap-7 md:gap-10 lg:gap-20 items-end">
             <div className="w-full lg:w-[60%] flex flex-col gap-5 sm:gap-7 lg:gap-10">
               <div>
@@ -74,10 +74,13 @@ export default function Services() {
               </div>
             </div>
           </div>
-        </div>
+        </section>
         {/* Services Section */}
-        <div className="px-5 sm:px-7 lg:px-10 xl:px-20">
+        <section className="px-5 sm:px-7 lg:px-10 xl:px-20">
           <div className="flex flex-col gap-5 sm:gap-7 md:gap-10 lg:gap-20">
+            <div className="uppercase font-titleFont font-semibold text-center text-2xl sm:text-4xl text-lightTitleText">
+              <span className="text-accentColor">Services</span> we provide
+            </div>
             <div>
               <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-y-5 lg:gap-y-10 gap-x-5">
                 <div className="flex flex-col gap-3 border-b lg:border-b-0 lg:border-r border-lightBodyText border-opacity-40 p-3">
@@ -403,7 +406,7 @@ export default function Services() {
               </div>
             </div>
           </div>
-        </div>
+        </section>
 
         <div className="flex flex-col">
           {/* Call To Action Section */}

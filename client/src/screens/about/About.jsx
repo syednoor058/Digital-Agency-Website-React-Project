@@ -1,4 +1,5 @@
 // import React from 'react'
+import { useEffect } from "react";
 import {
   FaFacebookSquare,
   FaGlobeAmericas,
@@ -10,6 +11,12 @@ import syedNoorImg from "../../assets/images/team/syed_noor.png";
 import CallToAction from "../../components/callToAction/CallToAction";
 import Footer from "../../components/footer/Footer";
 export default function About() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+  useEffect(() => {
+    document.title = "About Us - Best Agency in Affordable Budget | Devion Ark";
+  }, []);
   return (
     <div className="pt-14 lg:pt-10 w-full min-h-screen font-bodyFont overflow-x-hidden bg-darkPrimary text-lightBodyText">
       <div className="pt-10 lg:pt-0 flex flex-col gap-14 md:gap-20 lg:gap-28">
@@ -36,7 +43,7 @@ export default function About() {
               </div>
             </div>
           </div>
-          <div className="w-full flex flex-col gap-4">
+          <div className="w-full hidden lg:flex flex-col gap-4">
             <div className="w-full h-[1px] bg-lightSecondary"></div>
             <div className="flex flex-row justify-between px-5 sm:px-7 lg:px-10 xl:px-20">
               <div>&copy; Copyright 2024</div>
@@ -100,7 +107,7 @@ export default function About() {
                   <div>Software Engineer</div>
                 </div>
               </div>
-              <div className="flex flex-row gap-5 text-lg sm:text-xl">
+              <div className="flex flex-row gap-5 text-xl sm:text-2xl">
                 <FaFacebookSquare />
                 <FaInstagramSquare />
                 <FaLinkedin />
@@ -124,7 +131,55 @@ export default function About() {
                   <div>SEO Specialist</div>
                 </div>
               </div>
-              <div className="flex flex-row gap-5 text-lg sm:text-xl">
+              <div className="flex flex-row gap-5 text-xl sm:text-2xl">
+                <FaFacebookSquare />
+                <FaInstagramSquare />
+                <FaLinkedin />
+                <FaGlobeAmericas />
+              </div>
+            </div>
+            <div className="flex flex-col gap-3">
+              <div className="w-full h-auto">
+                <img
+                  className="w-full h-auto object-cover"
+                  src={syedNoorImg}
+                  alt="syed-noor"
+                />
+              </div>
+              <div className="flex flex-col font-light leading-none text-xs sm:text-base">
+                <div className="uppercase text-lg font-semibold text-lightPrimary leading-none">
+                  Farhan Fuad
+                </div>
+                <div className="pt-2">
+                  <div>Founder & CEO</div>
+                  <div>Digital Marketing Specialist</div>
+                </div>
+              </div>
+              <div className="flex flex-row gap-5 text-xl sm:text-2xl">
+                <FaFacebookSquare />
+                <FaInstagramSquare />
+                <FaLinkedin />
+                <FaGlobeAmericas />
+              </div>
+            </div>
+            <div className="flex flex-col gap-3">
+              <div className="w-full h-auto">
+                <img
+                  className="w-full h-auto object-cover"
+                  src={syedNoorImg}
+                  alt="syed-noor"
+                />
+              </div>
+              <div className="flex flex-col font-light leading-none text-xs sm:text-base">
+                <div className="uppercase text-lg font-semibold text-lightPrimary leading-none">
+                  Naim Rahman
+                </div>
+                <div className="pt-2">
+                  <div>Co-founder & CEO</div>
+                  <div>Digital Marketing Specialist</div>
+                </div>
+              </div>
+              <div className="flex flex-row gap-5 text-xl sm:text-2xl">
                 <FaFacebookSquare />
                 <FaInstagramSquare />
                 <FaLinkedin />
