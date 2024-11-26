@@ -9,19 +9,19 @@ import WhyChooseUsCard from "./WhyChooseUsCard";
 
 export default function WhyChooseUs() {
   return (
-    <div className="py-10 lg:py-20 font-bodyFont text-darkBodyText bg-lightPrimary relative overflow-hidden">
-      <div className="w-[60%] aspect-square rounded-[100%] bg-darkSecondary p-40 absolute -right-60 xl:-right-80 xl:-top-[400px] opacity-10 xl:opacity-10 z-[1] hidden xl:flex">
+    <div className="font-bodyFont text-lightBodyText bg-darkPrimary relative overflow-hidden">
+      {/* <div className="w-[60%] aspect-square rounded-[100%] bg-darkSecondary p-40 absolute -right-60 xl:-right-80 xl:-top-[400px] opacity-10 xl:opacity-10 z-[1] hidden xl:flex">
         <div className="w-full aspect-square bg-lightPrimary rounded-[100%]"></div>
-      </div>
+      </div> */}
       <div className="flex flex-col gap-7 sm:gap-10 lg:gap-20 px-5 sm:px-7 lg:px-10 xl:px-20 relative z-[5]">
         <div className="flex flex-row gap-2 items-center">
-          <div className="uppercase font-semibold text-sm sm:text-lg pe-3 border-r-[2px] border-accentColor">
+          <div className="uppercase font-light pe-3 border-r-[2px] border-accentColor">
             Why Choose Us
           </div>
         </div>
         <div className="flex flex-col gap-5 sm:gap-7 lg:gap-10 xl:gap-20">
           <div className="w-full flex flex-col xl:flex-row gap-5 sm:gap-7 lg:gap-10 xl:justify-between overflow-hidden">
-            <div className="flex flex-col gap-2 leading-none text-darkTitleText font-titleFont uppercase">
+            <div className="flex flex-col gap-2 leading-none text-lightTitleText font-titleFont uppercase">
               <div className="text-[26px] sm:text-5xl lg:text-7xl xl:text-4xl font-light">
                 Performance meets
               </div>

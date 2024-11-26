@@ -10,14 +10,18 @@ import deliverSubImg from "../../assets/images/howWeDo/4.1.png";
 import deliverImg from "../../assets/images/howWeDo/4.webp";
 
 export default function HowWeWork2() {
+  const [toggledState, setToggledState] = useState("discover");
+  const toggleState = (stateName) => {
+    setToggledState(stateName);
+  };
   const comp = useRef(null);
   useLayoutEffect(() => {
     let ctx = gsap.context(() => {
       gsap.to("#discover-img-cover", {
         translateX: "100%",
-        duration: 1,
+        duration: 5,
         // opacity: 0,
-        ease: "expo.inOut",
+        ease: "power2.inOut",
         scrollTrigger: {
           trigger: "#discover-img-cover",
           start: "top 85%",
@@ -27,23 +31,19 @@ export default function HowWeWork2() {
       });
       gsap.from("#discover-img", {
         scale: 1.2,
-        duration: 1,
-        ease: "expo.inOut",
+        duration: 5,
+        ease: "power2.inOut",
         scrollTrigger: {
           trigger: "#discover-img",
-          start: "top 95%",
-          end: "top 70%",
+          start: "top 85%",
+          end: "top 50%",
           scrub: 2,
         },
       });
     }, comp);
     return () => ctx.revert();
-  }, []);
+  }, [toggledState]);
 
-  const [toggledState, setToggledState] = useState("discover");
-  const toggleState = (stateName) => {
-    setToggledState(stateName);
-  };
   return (
     <div
       ref={comp}

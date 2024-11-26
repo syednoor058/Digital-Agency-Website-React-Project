@@ -222,7 +222,7 @@ export default function Hero3() {
           </div>
         </div>
       </section>
-      <section className="hidden lg:flex flex-col gap-5 pb-10 lg:pb-20">
+      <section className="hidden lg:flex flex-col gap-5 pb-10 lg:pb-20 px-5 sm:px-7 lg:px-10 xl:px-20">
         <div className="w-full h-[1px] bg-lightSecondary"></div>
         <div className="flex flex-row justify-between px-5 sm:px-7 lg:px-10 xl:px-20 text-xs sm:text-base">
           <div>&copy; Copyright 2024</div>

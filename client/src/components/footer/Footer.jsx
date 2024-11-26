@@ -1,6 +1,8 @@
 // import React from 'react'
 import { FaFacebookSquare, FaLinkedin, FaWhatsappSquare } from "react-icons/fa";
+import { HiMiniArrowUpRight } from "react-icons/hi2";
 import { IoLogoYoutube } from "react-icons/io";
+import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
@@ -13,12 +15,19 @@ export default function Footer() {
             </div>
             <div>Sign up for counsiling, latest update, and offers!</div>
             <input
-              className="w-full rounded-sm bg-lightPrimary border-none outline-none px-3 py-2 text-darkPrimary"
+              className="w-full rounded-full bg-lightPrimary border-none outline-none px-6 py-2 text-darkPrimary"
               placeholder="Enter Email Address"
             />
-            <button className="w-full px-3 py-2 uppercase text-center text-lightPrimary border rounded-sm border-lightPrimary hover:bg-lightPrimary hover:text-darkPrimary duration-300">
-              Let&apos;s start a conversation!
-            </button>
+            <Link to="/" className="w-full">
+              <div className="w-auto flex flex-row items-center text-darkPrimary">
+                <span className="px-6 py-2 uppercase text-center bg-lightTitleText rounded-full">
+                  Let&apos;s start a conversation!
+                </span>
+                <div className="w-[38px] aspect-square rounded-full bg-lightPrimary flex justify-center items-center">
+                  <HiMiniArrowUpRight />
+                </div>
+              </div>
+            </Link>
             <div className="text-xs">
               By signing up, you understand and agree that your data will be
               collected and used subject to our{" "}
@@ -42,7 +51,6 @@ export default function Footer() {
                 <div>Home</div>
                 <div>Services</div>
                 <div>Projects</div>
-                <div>Pricing</div>
               </div>
             </div>
             <div className="flex flex-col gap-5">
@@ -52,7 +60,6 @@ export default function Footer() {
               <div className="flex flex-col gap-3">
                 <div>Software Development</div>
                 <div>Digital Marketing</div>
-                <div>Machine Learning</div>
                 <div>Terms & Conditions</div>
               </div>
             </div>
@@ -63,7 +70,6 @@ export default function Footer() {
               <div className="flex flex-col gap-3">
                 <div>Contact</div>
                 <div>About</div>
-                <div>Get a Quote</div>
                 <div>Privacy Policy</div>
               </div>
             </div>

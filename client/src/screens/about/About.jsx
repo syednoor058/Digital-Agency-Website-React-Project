@@ -13,6 +13,7 @@ import naimImg from "../../assets/images/team/naim_rahman.png";
 import syedNoorImg from "../../assets/images/team/syed_noor.png";
 import CallToAction from "../../components/callToAction/CallToAction";
 import Footer from "../../components/footer/Footer";
+import WhyChooseUs from "./../../components/whyChooseUs/WhyChooseUs";
 export default function About() {
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -46,7 +47,7 @@ export default function About() {
               </div>
             </div>
           </div>
-          <div className="w-full hidden lg:flex flex-col gap-4">
+          <div className="w-full hidden lg:flex flex-col gap-4 px-5 sm:px-7 lg:px-10 xl:px-20">
             <div className="w-full h-[1px] bg-lightSecondary"></div>
             <div className="flex flex-row justify-between px-5 sm:px-7 lg:px-10 xl:px-20">
               <div>&copy; Copyright 2024</div>
@@ -87,6 +88,9 @@ export default function About() {
               creative solutions.
             </div>
           </div>
+        </section>
+        <section className="">
+          <WhyChooseUs />
         </section>
         <section className="flex flex-col gap-5 sm:gap-7 lg:gap-10 xl:gap-20">
           <div className="px-5 sm:px-7 lg:px-10 xl:px-20 font-titleFont font-bold text-4xl md:text-5xl text-center text-lightPrimary uppercase">
@@ -188,7 +192,7 @@ export default function About() {
                       insights into impactful outcomes.
                     </div>
                   </div>
-                  <div className="flex flex-row gap-5 text-xl sm:text-2xl justify-end">
+                  <div className="flex flex-row gap-5 text-xl sm:text-2xl sm:justify-end">
                     <FaFacebookSquare />
                     <FaInstagramSquare />
                     <FaLinkedin />
@@ -223,7 +227,7 @@ export default function About() {
                       relationships.
                     </div>
                   </div>
-                  <div className="flex flex-row gap-5 text-xl sm:text-2xl justify-end">
+                  <div className="flex flex-row gap-5 text-xl sm:text-2xl sm:justify-end">
                     <FaFacebookSquare />
                     <FaInstagramSquare />
                     <FaLinkedin />
@@ -233,105 +237,8 @@ export default function About() {
               </div>
             </div>
           </div>
-          {/* <div className="grid grid-cols-2 xl:grid-cols-4 gap-5">
-            <div className="flex flex-col gap-3">
-              <div className="w-full h-auto">
-                <img
-                  className="w-full h-auto object-cover"
-                  src={syedNoorImg}
-                  alt="syed-noor"
-                />
-              </div>
-              <div className="flex flex-col font-light leading-none text-xs sm:text-base">
-                <div className="uppercase text-lg font-semibold text-lightPrimary leading-none">
-                  Syed Shaeduzzaman Noor
-                </div>
-                <div className="pt-2">
-                  <div>Founder & CEO</div>
-                  <div>Software Engineer</div>
-                </div>
-              </div>
-              <div className="flex flex-row gap-5 text-xl sm:text-2xl">
-                <FaFacebookSquare />
-                <FaInstagramSquare />
-                <FaLinkedin />
-                <FaGlobeAmericas />
-              </div>
-            </div>
-            <div className="flex flex-col gap-3">
-              <div className="w-full h-auto">
-                <img
-                  className="w-full h-auto object-cover"
-                  src={syedNoorImg}
-                  alt="syed-noor"
-                />
-              </div>
-              <div className="flex flex-col font-light leading-none text-xs sm:text-base">
-                <div className="uppercase text-lg font-semibold text-lightPrimary leading-none">
-                  Kazi Sharar
-                </div>
-                <div className="pt-2">
-                  <div>Co-founder & CEO</div>
-                  <div>SEO Specialist</div>
-                </div>
-              </div>
-              <div className="flex flex-row gap-5 text-xl sm:text-2xl">
-                <FaFacebookSquare />
-                <FaInstagramSquare />
-                <FaLinkedin />
-                <FaGlobeAmericas />
-              </div>
-            </div>
-            <div className="flex flex-col gap-3">
-              <div className="w-full h-auto">
-                <img
-                  className="w-full h-auto object-cover"
-                  src={syedNoorImg}
-                  alt="syed-noor"
-                />
-              </div>
-              <div className="flex flex-col font-light leading-none text-xs sm:text-base">
-                <div className="uppercase text-lg font-semibold text-lightPrimary leading-none">
-                  Farhan Fuad
-                </div>
-                <div className="pt-2">
-                  <div>Founder & CEO</div>
-                  <div>Digital Marketing Specialist</div>
-                </div>
-              </div>
-              <div className="flex flex-row gap-5 text-xl sm:text-2xl">
-                <FaFacebookSquare />
-                <FaInstagramSquare />
-                <FaLinkedin />
-                <FaGlobeAmericas />
-              </div>
-            </div>
-            <div className="flex flex-col gap-3">
-              <div className="w-full h-auto">
-                <img
-                  className="w-full h-auto object-cover"
-                  src={syedNoorImg}
-                  alt="syed-noor"
-                />
-              </div>
-              <div className="flex flex-col font-light leading-none text-xs sm:text-base">
-                <div className="uppercase text-lg font-semibold text-lightPrimary leading-none">
-                  Naim Rahman
-                </div>
-                <div className="pt-2">
-                  <div>Co-founder & CEO</div>
-                  <div>Digital Marketing Specialist</div>
-                </div>
-              </div>
-              <div className="flex flex-row gap-5 text-xl sm:text-2xl">
-                <FaFacebookSquare />
-                <FaInstagramSquare />
-                <FaLinkedin />
-                <FaGlobeAmericas />
-              </div>
-            </div>
-          </div> */}
         </section>
+
         <section className="flex flex-col pt-10">
           {/* Call To Action Section */}
           <CallToAction />

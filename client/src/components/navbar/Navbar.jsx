@@ -1,6 +1,7 @@
 // import React from 'react'
 import gsap from "gsap";
 import { useLayoutEffect, useRef, useState } from "react";
+import { HiMiniArrowUpRight } from "react-icons/hi2";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { Link, NavLink } from "react-router-dom";
 import lightLogo from "../../assets/logo/dark_mode_logo.png";
@@ -128,33 +129,47 @@ export default function Navbar() {
           </div>
           <div
             id="nav-cta"
-            className="w-[15%] px-3 py-2 border border-accentColor rounded-full flex justify-center items-center text-sm font-bodyFont group relative overflow-hidden"
+            className="w-[20%] flex justify-center items-center text-sm font-bodyFont group relative overflow-hidden text-darkTitleText"
           >
-            <span className="w-full h-full absolute bg-accentColor translate-x-[-100%] group-hover:translate-x-0 duration-500 rounded-full top-0 left-0"></span>
-            <Link className="w-full h-full relative flex justify-center items-center">
-              <span className="group-hover:text-darkTitleText duration-500 text-center">
-                Get a quote
-              </span>
+            <Link>
+              <div className="w-full h-full flex flex-row items-center">
+                <span className="group-hover:text-darkTitleText duration-500 text-center px-5 py-2 bg-accentColor rounded-full">
+                  Get a quote
+                </span>
+                <div className="w-[32px] sm:w-[34px] md:w-8 aspect-square bg-accentColor rounded-full flex justify-center items-center text-darkTitleText font-normal">
+                  <HiMiniArrowUpRight />
+                </div>
+              </div>
             </Link>
           </div>
         </div>
       </div>
-      <div className="w-full h-14 px-5 md:px-10 lg:px-10 xl:px-20 text-xs sm:text-sm  flex lg:hidden items-center">
+      <div className="w-full h-14 px-5 md:px-10 lg:px-10 xl:px-20 text-sm sm:text-sm  flex lg:hidden items-center">
         <div className="w-full flex flex-row gap-10 items-center justify-between  text-lightTitleText">
           <div className="" id="mobile-nav0">
             <img
-              className="w-auto h-14 object-contain"
+              className="w-auto h-10 sm:h-14 object-contain"
               src={lightLogo}
               alt="light_logo"
             />
           </div>
           <div className="flex flex-row gap-2 sm:gap-3 justify-end items-center">
-            <div
+            {/* <div
               id="mobile-nav1"
               className="px-3 py-2 border border-accentColor rounded-full flex justify-center items-center font-bodyFont"
             >
               Get a Quote
-            </div>
+            </div> */}
+            <Link to="/">
+              <div className="w-full h-full flex flex-row items-center text-darkTitleText text-xs">
+                <span className="group-hover:text-darkTitleText duration-500 text-center px-5 py-2 bg-accentColor rounded-full">
+                  Let&apos;s Start
+                </span>
+                <div className="w-[28px] sm:w-[30px] md:w-8 aspect-square bg-accentColor rounded-full flex justify-center items-center text-darkTitleText font-normal">
+                  <HiMiniArrowUpRight />
+                </div>
+              </div>
+            </Link>
             <div
               id="mobile-nav2"
               className="p-2 rounded-full cursor-pointer text-lg"

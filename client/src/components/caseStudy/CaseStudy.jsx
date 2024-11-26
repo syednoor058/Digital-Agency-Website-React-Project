@@ -1,5 +1,6 @@
 // import React from 'react'
 import { BsFillArrowUpRightCircleFill } from "react-icons/bs";
+import { HiMiniArrowUpRight } from "react-icons/hi2";
 import { Link } from "react-router-dom";
 import portfolioImg from "../../assets/images/projects/2.webp";
 import kickOffImg from "../../assets/images/projects/3.webp";
@@ -110,12 +111,15 @@ export default function CaseStudy() {
           />
         </div>
         <div className="w-ful flex justify-center pt-5 lg:pt-10">
-          <Link
-            to="/projects"
-            className="uppercase text-lightPrimary text-sm sm:text-base px-5 py-2 border border-lightPrimary  hover:border-accentColor hover:text-darkPrimary text-center rounded-full duration-500 relative group overflow-hidden"
-          >
-            <span className="w-full h-full bg-accentColor absolute top-0 left-0 translate-x-[-100%] rounded-full group-hover:translate-x-0 duration-500"></span>
-            <span className="relative">Discover More Case Studies</span>
+          <Link to="/">
+            <div className="w-auto flex flex-row items-center text-darkPrimary">
+              <span className="px-6 py-2 capitalize text-center bg-lightTitleText rounded-full">
+                Discover More Case Studies
+              </span>
+              <div className="w-[38px] aspect-square rounded-full bg-lightPrimary flex justify-center items-center">
+                <HiMiniArrowUpRight />
+              </div>
+            </div>
           </Link>
         </div>
       </div>
