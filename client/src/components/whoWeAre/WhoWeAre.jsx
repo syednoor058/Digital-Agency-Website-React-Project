@@ -7,9 +7,9 @@ import { PiArrowSquareUpRightThin } from "react-icons/pi";
 import Splitting from "splitting";
 import "splitting/dist/splitting.css"; // Include required CSS for Splitting.js
 import azizul from "../../assets/images/testimonials/azizul.webp";
-import rhitu from "../../assets/images/testimonials/rhitu.webp";
-import sharar from "../../assets/images/testimonials/sharar.webp";
-import tanha from "../../assets/images/testimonials/tanha.webp";
+import masum from "../../assets/images/testimonials/farhan_masum.jpg";
+import mehedi from "../../assets/images/testimonials/mehedi.jpg";
+import rakibImg from "../../assets/images/testimonials/rakib.jpg";
 
 export default function WhoWeAre() {
   const comp = useRef(null);
@@ -153,20 +153,20 @@ export default function WhoWeAre() {
               />
 
               <Avatar
-                alt="Sheikh Tanjina"
-                src={tanha}
+                alt="mustafa"
+                src={mehedi}
                 sx={{
                   width: 56,
                   height: 56,
                 }}
               />
 
-              <Avatar alt="Rhitu" src={rhitu} sx={{ width: 56, height: 56 }} />
               <Avatar
-                alt="Sharar"
-                src={sharar}
+                alt="rakib"
+                src={rakibImg}
                 sx={{ width: 56, height: 56 }}
               />
+              <Avatar alt="masum" src={masum} sx={{ width: 56, height: 56 }} />
               <Avatar sx={{ width: 56, height: 56, bgcolor: "#414141" }}>
                 8+
               </Avatar>

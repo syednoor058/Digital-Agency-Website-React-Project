@@ -7,6 +7,9 @@ import {
   FaLinkedin,
 } from "react-icons/fa";
 import { LuArrowUpRight } from "react-icons/lu";
+import fahimImg from "../../assets/images/team/fahim_sharar.png";
+import fuadImg from "../../assets/images/team/farhan_fuad.png";
+import naimImg from "../../assets/images/team/naim_rahman.png";
 import syedNoorImg from "../../assets/images/team/syed_noor.png";
 import CallToAction from "../../components/callToAction/CallToAction";
 import Footer from "../../components/footer/Footer";
@@ -85,11 +88,152 @@ export default function About() {
             </div>
           </div>
         </section>
-        <section className="px-5 sm:px-7 lg:px-10 xl:px-20 flex flex-col gap-5 sm:gap-7 lg:gap-10 xl:gap-20">
-          <div className="font-titleFont font-bold text-4xl md:text-5xl text-center text-lightPrimary uppercase">
+        <section className="flex flex-col gap-5 sm:gap-7 lg:gap-10 xl:gap-20">
+          <div className="px-5 sm:px-7 lg:px-10 xl:px-20 font-titleFont font-bold text-4xl md:text-5xl text-center text-lightPrimary uppercase">
             Meet the <span className="text-accentColor">Team</span>
           </div>
-          <div className="grid grid-cols-2 xl:grid-cols-4 gap-5">
+          <div className="px-5 sm:px-0 w-full grid grid-cols-1 md:grid-cols-2 gap-0">
+            <div className="flex flex-col sm:flex-row">
+              <div className="w-full sm:w-[40%] aspect-square overflow-hidden">
+                <img
+                  className="w-full h-full object-contain"
+                  src={syedNoorImg}
+                  alt="syed-shaeduzzaman-noor"
+                />
+              </div>
+              <div className="w-full sm:w-[60%] bg-accentColor p-7 text-darkBodyText flex  justify-center">
+                <div className="flex flex-col gap-3 justify-between">
+                  <div className="flex flex-col gap-3 font-light leading-none text-base">
+                    <div className="uppercase text-2xl text-darkTitleText leading-none font-medium">
+                      Syed Shaeduzzaman Noor
+                    </div>
+
+                    <div className="flex flex-col gap-1 leading-none text-sm font-normal">
+                      <div>Founder & Cheif Technology Officer (CTO)</div>
+                      <div>Senior Software Engineer</div>
+                    </div>
+                    <div className="text-xs opacity-70">
+                      The mind behind the concept and the driving force of
+                      innovation, Syed Shaeduzzaman Noor blends technical
+                      expertise with a passion for problem-solving.
+                    </div>
+                  </div>
+                  <div className="flex flex-row gap-5 text-xl sm:text-2xl">
+                    <FaFacebookSquare />
+                    <FaInstagramSquare />
+                    <FaLinkedin />
+                    <FaGlobeAmericas />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="flex flex-col sm:flex-row">
+              <div className="w-full sm:w-[40%] aspect-square overflow-hidden">
+                <img
+                  className="w-full h-full object-contain"
+                  src={fahimImg}
+                  alt="fahim-sharar"
+                />
+              </div>
+              <div className="w-full sm:w-[60%] bg-lightPrimary p-7 text-darkBodyText flex  justify-center">
+                <div className="flex flex-col gap-3 justify-between">
+                  <div className="flex flex-col gap-3 font-light leading-none text-base">
+                    <div className="uppercase text-2xl text-darkTitleText leading-none font-medium">
+                      Kazi Fahim Sharar
+                    </div>
+
+                    <div className="flex flex-col gap-1 leading-none text-sm font-normal">
+                      <div>Co-Founder & Head of SEO Strategies</div>
+                      <div>Search Engine Optimization Specialist</div>
+                    </div>
+                    <div className="text-xs opacity-70">
+                      The expert in making businesses shine online, Kazi Sharar
+                      specializes in search engine optimization. His strategies
+                      ensure your brand not only gets discovered but thrives in
+                      the digital landscape.
+                    </div>
+                  </div>
+                  <div className="flex flex-row gap-5 text-xl sm:text-2xl">
+                    <FaFacebookSquare />
+                    <FaInstagramSquare />
+                    <FaLinkedin />
+                    <FaGlobeAmericas />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="flex flex-col sm:flex-row-reverse">
+              <div className="w-full sm:w-[40%] aspect-square overflow-hidden">
+                <img
+                  className="w-full h-full object-contain"
+                  src={fuadImg}
+                  alt="farhan-fuad"
+                />
+              </div>
+              <div className="w-full sm:w-[60%] bg-lightPrimary p-7 text-darkBodyText flex  justify-center sm:text-end">
+                <div className="flex flex-col gap-3 justify-between">
+                  <div className="flex flex-col gap-3 font-light leading-none text-base">
+                    <div className="uppercase text-2xl text-darkTitleText leading-none font-medium">
+                      Farhan Fuad
+                    </div>
+
+                    <div className="flex flex-col gap-1 leading-none text-sm font-normal">
+                      <div>Co-Founder & Head of Marketing Campaigns</div>
+                      <div>Digital Marketing Specialist</div>
+                    </div>
+                    <div className="text-xs opacity-70">
+                      Creative and results-driven, Farhan Fuad excels at
+                      crafting campaigns that resonate with audiences. They
+                      bring an analytical edge to every campaign, turning
+                      insights into impactful outcomes.
+                    </div>
+                  </div>
+                  <div className="flex flex-row gap-5 text-xl sm:text-2xl justify-end">
+                    <FaFacebookSquare />
+                    <FaInstagramSquare />
+                    <FaLinkedin />
+                    <FaGlobeAmericas />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="flex flex-col sm:flex-row-reverse">
+              <div className="w-full sm:w-[40%] aspect-square overflow-hidden">
+                <img
+                  className="w-full h-full object-contain"
+                  src={naimImg}
+                  alt="naim-rahman"
+                />
+              </div>
+              <div className="w-full sm:w-[60%] bg-accentColor p-7 text-darkBodyText flex  justify-center sm:text-end">
+                <div className="flex flex-col gap-3 justify-between">
+                  <div className="flex flex-col gap-3 font-light leading-none text-base">
+                    <div className="uppercase text-2xl text-darkTitleText leading-none font-medium">
+                      Naim Rahman
+                    </div>
+
+                    <div className="flex flex-col gap-1 leading-none text-sm font-normal">
+                      <div>Co-Founder & Head of Marketing Operations</div>
+                      <div>Digital Marketing Specialist</div>
+                    </div>
+                    <div className="text-xs opacity-70">
+                      A storyteller at heart, Naim Rahman uses his digital
+                      marketing prowess to connect brands with their customers.
+                      His expertise lies in designing strategies that build
+                      relationships.
+                    </div>
+                  </div>
+                  <div className="flex flex-row gap-5 text-xl sm:text-2xl justify-end">
+                    <FaFacebookSquare />
+                    <FaInstagramSquare />
+                    <FaLinkedin />
+                    <FaGlobeAmericas />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          {/* <div className="grid grid-cols-2 xl:grid-cols-4 gap-5">
             <div className="flex flex-col gap-3">
               <div className="w-full h-auto">
                 <img
@@ -186,7 +330,7 @@ export default function About() {
                 <FaGlobeAmericas />
               </div>
             </div>
-          </div>
+          </div> */}
         </section>
         <section className="flex flex-col pt-10">
           {/* Call To Action Section */}

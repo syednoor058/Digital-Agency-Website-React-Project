@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 // import React from "react";
+import { FaFacebookSquare } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
 import {
   MdOutlineKeyboardArrowLeft,
@@ -9,9 +10,9 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick-theme.css";
 import "slick-carousel/slick/slick.css";
 import azizulImg from "../../assets/images/testimonials/azizul.webp";
-import rituImg from "../../assets/images/testimonials/rhitu.webp";
-import shararImg from "../../assets/images/testimonials/sharar.webp";
-import tanhImg from "../../assets/images/testimonials/tanha.webp";
+import farhanMasumImg from "../../assets/images/testimonials/farhan_masum.jpg";
+import mehediImg from "../../assets/images/testimonials/mehedi.jpg";
+import rakibImg from "../../assets/images/testimonials/rakib.jpg";
 import TestimonialCard from "./TestimonialCard";
 
 function SampleNextArrow(props) {
@@ -101,31 +102,35 @@ export default function Testimonials() {
           <Slider {...settings}>
             <div className="px-2 sm:px-3">
               <TestimonialCard
-                image={shararImg}
+                image={farhanMasumImg}
                 icon={<FcGoogle />}
-                feedback="Our business grew faster than we imagined after partnering with this agency. Their strategic guidance and digital solutions boosted our revenue by 50% within months. They don't just deliver services—they help us unlock."
-                client="Kazi Fahim Sharar"
+                feedback="Our business grew faster than we imagined after partnering with this agency. They showed obedient behavior and a work friendly attitude. They were always willing to offer their assistance. I wish them every success in their future endeavors."
+                client="Kazi Farhan Masum"
                 company="Puppetbrush Digital Solution"
                 pos="Cheif Executive Officer"
               />
             </div>
             <div className="px-2 sm:px-3">
               <TestimonialCard
-                image={tanhImg}
+                image={mehediImg}
                 icon={<FcGoogle />}
                 feedback="With their SEO expertise and digital marketing campaigns, we saw a 200% increase in website traffic within the first quarter. They transformed our online presence and positioned us as an authority in our industry."
-                client="Sheikh Tanjina"
-                company="Sweet Cakes Food Groceries"
+                client="Syed Mustafa Mehedi"
+                company="Qahaf"
                 pos="Founder & CEO"
               />
             </div>
             <div className="px-2 sm:px-3">
               <TestimonialCard
-                image={rituImg}
-                icon={<FcGoogle />}
-                feedback="Thanks to their tailored marketing strategies, our customer engagement skyrocketed, and our retention rate improved by 35%. Their team understands our audience perfectly and knows how to keep them engaged."
-                client="Dr. Rhituparna Das"
-                company="Lexerburg Dental Care"
+                image={rakibImg}
+                icon={
+                  <div className="text-[#1877F2]">
+                    <FaFacebookSquare />
+                  </div>
+                }
+                feedback="They developed an E-commerce web application for my jersey business! The most loveble thing is they actually can understand what clients want and their requirments! Totally satisfied with their works! Their services are highly recommended!"
+                client="Rakib Shikdar"
+                company="Kick-off the Jersey Galleria"
                 pos="Owner"
               />
             </div>
@@ -135,8 +140,8 @@ export default function Testimonials() {
                 icon={<FcGoogle />}
                 feedback="We relied on them for software development, and they exceeded expectations with flawless, reliable solutions. Their rigorous testing ensured a smooth launch with zero downtime—simply outstanding and amazing!"
                 client="Md. Azizul Haque"
-                company="InterAid education care"
-                pos="Founder & Head Teacher"
+                company="InterAid Education Care"
+                pos="Founder & CEO"
               />
             </div>
           </Slider>
