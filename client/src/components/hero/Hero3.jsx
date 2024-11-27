@@ -4,6 +4,7 @@ import { FaRegFolderOpen } from "react-icons/fa6";
 import { HiMiniArrowUpRight } from "react-icons/hi2";
 import { IoIosPlayCircle } from "react-icons/io";
 import { IoPersonCircle } from "react-icons/io5";
+import { LuMouse } from "react-icons/lu";
 import { Link } from "react-router-dom";
 import heroImg1 from "../../assets/images/hero1.png";
 import heroImg2 from "../../assets/images/hero2.png";
@@ -129,7 +130,7 @@ export default function Hero3() {
               <Link to="/pricing" className="w-full h-full">
                 {/* <span className="w-full h-full rounded-full bg-lightPrimary absolute top-0 left-0 translate-x-[-100%] group-hover:translate-x-0 duration-500"></span> */}
                 <div className="flex flex-row items-center">
-                  <span className="flex justify-center items-center relative px-3 sm:px-5 py-2 bg-accentColor rounded-full">
+                  <span className="flex justify-center items-center relative px-5 py-2 bg-accentColor rounded-full">
                     Get Started{" "}
                   </span>
                   <span className="w-[35px] h-[35px] sm:w-[37px] sm:h-[37px] rounded-full bg-accentColor flex justify-center items-center">
@@ -225,8 +226,14 @@ export default function Hero3() {
       <section className="hidden lg:flex flex-col gap-5 pb-10 lg:pb-20 px-5 sm:px-7 lg:px-10 xl:px-20">
         <div className="w-full h-[1px] bg-lightSecondary"></div>
         <div className="flex flex-row justify-between px-5 sm:px-7 lg:px-10 xl:px-20 text-xs sm:text-base">
-          <div>&copy; Copyright 2024</div>
-          <div>Scroll To Explore</div>
+          <div>Copyright &copy; 2024</div>
+          <div className="flex flex-row gap-1 items-center">
+            <span>
+              {" "}
+              <LuMouse />
+            </span>
+            Scroll To Explore
+          </div>
         </div>
       </section>
     </div>

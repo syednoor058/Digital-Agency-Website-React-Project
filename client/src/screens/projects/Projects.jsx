@@ -2,6 +2,7 @@
 import { useEffect } from "react";
 import Marquee from "react-fast-marquee";
 import { HiMiniArrowUpRight } from "react-icons/hi2";
+import { LuMouse } from "react-icons/lu";
 import { Link } from "react-router-dom";
 import projectPageHeroImg from "../../assets/images/project_page_hero.png";
 import portfolioImg from "../../assets/images/projects/2.webp";
@@ -83,8 +84,14 @@ export default function Projects() {
           <div className="w-full hidden lg:flex flex-col gap-4">
             <div className="w-full h-[1px] bg-lightSecondary"></div>
             <div className="flex flex-row justify-between px-5 sm:px-7 lg:px-10 xl:px-20">
-              <div>&copy; Copyright 2024</div>
-              <div>Scroll To Explore</div>
+              <div>Copyright &copy; 2024</div>
+              <div className="flex flex-row gap-1 items-center">
+                <span>
+                  {" "}
+                  <LuMouse />
+                </span>
+                Scroll To Explore
+              </div>
             </div>
           </div>
         </section>

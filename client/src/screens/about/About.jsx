@@ -1,12 +1,8 @@
 // import React from 'react'
 import { useEffect } from "react";
-import {
-  FaFacebookSquare,
-  FaGlobeAmericas,
-  FaInstagramSquare,
-  FaLinkedin,
-} from "react-icons/fa";
-import { LuArrowUpRight } from "react-icons/lu";
+import { AiFillInstagram } from "react-icons/ai";
+import { FaFacebookSquare, FaGlobeAmericas, FaLinkedin } from "react-icons/fa";
+import { LuArrowUpRight, LuMouse } from "react-icons/lu";
 import fahimImg from "../../assets/images/team/fahim_sharar.png";
 import fuadImg from "../../assets/images/team/farhan_fuad.png";
 import naimImg from "../../assets/images/team/naim_rahman.png";
@@ -50,8 +46,14 @@ export default function About() {
           <div className="w-full hidden lg:flex flex-col gap-4 px-5 sm:px-7 lg:px-10 xl:px-20">
             <div className="w-full h-[1px] bg-lightSecondary"></div>
             <div className="flex flex-row justify-between px-5 sm:px-7 lg:px-10 xl:px-20">
-              <div>&copy; Copyright 2024</div>
-              <div>Scroll To Explore</div>
+              <div>Copyright &copy; 2024</div>
+              <div className="flex flex-row gap-1 items-center">
+                <span>
+                  {" "}
+                  <LuMouse />
+                </span>
+                Scroll To Explore
+              </div>
             </div>
           </div>
         </section>
@@ -122,9 +124,9 @@ export default function About() {
                       expertise with a passion for problem-solving.
                     </div>
                   </div>
-                  <div className="flex flex-row gap-5 text-xl sm:text-2xl">
+                  <div className="flex flex-row gap-5 text-2xl">
                     <FaFacebookSquare />
-                    <FaInstagramSquare />
+                    <AiFillInstagram />
                     <FaLinkedin />
                     <FaGlobeAmericas />
                   </div>
@@ -157,9 +159,9 @@ export default function About() {
                       the digital landscape.
                     </div>
                   </div>
-                  <div className="flex flex-row gap-5 text-xl sm:text-2xl">
+                  <div className="flex flex-row gap-5 text-2xl">
                     <FaFacebookSquare />
-                    <FaInstagramSquare />
+                    <AiFillInstagram />
                     <FaLinkedin />
                     <FaGlobeAmericas />
                   </div>
@@ -192,9 +194,9 @@ export default function About() {
                       insights into impactful outcomes.
                     </div>
                   </div>
-                  <div className="flex flex-row gap-5 text-xl sm:text-2xl sm:justify-end">
+                  <div className="flex flex-row gap-5 text-2xl sm:justify-end">
                     <FaFacebookSquare />
-                    <FaInstagramSquare />
+                    <AiFillInstagram />
                     <FaLinkedin />
                     <FaGlobeAmericas />
                   </div>
@@ -227,9 +229,9 @@ export default function About() {
                       relationships.
                     </div>
                   </div>
-                  <div className="flex flex-row gap-5 text-xl sm:text-2xl sm:justify-end">
+                  <div className="flex flex-row gap-5 text-2xl sm:justify-end">
                     <FaFacebookSquare />
-                    <FaInstagramSquare />
+                    <AiFillInstagram />
                     <FaLinkedin />
                     <FaGlobeAmericas />
                   </div>

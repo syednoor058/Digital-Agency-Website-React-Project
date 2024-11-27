@@ -129,7 +129,7 @@ export default function Navbar() {
           </div>
           <div
             id="nav-cta"
-            className="w-[20%] flex justify-center items-center text-sm font-bodyFont group relative overflow-hidden text-darkTitleText"
+            className="w-[25%] xl:w-[20%] flex justify-end items-center text-sm font-bodyFont group relative overflow-hidden text-darkTitleText"
           >
             <Link>
               <div className="w-full h-full flex flex-row items-center">
