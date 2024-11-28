@@ -50,7 +50,7 @@ export default function Services() {
               </p>
               <div className="flex justify-between items-center pe-0 sm:pe-32">
                 <div className="flex flex-row hover:flex-row-reverse duration-500 items-center">
-                  <Link to="/pricing">
+                  <Link to="/contact-us">
                     <div className="text-center text-base sm:text-xl px-8 py-2 sm:py-3 rounded-full bg-accentColor text-darkTitleText">
                       Get Started
                     </div>

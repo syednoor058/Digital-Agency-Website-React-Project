@@ -3,7 +3,7 @@ import gsap from "gsap";
 import { useLayoutEffect, useRef, useState } from "react";
 import { HiMiniArrowUpRight } from "react-icons/hi2";
 import { RxHamburgerMenu } from "react-icons/rx";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import lightLogo from "../../assets/logo/dark_mode_logo.png";
 export default function Navbar() {
   const [toggle, setToggle] = useState(false);
@@ -131,7 +131,7 @@ export default function Navbar() {
             id="nav-cta"
             className="w-[25%] xl:w-[20%] flex justify-end items-center text-sm font-bodyFont group relative overflow-hidden text-darkTitleText"
           >
-            <Link>
+            <NavLink to="/contact-us">
               <div className="w-full h-full flex flex-row items-center">
                 <span className="group-hover:text-darkTitleText duration-500 text-center px-5 py-2 bg-accentColor rounded-full">
                   Get a quote
@@ -140,7 +140,7 @@ export default function Navbar() {
                   <HiMiniArrowUpRight />
                 </div>
               </div>
-            </Link>
+            </NavLink>
           </div>
         </div>
       </div>
@@ -154,13 +154,7 @@ export default function Navbar() {
             />
           </div>
           <div className="flex flex-row gap-2 sm:gap-3 justify-end items-center">
-            {/* <div
-              id="mobile-nav1"
-              className="px-3 py-2 border border-accentColor rounded-full flex justify-center items-center font-bodyFont"
-            >
-              Get a Quote
-            </div> */}
-            <Link to="/">
+            <NavLink to="/contact-us">
               <div className="w-full h-full flex flex-row items-center text-darkTitleText text-xs">
                 <span className="group-hover:text-darkTitleText duration-500 text-center px-5 py-2 bg-accentColor rounded-full">
                   Let&apos;s Start
@@ -169,7 +163,7 @@ export default function Navbar() {
                   <HiMiniArrowUpRight />
                 </div>
               </div>
-            </Link>
+            </NavLink>
             <div
               id="mobile-nav2"
               className="p-2 rounded-full cursor-pointer text-lg"

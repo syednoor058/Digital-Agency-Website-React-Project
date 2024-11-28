@@ -111,7 +111,7 @@ export default function CaseStudy() {
           />
         </div>
         <div className="w-ful flex justify-center pt-5 lg:pt-10">
-          <Link to="/">
+          <Link to="/projects">
             <div className="w-auto flex flex-row items-center text-darkPrimary">
               <span className="px-6 py-2 capitalize text-center bg-lightTitleText rounded-full">
                 Discover More Case Studies

@@ -125,10 +125,34 @@ export default function About() {
                     </div>
                   </div>
                   <div className="flex flex-row gap-5 text-2xl">
-                    <FaFacebookSquare />
-                    <AiFillInstagram />
-                    <FaLinkedin />
-                    <FaGlobeAmericas />
+                    <a
+                      href="https://web.facebook.com/shaed058/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <FaFacebookSquare />
+                    </a>
+                    <a
+                      href="https://www.instagram.com/shaed_noor/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <AiFillInstagram />
+                    </a>
+                    <a
+                      href="https://www.linkedin.com/in/shaednoor/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <FaLinkedin />
+                    </a>
+                    <a
+                      href="https://shaed-noor.vercel.app/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <FaGlobeAmericas />
+                    </a>
                   </div>
                 </div>
               </div>
@@ -195,10 +219,34 @@ export default function About() {
                     </div>
                   </div>
                   <div className="flex flex-row gap-5 text-2xl sm:justify-end">
-                    <FaFacebookSquare />
-                    <AiFillInstagram />
-                    <FaLinkedin />
-                    <FaGlobeAmericas />
+                    <a
+                      href="https://www.facebook.com/farhan.fuad.1257?mibextid=ZbWKwL"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <FaFacebookSquare />
+                    </a>
+                    <a
+                      href="https://www.instagram.com/fuad.farhan00/profilecard/?igsh=ZGx0am1lM29kcXMx"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <AiFillInstagram />
+                    </a>
+                    <a
+                      href="https://www.linkedin.com/in/md-farhan-fuad-8a2b9a320?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <FaLinkedin />
+                    </a>
+                    <a
+                      href="https://sites.google.com/view/md-farhanfuad?usp=sharing"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <FaGlobeAmericas />
+                    </a>
                   </div>
                 </div>
               </div>

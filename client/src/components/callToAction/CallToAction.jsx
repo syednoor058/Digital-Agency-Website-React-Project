@@ -17,7 +17,7 @@ export default function CallToAction() {
           With <span className="text-lightPrimary">Devion Ark</span>
         </div>
 
-        <Link to="" className="flex items-center mt-5">
+        <Link to="/contact-us" className="flex items-center mt-5">
           <div className="flex flex-row items-center">
             <span className="capitalize font-bodyFont text-darkTitleText text-sm sm:text-base text-center gap-2 rounded-full bg-accentColor px-7 py-2">
               Get a quote

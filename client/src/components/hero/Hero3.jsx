@@ -126,8 +126,7 @@ export default function Hero3() {
               id="hero-btn-1"
               className=" text-darkBodyText  text-base sm:text-xl group overflow-hidden relative"
             >
-              <Link to="/pricing" className="w-full h-full">
-                {/* <span className="w-full h-full rounded-full bg-lightPrimary absolute top-0 left-0 translate-x-[-100%] group-hover:translate-x-0 duration-500"></span> */}
+              <Link to="/contact-us" className="w-full h-full">
                 <div className="flex flex-row items-center">
                   <span className="flex justify-center items-center relative px-5 py-2 bg-accentColor rounded-full">
                     Get Started{" "}

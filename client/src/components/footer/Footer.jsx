@@ -40,10 +40,30 @@ export default function Footer() {
             </div>
             <div>*Required Information</div>
             <div className="w-full flex flex-wrap gap-5 text-3xl">
-              <FaFacebookSquare />
-              <FaLinkedin />
-              <RiWhatsappFill />
-              <AiFillInstagram />
+              <a
+                href="https://www.facebook.com/devion.ark"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaFacebookSquare />
+              </a>
+              <a
+                href="https://www.linkedin.com/company/devion-ark/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaLinkedin />
+              </a>
+              <a href="" target="_blank" rel="noopener noreferrer">
+                <RiWhatsappFill />
+              </a>
+              <a
+                href="https://www.instagram.com/devionark/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <AiFillInstagram />
+              </a>
             </div>
           </div>
           <div className="w-full lg:w-[55%] flex flex-wrap gap-10 sm:justify-between pt-10 lg:pt-0">
