@@ -6,8 +6,7 @@ import { IoIosPlayCircle } from "react-icons/io";
 import { IoPersonCircle } from "react-icons/io5";
 import { LuMouse } from "react-icons/lu";
 import { Link } from "react-router-dom";
-import heroImg1 from "../../assets/images/hero1.png";
-import heroImg2 from "../../assets/images/hero2.png";
+import homeHeroImg from "../../assets/images/home_hero.webp";
 import { useAnimation } from "../../context/animationContext/AnimationContextProvider";
 
 // Register ScrollTrigger with GSAP
@@ -102,13 +101,13 @@ export default function Hero3() {
     >
       <section className="w-full px-5 sm:px-7 lg:px-10 xl:px-20 py-10 lg:pt-24 lg:pb-10 relative z-[5] backdrop-blur-[1px] flex flex-col lg:flex-row gap-10">
         <div className="w-full lg:w-[70%] flex flex-col lg:flex-col-reverse gap-5 md:gap-7">
-          <div className="uppercase font-titleFont font-bold text-[28px] sm:text-5xl lg:text-[32px] xl:text-[40px] leading-none text-center lg:text-start text-lightTitleText">
+          <div className="uppercase font-titleFont font-bold text-[28px] sm:text-5xl lg:text-[30px] xl:text-[40px] leading-none text-center lg:text-start text-lightTitleText">
             <h1 className="font-semibold overflow-hidden">
               <span id="hero-title" className="inline-block">
                 Transforming Your ideas into
               </span>
             </h1>
-            <h1 className="text-[35px] sm:text-6xl md:text-7xl lg:text-6xl xl:text-[88px] overflow-hidden">
+            <h1 className="text-[35px] sm:text-6xl md:text-7xl lg:text-6xl xl:text-[82px] overflow-hidden">
               <span id="hero-title-2" className="inline-block">
                 Digital <span className="text-accentColor">reality</span>
               </span>
@@ -194,8 +193,8 @@ export default function Hero3() {
             </div>
           </div>
         </div>
-        <div className="w-full lg:w-[30%] flex flex-col-reverse lg:flex-row-reverse gap-3 lg:gap-7">
-          <div className="w-full grid grid-cols-2 gap-1 lg:gap-5">
+        <div className="w-full lg:w-[40%] flex flex-col-reverse lg:flex-row-reverse gap-3 lg:gap-7">
+          {/* <div className="w-full grid grid-cols-2 gap-1 lg:gap-5">
             <div className="flex justify-center items-start relative overflow-hidden">
               <div
                 id="hero-img-1-cover"
@@ -220,6 +219,13 @@ export default function Hero3() {
                 alt="google_review"
               />
             </div>
+          </div> */}
+          <div className="w-full aspect-square overflow-hidden">
+            <img
+              className="w-full aspect-square object-fit"
+              src={homeHeroImg}
+              alt="home-hero-section"
+            />
           </div>
         </div>
       </section>

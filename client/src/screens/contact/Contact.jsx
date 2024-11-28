@@ -1,13 +1,15 @@
 // import React from 'react'
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { HiMiniArrowUpRight } from "react-icons/hi2";
 import { LuMouse } from "react-icons/lu";
 import { Link } from "react-router-dom";
-import contactFormImg from "../../assets/images/contact_form.png";
-import contactHeroImg from "../../assets/images/contact_hero.png";
+import contactFormImg from "../../assets/images/contact_form.webp";
+import contactHeroImg from "../../assets/images/contact_hero.webp";
 import LightFooter from "../../components/footer/LightFooter";
 
 export default function Contact() {
+  const [interest, setInterest] = useState("");
+  const [budgetState, setBudgetState] = useState("");
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -18,9 +20,9 @@ export default function Contact() {
   return (
     <div className="pt-14 lg:pt-10 w-full min-h-screen font-bodyFont overflow-x-hidden bg-darkPrimary text-lightBodyText">
       <div className="pt-10 lg:pt-0 flex flex-col gap-14 md:gap-20 lg:gap-28">
-        <section className="w-full h-full lg:min-h-screen flex flex-col gap-10">
+        <section className="w-full h-full lg:min-h-screen flex flex-col gap-10 px-5  sm:px-7 lg:px-10 xl:px-20">
           <div className="w-full h-full lg:h-[450px] flex flex-col lg:flex-row gap-5 sm:gap-7 lg:gap-10">
-            <div className="w-full lg:w-[65%] h-auto flex flex-col-reverse lg:flex-col justify-end gap-5 sm:gap-7 lg:gap-10 leading-none ps-5 pe-5 sm:ps-7 sm:pe-7 lg:pe-0 lg:ps-10 xl:ps-20">
+            <div className="w-full lg:w-[65%] h-auto flex flex-col-reverse lg:flex-col justify-end gap-5 sm:gap-7 lg:gap-10 leading-none">
               <div className="w-full lg:w-[60%] text-base lg:text-lg">
                 Whether you have a question, need a custom solution, or just
                 want to say hello, our team is ready to assist you. Let’s create
@@ -46,7 +48,7 @@ export default function Contact() {
               </div>
             </div>
           </div>
-          <div className="w-full hidden lg:flex flex-col gap-4 px-5 sm:px-7 lg:px-10 xl:px-20">
+          <div className="w-full hidden lg:flex flex-col gap-4">
             <div className="w-full h-[1px] bg-lightSecondary"></div>
             <div className="flex flex-row justify-between px-5 sm:px-7 lg:px-10 xl:px-20">
               <div>Copyright &copy; 2024</div>
@@ -91,7 +93,14 @@ export default function Contact() {
                     "Blog Writing",
                     "Content Creation",
                   ].map((item) => (
-                    <div className="px-3 md:px-5 py-2 rounded-full border border-accentColor text-xs sm:text-base md:text-lg text-center capitalize font-light">
+                    <div
+                      className={`px-3 md:px-5 py-2 rounded-full border-accentColor ${
+                        interest === item
+                          ? "bg-accentColor text-darkBodyText font-normal"
+                          : "border text-lightBodyText"
+                      } text-xs sm:text-base md:text-lg text-center capitalize font-light text-nowrap cursor-pointer`}
+                      onClick={() => setInterest(item)}
+                    >
                       {item}
                     </div>
                   ))}
@@ -124,11 +133,18 @@ export default function Contact() {
                     {[
                       "<$100",
                       "$101-300",
-                      "$301-700",
+                      "$301-600",
                       "$601-1000",
                       "$1000+",
                     ].map((budget) => (
-                      <div className="px-3 md:px-5 py-2 rounded-full border border-accentColor text-xs sm:text-base md:text-lg text-center capitalize font-light">
+                      <div
+                        className={`px-3 md:px-5 py-2 rounded-full border-accentColor ${
+                          budgetState === budget
+                            ? "bg-accentColor text-darkBodyText font-normal"
+                            : "border text-lightBodyText"
+                        } text-xs sm:text-base md:text-lg text-center capitalize font-light text-nowrap cursor-pointer`}
+                        onClick={() => setBudgetState(budget)}
+                      >
                         {budget}
                       </div>
                     ))}

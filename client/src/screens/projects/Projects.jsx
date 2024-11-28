@@ -4,7 +4,7 @@ import Marquee from "react-fast-marquee";
 import { HiMiniArrowUpRight } from "react-icons/hi2";
 import { LuMouse } from "react-icons/lu";
 import { Link } from "react-router-dom";
-import projectPageHeroImg from "../../assets/images/project_page_hero.png";
+import projectPageHeroImg from "../../assets/images/project_page_hero.webp";
 import portfolioImg from "../../assets/images/projects/2.webp";
 import kickOffImg from "../../assets/images/projects/3.webp";
 import carsPredImg from "../../assets/images/projects/4.webp";

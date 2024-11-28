@@ -7,9 +7,9 @@ import { PiArrowSquareUpRightThin } from "react-icons/pi";
 import Splitting from "splitting";
 import "splitting/dist/splitting.css"; // Include required CSS for Splitting.js
 import azizul from "../../assets/images/testimonials/azizul.webp";
-import masum from "../../assets/images/testimonials/farhan_masum.jpg";
-import mehedi from "../../assets/images/testimonials/mehedi.jpg";
-import rakibImg from "../../assets/images/testimonials/rakib.jpg";
+import masum from "../../assets/images/testimonials/farhan_masum.webp";
+import mehedi from "../../assets/images/testimonials/mehedi.webp";
+import rakibImg from "../../assets/images/testimonials/rakib.webp";
 
 export default function WhoWeAre() {
   const comp = useRef(null);

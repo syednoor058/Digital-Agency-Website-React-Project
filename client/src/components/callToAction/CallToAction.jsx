@@ -1,7 +1,7 @@
 import React from "react";
 import { HiMiniArrowUpRight } from "react-icons/hi2";
 import { Link } from "react-router-dom";
-import callToActionImg from "../../assets/images/call_to_action.png";
+import callToActionImg from "../../assets/images/call_to_action.webp";
 
 export default function CallToAction() {
   return (

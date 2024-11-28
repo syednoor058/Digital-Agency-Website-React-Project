@@ -10,9 +10,9 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick-theme.css";
 import "slick-carousel/slick/slick.css";
 import azizulImg from "../../assets/images/testimonials/azizul.webp";
-import farhanMasumImg from "../../assets/images/testimonials/farhan_masum.jpg";
-import mehediImg from "../../assets/images/testimonials/mehedi.jpg";
-import rakibImg from "../../assets/images/testimonials/rakib.jpg";
+import farhanMasumImg from "../../assets/images/testimonials/farhan_masum.webp";
+import mehediImg from "../../assets/images/testimonials/mehedi.webp";
+import rakibImg from "../../assets/images/testimonials/rakib.webp";
 import TestimonialCard from "./TestimonialCard";
 
 function SampleNextArrow(props) {

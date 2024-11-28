@@ -14,7 +14,7 @@ import {
 import { MdControlPoint } from "react-icons/md";
 import { PiArrowSquareUpRightThin } from "react-icons/pi";
 import { Link } from "react-router-dom";
-import serviceHeroImg from "../../assets/images/services_hero.png";
+import serviceHeroImg from "../../assets/images/services_hero.webp";
 import CallToAction from "../../components/callToAction/CallToAction";
 import Footer from "../../components/footer/Footer";
 
