@@ -3,15 +3,11 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import LocomotiveScroll from "locomotive-scroll";
 import "locomotive-scroll/dist/locomotive-scroll.css";
 import { useLayoutEffect, useRef } from "react";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
 import Navbar from "./components/navbar/Navbar";
 import ScrollToTop from "./components/scrollToTop/ScrollToTop";
 import { AnimationContextProvider } from "./context/animationContext/AnimationContextProvider";
-import About from "./screens/about/About";
-import Contact from "./screens/contact/Contact";
-import Home from "./screens/home/Home";
-import Projects from "./screens/projects/Projects";
-import Services from "./screens/services/Services";
+import AppRoutes from "./routes/AppRoutes";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -130,13 +126,7 @@ export default function App() {
           </div>
           <AnimationContextProvider>
             <ScrollToTop />
-            <Routes>
-              <Route exact path="/" element={<Home />} />
-              <Route exact path="/services" element={<Services />} />
-              <Route exact path="/projects" element={<Projects />} />
-              <Route exact path="/about-us" element={<About />} />
-              <Route exact path="/contact-us" element={<Contact />} />
-            </Routes>
+            <AppRoutes />
           </AnimationContextProvider>
         </div>
       </div>

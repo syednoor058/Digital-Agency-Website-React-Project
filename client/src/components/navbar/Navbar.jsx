@@ -55,9 +55,14 @@ export default function Navbar() {
       className="w-full font-bodyFont capitalize text-lightBodyText bg-darkPrimary"
     >
       <div className="w-full h-16 px-5 sm:px-10 xl:px-20 hidden lg:flex flex-row gap-10 items-center justify-between">
-        <div id="navLogo" className="w-[15%]">
-          <img className="w-full h-auto" src={lightLogo} alt="light_logo" />
+        <div className="w-[15%]">
+          <NavLink to="/">
+            <div id="navLogo">
+              <img className="w-full h-auto" src={lightLogo} alt="light_logo" />
+            </div>
+          </NavLink>
         </div>
+
         <div className="w-full flex flex-row gap-20 justify-end items-center">
           <div className="flex flex-row gap-5 justify-center items-center text-base lg:text-sm">
             <div id="nav0" className="overflow-hidden">
@@ -146,13 +151,15 @@ export default function Navbar() {
       </div>
       <div className="w-full h-14 px-5 md:px-10 lg:px-10 xl:px-20 text-sm sm:text-sm  flex lg:hidden items-center">
         <div className="w-full flex flex-row gap-10 items-center justify-between  text-lightTitleText">
-          <div className="" id="mobile-nav0">
-            <img
-              className="w-auto h-10 sm:h-14 object-contain"
-              src={lightLogo}
-              alt="light_logo"
-            />
-          </div>
+          <NavLink to="/">
+            <div className="" id="mobile-nav0">
+              <img
+                className="w-auto h-10 sm:h-14 object-contain"
+                src={lightLogo}
+                alt="light_logo"
+              />
+            </div>
+          </NavLink>
           <div className="flex flex-row gap-2 sm:gap-3 justify-end items-center">
             <NavLink to="/contact-us">
               <div className="w-full h-full flex flex-row items-center text-darkTitleText text-xs">
