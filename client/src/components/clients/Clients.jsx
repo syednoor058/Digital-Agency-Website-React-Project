@@ -1,15 +1,14 @@
 // import React from 'react'
 import Marquee from "react-fast-marquee";
-import interAid from "../../assets/images/clients/1.png";
-import puppetBrush from "../../assets/images/clients/2.png";
-import qahaf from "../../assets/images/clients/3.png";
-import quantumQube from "../../assets/images/clients/4.png";
-import sato from "../../assets/images/clients/5.png";
-import shodwe from "../../assets/images/clients/6.png";
+import interAid from "../../assets/images/clients/interaid.webp";
+import kickOff from "../../assets/images/clients/kick_off.png";
+import puppetBrush from "../../assets/images/clients/puppetbrush.png";
+import qahaf from "../../assets/images/clients/qahaf.png";
+import sweetCakes from "../../assets/images/clients/sweet_cakes.png";
 
 export default function Clients() {
   return (
-    <div className="py-7 sm:py-10 bg-lightPrimary">
+    <div className="py-7 sm:py-10 lg:py-14 bg-lightPrimary">
       <div className="">
         <Marquee
           autoFill={true}
@@ -17,49 +16,41 @@ export default function Clients() {
           direction="left"
           className="hover:cursor-pointer opacity-60"
         >
-          <div className="flex justify-center items-center mx-3 md:mx-6">
+          <div className="flex justify-center items-center mx-5 sm:mx-8 md:mx-14">
             <img
-              className="w-[100px] md:w-[150px]"
+              className="h-[40px] md:h-[70px] w-auto"
               src={interAid}
               alt="inter-aid"
             />
           </div>
-          <div className="flex justify-center items-center mx-3 md:mx-10">
+          <div className="flex justify-center items-center mx-5 sm:mx-8 md:mx-14">
             <img
-              className="w-[100px] md:w-[150px]"
-              src={sato}
-              alt="inter-aid"
+              className="h-[40px] md:h-[70px] w-auto"
+              src={kickOff}
+              alt="kick-off"
             />
           </div>
-          <div className="flex justify-center items-center mx-3 md:mx-10">
+          <div className="flex justify-center items-center mx-5 sm:mx-8 md:mx-14">
             <img
-              className="w-[100px] md:w-[150px]"
+              className="h-[40px] md:h-[70px] w-auto"
               src={qahaf}
-              alt="inter-aid"
+              alt="qahaf"
             />
           </div>
 
-          <div className="flex justify-center items-center mx-3 md:mx-10">
+          <div className="flex justify-center items-center mx-5 sm:mx-8 md:mx-14">
             <img
-              className="w-[100px] md:w-[150px]"
-              src={quantumQube}
-              alt="inter-aid"
-            />
-          </div>
-
-          <div className="flex justify-center items-center mx-3 md:mx-10">
-            <img
-              className="w-[100px] md:w-[150px]"
+              className="h-[40px] md:h-[70px] w-auto"
               src={puppetBrush}
-              alt="inter-aid"
+              alt="puppetbrush"
             />
           </div>
 
-          <div className="flex justify-center items-center mx-3 md:mx-10">
+          <div className="flex justify-center items-center mx-5 sm:mx-8 md:mx-14">
             <img
-              className="w-[100px] md:w-[150px]"
-              src={shodwe}
-              alt="inter-aid"
+              className="h-[40px] md:h-[70px] w-auto"
+              src={sweetCakes}
+              alt="sweet-cakes"
             />
           </div>
         </Marquee>

@@ -6,7 +6,7 @@ import { LuArrowUpRight, LuMouse } from "react-icons/lu";
 import fahimImg from "../../assets/images/team/fahim_sharar.webp";
 import fuadImg from "../../assets/images/team/farhan_fuad.webp";
 import naimImg from "../../assets/images/team/naim_rahman.webp";
-import syedNoorImg from "../../assets/images/team/syed_noor.png";
+import syedNoorImg from "../../assets/images/team/syed_noor.webp";
 import CallToAction from "../../components/callToAction/CallToAction";
 import Footer from "../../components/footer/Footer";
 import WhyChooseUs from "./../../components/whyChooseUs/WhyChooseUs";

@@ -1,12 +1,12 @@
 import gsap from "gsap";
 import React, { useLayoutEffect, useRef, useState } from "react";
-import discoverSubImg from "../../assets/images/howWeDo/1.1.png";
+import discoverSubImg from "../../assets/images/howWeDo/1.1.webp";
 import discoverImg from "../../assets/images/howWeDo/1.webp";
-import designSubImg from "../../assets/images/howWeDo/2.1.png";
+import designSubImg from "../../assets/images/howWeDo/2.1.webp";
 import designImg from "../../assets/images/howWeDo/2.webp";
-import developSubImg from "../../assets/images/howWeDo/3.1.png";
+import developSubImg from "../../assets/images/howWeDo/3.1.webp";
 import developImg from "../../assets/images/howWeDo/3.webp";
-import deliverSubImg from "../../assets/images/howWeDo/4.1.png";
+import deliverSubImg from "../../assets/images/howWeDo/4.1.webp";
 import deliverImg from "../../assets/images/howWeDo/4.webp";
 
 export default function HowWeWork2() {
