@@ -32,13 +32,20 @@ import wordpressImg from "../../assets/images/technologies/wordpress.png";
 import CallToAction from "../../components/callToAction/CallToAction";
 import CaseStudyCard from "../../components/caseStudy/CaseStudyCard";
 import Footer from "../../components/footer/Footer";
+import { useAnimation } from "../../context/animationContext/AnimationContextProvider";
 export default function Projects() {
+  const { delayLandingPage, setDelayLandingPage } = useAnimation();
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
   useEffect(() => {
     document.title =
       "Case Studies - Best Agency in Affordable Budget | Devion Ark";
+  }, []);
+  useEffect(() => {
+    if (delayLandingPage !== 0) {
+      setDelayLandingPage(0);
+    }
   }, []);
   return (
     <div className="pt-14 lg:pt-10 w-full font-bodyFont overflow-x-hidden bg-darkPrimary text-lightBodyText">

@@ -17,14 +17,21 @@ import { Link } from "react-router-dom";
 import serviceHeroImg from "../../assets/images/services_hero.webp";
 import CallToAction from "../../components/callToAction/CallToAction";
 import Footer from "../../components/footer/Footer";
+import { useAnimation } from "../../context/animationContext/AnimationContextProvider";
 
 export default function Services() {
+  const { delayLandingPage, setDelayLandingPage } = useAnimation();
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
   useEffect(() => {
     document.title =
       "Services - Best Service Delivery in Affordable Budget | Devion Ark";
+  }, []);
+  useEffect(() => {
+    if (delayLandingPage !== 0) {
+      setDelayLandingPage(0);
+    }
   }, []);
   return (
     <div className="pt-14 lg:pt-10 w-full overflow-x-hidden bg-darkPrimary text-lightBodyText font-bodyFont">

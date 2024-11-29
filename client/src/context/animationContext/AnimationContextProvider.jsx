@@ -4,7 +4,7 @@ import React, { createContext, useContext, useState } from "react";
 const AnimationContext = createContext();
 
 export function AnimationContextProvider({ children }) {
-  const [delayLandingPage, setDelayLandingPage] = useState(5); // Initialize delay state to 4 seconds
+  const [delayLandingPage, setDelayLandingPage] = useState(5); // Initialize delay state to  seconds
 
   return (
     <AnimationContext.Provider

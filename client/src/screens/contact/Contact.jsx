@@ -6,8 +6,10 @@ import { Link } from "react-router-dom";
 import contactFormImg from "../../assets/images/contact_form.webp";
 import contactHeroImg from "../../assets/images/contact_hero.webp";
 import LightFooter from "../../components/footer/LightFooter";
+import { useAnimation } from "../../context/animationContext/AnimationContextProvider";
 
 export default function Contact() {
+  const { delayLandingPage, setDelayLandingPage } = useAnimation();
   const [interest, setInterest] = useState("");
   const [budgetState, setBudgetState] = useState("");
   useEffect(() => {
@@ -16,6 +18,11 @@ export default function Contact() {
   useEffect(() => {
     document.title =
       "Contact Us - Best Agency in Affordable Budget | Devion Ark";
+  }, []);
+  useEffect(() => {
+    if (delayLandingPage !== 0) {
+      setDelayLandingPage(0);
+    }
   }, []);
   return (
     <div className="pt-14 lg:pt-10 w-full min-h-screen font-bodyFont overflow-x-hidden bg-darkPrimary text-lightBodyText">

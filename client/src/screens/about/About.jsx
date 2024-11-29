@@ -2,20 +2,30 @@
 import { useEffect } from "react";
 import { AiFillInstagram } from "react-icons/ai";
 import { FaFacebookSquare, FaGlobeAmericas, FaLinkedin } from "react-icons/fa";
+import { FaSquareXTwitter } from "react-icons/fa6";
 import { LuArrowUpRight, LuMouse } from "react-icons/lu";
+import { RiWhatsappFill } from "react-icons/ri";
 import fahimImg from "../../assets/images/team/fahim_sharar.webp";
 import fuadImg from "../../assets/images/team/farhan_fuad.webp";
 import naimImg from "../../assets/images/team/naim_rahman.webp";
 import syedNoorImg from "../../assets/images/team/syed_noor.webp";
 import CallToAction from "../../components/callToAction/CallToAction";
 import Footer from "../../components/footer/Footer";
+import { useAnimation } from "../../context/animationContext/AnimationContextProvider";
 import WhyChooseUs from "./../../components/whyChooseUs/WhyChooseUs";
+
 export default function About() {
+  const { delayLandingPage, setDelayLandingPage } = useAnimation();
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
   useEffect(() => {
     document.title = "About Us - Best Agency in Affordable Budget | Devion Ark";
+  }, []);
+  useEffect(() => {
+    if (delayLandingPage !== 0) {
+      setDelayLandingPage(0);
+    }
   }, []);
   return (
     <div className="pt-14 lg:pt-10 w-full min-h-screen font-bodyFont overflow-x-hidden bg-darkPrimary text-lightBodyText">
@@ -98,8 +108,8 @@ export default function About() {
           <div className="px-5 sm:px-7 lg:px-10 xl:px-20 font-titleFont font-bold text-4xl md:text-5xl text-center text-lightPrimary uppercase">
             Meet the <span className="text-accentColor">Team</span>
           </div>
-          <div className="px-5 sm:px-0 w-full grid grid-cols-1 md:grid-cols-2 gap-0">
-            <div className="flex flex-col sm:flex-row">
+          <div className="px-5 sm:px-0 w-full grid grid-cols-1 md:grid-cols-2 gap-0 ">
+            <div className="flex flex-col sm:flex-row gap-0">
               <div className="w-full sm:w-[40%] aspect-square overflow-hidden">
                 <img
                   className="w-full h-full object-contain"
@@ -157,7 +167,7 @@ export default function About() {
                 </div>
               </div>
             </div>
-            <div className="flex flex-col sm:flex-row">
+            <div className="flex flex-col sm:flex-row gap-0">
               <div className="w-full sm:w-[40%] aspect-square overflow-hidden">
                 <img
                   className="w-full h-full object-contain"
@@ -184,10 +194,34 @@ export default function About() {
                     </div>
                   </div>
                   <div className="flex flex-row gap-5 text-2xl">
-                    <FaFacebookSquare />
-                    <AiFillInstagram />
-                    <FaLinkedin />
-                    <FaGlobeAmericas />
+                    <a
+                      href="https://facebook.com/kz.fsharar"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <FaFacebookSquare />
+                    </a>
+                    <a
+                      href="https://wa.me/351920579344"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <RiWhatsappFill />
+                    </a>
+                    <a
+                      href="https://x.com/KaziSharar"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <FaSquareXTwitter />
+                    </a>
+                    <a
+                      href="https://linkedin.com/ksharar"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <FaLinkedin />
+                    </a>
                   </div>
                 </div>
               </div>
@@ -278,10 +312,34 @@ export default function About() {
                     </div>
                   </div>
                   <div className="flex flex-row gap-5 text-2xl sm:justify-end">
-                    <FaFacebookSquare />
-                    <AiFillInstagram />
-                    <FaLinkedin />
-                    <FaGlobeAmericas />
+                    <a
+                      href="https://wa.me/8801974190739"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <RiWhatsappFill />
+                    </a>
+                    <a
+                      href="https://x.com/naimrahman1952/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <FaSquareXTwitter />
+                    </a>
+                    <a
+                      href="https://www.linkedin.com/in/naimrahman1"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <FaLinkedin />
+                    </a>
+                    <a
+                      href="https://x.com/naimrahman1952/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <FaGlobeAmericas />
+                    </a>
                   </div>
                 </div>
               </div>
