@@ -61,20 +61,20 @@ export default function App() {
             stagger: 0.2,
           }
         )
-        .to("#intro-end-shutter", {
+        .to(["#intro-end-shutter", "#intro-end"], {
           yPercent: "100",
           duration: 0.7,
           ease: "expo.inOut",
-        })
-        .to(
-          "#intro-end",
-          {
-            yPercent: "100",
-            duration: 0.8,
-            ease: "expo.inOut",
-          },
-          "<0.5"
-        );
+        });
+      // .to(
+      //   "#intro-end",
+      //   {
+      //     yPercent: "100",
+      //     duration: 0.8,
+      //     ease: "expo.inOut",
+      //   },
+      //   "<0.5"
+      // );
     }, comp);
 
     return () => gsapContext.revert();

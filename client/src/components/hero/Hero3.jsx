@@ -22,7 +22,7 @@ export default function Hero3() {
         duration: 1.5,
         ease: "power2.inOut",
         opacity: 0,
-        delay: delayLandingPage,
+        delay: delayLandingPage + 0.6,
 
         stagger: 0.2,
       });
@@ -30,7 +30,7 @@ export default function Hero3() {
         translateY: "100%",
         duration: 1,
         ease: "power2.inOut",
-        delay: delayLandingPage,
+        delay: delayLandingPage + 0.6,
         opacity: 0,
       });
       gsap.from("#hero-btn-1", {
@@ -38,50 +38,50 @@ export default function Hero3() {
         duration: 1,
         ease: "power2.inOut",
         opacity: 0,
-        delay: delayLandingPage,
+        delay: delayLandingPage + 0.6,
       });
       gsap.from("#hero-btn-2", {
         translateY: "100%",
         duration: 1,
         ease: "power2.inOut",
         opacity: 0,
-        delay: delayLandingPage,
+        delay: delayLandingPage + 0.6,
       });
       gsap.from("#hero-img-1-cover", {
         translateX: "0",
         duration: 1.5,
         ease: "expo.inOut",
-        delay: delayLandingPage,
+        delay: delayLandingPage + 0.6,
       });
       gsap.from("#hero-img-1", {
         scale: 1,
         duration: 1.5,
         ease: "expo.inOut",
-        delay: delayLandingPage,
+        delay: delayLandingPage + 0.6,
       });
       gsap.from("#hero-img-2-cover", {
         translateX: "0",
         duration: 1.5,
         ease: "expo.inOut",
-        delay: delayLandingPage,
+        delay: delayLandingPage + 0.6,
       });
       gsap.from("#hero-img-2", {
         scale: 1,
         duration: 1.5,
         ease: "expo.inOut",
-        delay: delayLandingPage,
+        delay: delayLandingPage + 0.6,
       });
       gsap.from("#satisfied-clients", {
         translateY: "100%",
         duration: 1.5,
         ease: "power2.inOut",
-        delay: delayLandingPage,
+        delay: delayLandingPage + 0.6,
       });
       gsap.from("#completed-projects", {
         translateY: "100%",
         duration: 1.5,
         ease: "power2.inOut",
-        delay: delayLandingPage,
+        delay: delayLandingPage + 0.6,
       });
     }, comp);
 

@@ -151,7 +151,7 @@ export default function Navbar() {
       </div>
       <div className="w-full h-14 px-5 md:px-10 lg:px-10 xl:px-20 text-sm sm:text-sm  flex lg:hidden items-center">
         <div className="w-full flex flex-row gap-10 items-center justify-between  text-lightTitleText">
-          <NavLink to="/">
+          <NavLink id="mobile-nav0" to="/">
             <div className="" id="mobile-nav0">
               <img
                 className="w-auto h-10 sm:h-14 object-contain"
