@@ -1,7 +1,6 @@
 // import React from 'react'
 import { AiFillInstagram } from "react-icons/ai";
 import { FaFacebookSquare, FaLinkedin } from "react-icons/fa";
-import { HiMiniArrowUpRight } from "react-icons/hi2";
 import { IoIosCall } from "react-icons/io";
 import { MdEmail } from "react-icons/md";
 import { RiWhatsappFill } from "react-icons/ri";
@@ -28,7 +27,7 @@ export default function Footer() {
                   Let&apos;s start a conversation!
                 </span>
                 <div className="w-[38px] aspect-square rounded-full bg-lightPrimary flex justify-center items-center">
-                  <HiMiniArrowUpRight />
+                  <MdEmail />
                 </div>
               </div>
             </Link>

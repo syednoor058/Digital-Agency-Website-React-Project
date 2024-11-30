@@ -22,7 +22,7 @@ export default function Hero3() {
         duration: 1.5,
         ease: "power2.inOut",
         opacity: 0,
-        delay: delayLandingPage + 0.6,
+        delay: delayLandingPage + 0.5,
 
         stagger: 0.2,
       });
@@ -30,7 +30,7 @@ export default function Hero3() {
         translateY: "100%",
         duration: 1,
         ease: "power2.inOut",
-        delay: delayLandingPage + 0.6,
+        delay: delayLandingPage + 0.5,
         opacity: 0,
       });
       gsap.from("#hero-btn-1", {
@@ -38,50 +38,37 @@ export default function Hero3() {
         duration: 1,
         ease: "power2.inOut",
         opacity: 0,
-        delay: delayLandingPage + 0.6,
+        delay: delayLandingPage + 0.5,
       });
       gsap.from("#hero-btn-2", {
         translateY: "100%",
         duration: 1,
         ease: "power2.inOut",
         opacity: 0,
-        delay: delayLandingPage + 0.6,
+        delay: delayLandingPage + 0.5,
       });
-      gsap.from("#hero-img-1-cover", {
+      gsap.from("#home-hero-img-cover", {
         translateX: "0",
         duration: 1.5,
         ease: "expo.inOut",
-        delay: delayLandingPage + 0.6,
+        delay: delayLandingPage + 0.5,
       });
-      gsap.from("#hero-img-1", {
-        scale: 1,
+      gsap.from("#home-hero-img", {
         duration: 1.5,
         ease: "expo.inOut",
-        delay: delayLandingPage + 0.6,
-      });
-      gsap.from("#hero-img-2-cover", {
-        translateX: "0",
-        duration: 1.5,
-        ease: "expo.inOut",
-        delay: delayLandingPage + 0.6,
-      });
-      gsap.from("#hero-img-2", {
-        scale: 1,
-        duration: 1.5,
-        ease: "expo.inOut",
-        delay: delayLandingPage + 0.6,
+        delay: delayLandingPage + 0.5,
       });
       gsap.from("#satisfied-clients", {
         translateY: "100%",
         duration: 1.5,
         ease: "power2.inOut",
-        delay: delayLandingPage + 0.6,
+        delay: delayLandingPage + 0.5,
       });
       gsap.from("#completed-projects", {
         translateY: "100%",
         duration: 1.5,
         ease: "power2.inOut",
-        delay: delayLandingPage + 0.6,
+        delay: delayLandingPage + 0.5,
       });
     }, comp);
 
@@ -219,8 +206,13 @@ export default function Hero3() {
               />
             </div>
           </div> */}
-          <div className="w-full aspect-square overflow-hidden">
+          <div className="w-full aspect-square overflow-hidden relative">
+            <div
+              id="home-hero-img-cover"
+              className="w-full h-full bg-darkPrimary absolute top-0 left-0 z-[5] translate-x-[100%]"
+            ></div>
             <img
+              id="home-hero-img"
               className="w-full aspect-square object-fit"
               src={homeHeroImg}
               alt="home-hero-section"

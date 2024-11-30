@@ -151,7 +151,7 @@ export default function Navbar() {
       </div>
       <div className="w-full h-14 px-5 md:px-10 lg:px-10 xl:px-20 text-sm sm:text-sm  flex lg:hidden items-center">
         <div className="w-full flex flex-row gap-10 items-center justify-between  text-lightTitleText">
-          <NavLink id="mobile-nav0" to="/">
+          <NavLink to="/">
             <div className="" id="mobile-nav0">
               <img
                 className="w-auto h-10 sm:h-14 object-contain"
@@ -161,7 +161,7 @@ export default function Navbar() {
             </div>
           </NavLink>
           <div className="flex flex-row gap-2 sm:gap-3 justify-end items-center">
-            <NavLink to="/contact-us">
+            <NavLink id="mobile-nav1" to="/contact-us">
               <div className="w-full h-full flex flex-row items-center text-darkTitleText text-xs">
                 <span className="group-hover:text-darkTitleText duration-500 text-center px-5 py-2 bg-accentColor rounded-full">
                   Let&apos;s Start
