@@ -158,6 +158,18 @@ export default function Contact() {
                   </div>
                 </div>
               </div>
+              <div className="text-xs md:text-sm">
+                By signing up, you understand and agree that your data will be
+                collected and used subject to our{" "}
+                <span className="underline underline-offset-2">
+                  Privacy Policy
+                </span>{" "}
+                and{" "}
+                <span className="underline underline-offset-2">
+                  Terms of Use
+                </span>
+                .
+              </div>
               <div className="flex justify-center">
                 <Link to="/" className="w-full">
                   <div className="w-auto flex flex-row items-center text-darkPrimary text-lg md:text-xl">
