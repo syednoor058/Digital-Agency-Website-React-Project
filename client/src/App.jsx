@@ -4,6 +4,8 @@ import LocomotiveScroll from "locomotive-scroll";
 import "locomotive-scroll/dist/locomotive-scroll.css";
 import { useLayoutEffect, useRef } from "react";
 import { BrowserRouter } from "react-router-dom";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import Navbar from "./components/navbar/Navbar";
 import ScrollToTop from "./components/scrollToTop/ScrollToTop";
 import { AnimationContextProvider } from "./context/animationContext/AnimationContextProvider";
@@ -123,6 +125,7 @@ export default function App() {
         <div id="main-container">
           <div className="w-full fixed top-0 z-[1000] bg-lightPrimary bg-opacity-90 backdrop-blur-[6px]">
             <Navbar />
+            <ToastContainer autoClose={3000} transition:Slide />
           </div>
           <AnimationContextProvider>
             <ScrollToTop />
