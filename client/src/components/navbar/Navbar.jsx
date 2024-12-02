@@ -164,7 +164,7 @@ export default function Navbar() {
             <NavLink id="mobile-nav1" to="/contact-us">
               <div className="w-full h-full flex flex-row items-center text-darkTitleText text-xs">
                 <span className="group-hover:text-darkTitleText duration-500 text-center px-5 py-2 bg-accentColor rounded-full">
-                  Let&apos;s Start
+                  Let&apos;s Talk
                 </span>
                 <div className="w-[28px] sm:w-[30px] md:w-8 aspect-square bg-accentColor rounded-full flex justify-center items-center text-darkTitleText font-normal">
                   <HiMiniArrowUpRight />

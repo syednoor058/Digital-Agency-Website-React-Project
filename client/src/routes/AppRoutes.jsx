@@ -5,6 +5,7 @@ import PageTransition from "../components/pageTransition/PageTransition";
 import About from "../screens/about/About";
 import Contact from "../screens/contact/Contact";
 import Home from "../screens/home/Home";
+import PrivacyPolicies from "../screens/privacyPolicies/PrivacyPolicies";
 import Projects from "../screens/projects/Projects";
 import Services from "../screens/services/Services";
 
@@ -22,6 +23,7 @@ export default function AppRoutes() {
         <Route exact path="/projects" element={<Projects />} />
         <Route exact path="/about-us" element={<About />} />
         <Route exact path="/contact-us" element={<Contact />} />
+        <Route exact path="/privacy-policy" element={<PrivacyPolicies />} />
       </Routes>
     </AnimatePresence>
   );

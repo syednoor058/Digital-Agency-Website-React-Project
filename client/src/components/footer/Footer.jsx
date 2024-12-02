@@ -83,7 +83,7 @@ export default function Footer() {
               <div className="flex flex-col gap-3">
                 <div>Software Development</div>
                 <div>Digital Marketing</div>
-                <div>Terms & Conditions</div>
+                <div>About</div>
               </div>
             </div>
             <div className="flex flex-col gap-5">
@@ -92,8 +92,8 @@ export default function Footer() {
               </div>
               <div className="flex flex-row sm:flex-col gap-5 sm:gap-3">
                 <div>Contact</div>
-                <div>About</div>
-                <div>Privacy Policy</div>
+                <div>Terms & Conditions</div>
+                <Link to="/privacy-policy">Privacy Policy</Link>
               </div>
             </div>
             <div className="w-full flex flex-row gap-5">
